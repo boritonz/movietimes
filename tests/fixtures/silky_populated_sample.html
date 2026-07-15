@@ -1,0 +1,24 @@
+<!--
+Synthetic fixture, NOT captured from silkyotter.co.nz. The live site never
+serves film data in HTML (see adapters/silky.py module docstring for what
+was tried) -- this file exists purely to regression-test
+silky._extract_films()'s JSON-LD parsing path in case the site ever starts
+server-rendering a schema.org Movie/ItemList block, which is a common
+Next.js SEO pattern this adapter defensively supports.
+-->
+<html>
+<head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "item": {"@type": "Movie", "name": "Toy Story 5"}},
+    {"@type": "ListItem", "position": 2, "item": {"@type": "Movie", "name": "The Invite"}},
+    {"@type": "ListItem", "position": 3, "item": {"@type": "Movie", "name": "Kids Club: Moana (2026)"}}
+  ]
+}
+</script>
+</head>
+<body></body>
+</html>
