@@ -42,7 +42,7 @@ CINEMAS = [
      "flicksSlug": "the-hollywood-cinema"},
     {"id": "capitol", "name": "The Capitol", "area": "Balmoral", "tier": 1,
      "url": "https://www.thecapitol.co.nz",
-     "veeziToken": None,  # discover from booking links on thecapitol.co.nz
+     "veeziToken": "heg709z4rmk2gh10ykam14wxm8",  # discovered 15 Jul 2026; rediscovered at runtime if it stops working
      "flicksSlug": "capitol-cinema"},
     {"id": "rialto", "name": "Rialto Newmarket", "area": "Newmarket", "tier": 1,
      "url": "https://www.rialto.co.nz",
@@ -67,7 +67,7 @@ CINEMAS = [
      "flicksSlug": "reading-cinemas-lynnmall"},
     {"id": "bridgeway", "name": "The Bridgeway", "area": "Northcote Pt", "tier": 2,
      "url": "https://www.bridgeway.co.nz",
-     "veeziToken": None,  # discover from booking links on bridgeway.co.nz
+     "veeziToken": "cf4esppshx7mcjpd1c5j74xc70",  # discovered 15 Jul 2026; rediscovered at runtime if it stops working
      "flicksSlug": "bridgeway-cinema"},
 ]
 
