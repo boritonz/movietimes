@@ -1,0 +1,441 @@
+{% macro tag_chips(tags) %}
+{%- for t in tags %}<span class="chip chip-{{ t }}">{{ t }}</span>{% endfor -%}
+{% endmacro %}
+
+{% macro venue_row(v) %}
+<div class="venue-row">
+  <div class="venue-row-top">
+    <a class="venue-name" href="{{ v.sourceUrl }}" target="_blank" rel="noopener">{{ v.cinemaName }}</a>
+    <div class="dayview dayview-today">
+      {% if v.todayTimes %}
+      <span class="times">{{ v.todayTimes | join(' · ') }}</span>
+      {% else %}
+      <a class="times-link" href="{{ v.sourceUrl }}" target="_blank" rel="noopener">times &rarr;</a>
+      {% endif %}
+    </div>
+    <div class="dayview dayview-upcoming">
+      {% if v.upcoming %}
+      {% for u in v.upcoming %}
+      <div class="upcoming-date"><span class="date-label">{{ u.label }}</span> <span class="times">{{ u.times | join(' · ') }}</span></div>
+      {% endfor %}
+      {% else %}
+      <a class="times-link" href="{{ v.sourceUrl }}" target="_blank" rel="noopener">times &rarr;</a>
+      {% endif %}
+    </div>
+  </div>
+  {% if v.note %}<div class="note">{{ v.note }}</div>{% endif %}
+</div>
+{% endmacro %}
+
+{% macro film_card(film) %}
+<article class="filmcard">
+  <div class="filmcard-head">
+    <h3 class="filmtitle">{{ film.title }}</h3>
+    <span class="cinema-count">{{ film.venueCount }} cinema{{ 's' if film.venueCount != 1 else '' }}</span>
+  </div>
+  {% if film.tags %}<div class="chips">{{ tag_chips(film.tags) }}</div>{% endif %}
+  {% if film.tier1Venues %}
+  <div class="venues">
+    {% for v in film.tier1Venues %}{{ venue_row(v) }}{% endfor %}
+  </div>
+  {% endif %}
+  {% if film.tier2Venues %}
+  <details class="further-afield">
+    <summary>Further afield ({{ film.tier2Venues | length }})</summary>
+    <div class="venues">
+      {% for v in film.tier2Venues %}{{ venue_row(v) }}{% endfor %}
+    </div>
+  </details>
+  {% endif %}
+</article>
+{% endmacro %}
+
+{% macro cinema_film_row(film, source_url) %}
+<div class="film-row">
+  <div class="film-row-top">
+    <span class="film-row-title">{{ film.title }}</span>
+    {% if film.tags %}<span class="chips">{{ tag_chips(film.tags) }}</span>{% endif %}
+  </div>
+  <div class="dayview dayview-today">
+    {% if film.todayTimes %}
+    <span class="times">{{ film.todayTimes | join(' · ') }}</span>
+    {% else %}
+    <a class="times-link" href="{{ source_url }}" target="_blank" rel="noopener">times &rarr;</a>
+    {% endif %}
+  </div>
+  <div class="dayview dayview-upcoming">
+    {% if film.upcoming %}
+    {% for u in film.upcoming %}
+    <div class="upcoming-date"><span class="date-label">{{ u.label }}</span> <span class="times">{{ u.times | join(' · ') }}</span></div>
+    {% endfor %}
+    {% else %}
+    <a class="times-link" href="{{ source_url }}" target="_blank" rel="noopener">times &rarr;</a>
+    {% endif %}
+  </div>
+  {% if film.note %}<div class="note">{{ film.note }}</div>{% endif %}
+</div>
+{% endmacro %}
+
+{% macro cinema_card(cinema, entry) %}
+<article class="cinemacard">
+  <div class="cinemacard-head">
+    <h3 class="cinemaname"><a href="{{ entry.sourceUrl }}" target="_blank" rel="noopener">{{ cinema.name }}</a></h3>
+    <span class="area">{{ cinema.area }}</span>
+  </div>
+  {% if entry.info %}<div class="cinema-info">{{ entry.info }}</div>{% endif %}
+  {% if entry.films %}
+  <div class="films">
+    {% for film in entry.films %}{{ cinema_film_row(film, entry.sourceUrl) }}{% endfor %}
+  </div>
+  {% else %}
+  <p class="empty">No listings — check the cinema site.</p>
+  {% endif %}
+</article>
+{% endmacro %}
+
+<!DOCTYPE html>
+<html lang="en" data-day-mode="today">
+<head>
+<meta charset="UTF-8">
+<title>Auckland Screens — now showing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Auckland cinema listings, aggregated across the city's independent and chain screens.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #161310;
+    --surface: #1E1A15;
+    --border: #2C261F;
+    --border-strong: #3A332A;
+    --gold: #E4A83C;
+    --text: #F0EADD;
+    --muted: #9C937F;
+    --error: #C97B6B;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+  }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 16px 64px;
+  }
+  h1, h2, h3, .display {
+    font-family: 'Bebas Neue', 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin: 0;
+  }
+  a { color: var(--gold); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header {
+    padding: 32px 0 20px;
+    border-bottom: 3px double var(--border-strong);
+    margin-bottom: 20px;
+  }
+  .eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+    font-weight: 600;
+  }
+  header h1 {
+    font-size: 52px;
+    letter-spacing: 0.06em;
+    line-height: 1;
+  }
+  .fetched-at {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 12px 0 0;
+  }
+  .stale-list {
+    list-style: none;
+    margin: 8px 0 0;
+    padding: 0;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .stale-list li { margin-top: 2px; }
+  .stale-list li::before { content: "⚠ "; color: var(--error); }
+
+  nav.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .tabbtn {
+    flex: 1;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    padding: 10px 0;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .tabbtn.active {
+    color: var(--bg);
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+
+  .daytoggle {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+  .daytogglebtn {
+    background: transparent;
+    border: 1px solid var(--border-strong);
+    color: var(--muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .daytogglebtn.active {
+    color: var(--gold);
+    border-color: var(--gold);
+  }
+
+  .tabpanel { display: none; }
+  .tabpanel.active { display: block; }
+
+  html[data-day-mode="today"] .dayview-upcoming { display: none; }
+  html[data-day-mode="upcoming"] .dayview-today { display: none; }
+
+  .filmcard, .cinemacard {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 14px;
+  }
+  .filmcard-head, .cinemacard-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .filmtitle {
+    font-size: 24px;
+    letter-spacing: 0.03em;
+  }
+  .cinema-count {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .chips {
+    margin-top: 8px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .chip {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+  }
+  .chip-kids { background: rgba(122, 184, 122, 0.14); color: #8FCB8F; border-color: rgba(143, 203, 143, 0.35); }
+  .chip-retro { background: transparent; color: var(--gold); border-color: var(--gold); }
+  .chip-event { background: rgba(160, 130, 200, 0.16); color: #B79EDB; border-color: rgba(183, 158, 219, 0.4); }
+
+  .venues { margin-top: 12px; }
+  .venue-row {
+    padding: 8px 0;
+    border-top: 1px solid var(--border);
+  }
+  .venue-row:first-child { border-top: none; padding-top: 0; }
+  .venue-row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .venue-name { font-weight: 600; color: var(--text); }
+  .venue-name:hover { color: var(--gold); }
+  .times { color: var(--text); font-size: 13px; }
+  .times-link { font-size: 13px; font-weight: 600; }
+  .upcoming-date { font-size: 13px; }
+  .date-label { color: var(--muted); margin-right: 6px; }
+  .note { color: var(--muted); font-size: 12.5px; margin-top: 3px; }
+
+  details.further-afield {
+    margin-top: 12px;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+  }
+  details.further-afield summary {
+    cursor: pointer;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  details.further-afield summary::marker { color: var(--gold); }
+  details.further-afield .venues { margin-top: 10px; }
+
+  .further-afield-section {
+    border: none;
+    padding: 0;
+  }
+  .further-afield-section > summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 20px 0 12px;
+    cursor: pointer;
+  }
+  .further-afield-section > summary::before,
+  .further-afield-section > summary::after {
+    content: "";
+    flex: 1;
+    border-top: 1px solid var(--border-strong);
+  }
+
+  .cinemacard-head { margin-bottom: 4px; }
+  .cinemaname { font-size: 22px; letter-spacing: 0.03em; }
+  .area { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
+  .cinema-info { color: var(--gold); font-size: 12.5px; margin: 6px 0 10px; }
+  .films { margin-top: 8px; }
+  .film-row {
+    padding: 8px 0;
+    border-top: 1px solid var(--border);
+  }
+  .film-row:first-child { border-top: none; padding-top: 0; }
+  .film-row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .film-row-title { font-weight: 600; }
+  .empty { color: var(--muted); font-size: 13px; }
+
+  footer {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Now Showing</p>
+    <h1>Auckland Screens</h1>
+    <p class="fetched-at">Listings as at {{ fetched_at_display }}</p>
+    {% if stale_lines %}
+    <ul class="stale-list">
+      {% for line in stale_lines %}<li>{{ line }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button type="button" class="tabbtn active" data-target="panel-byfilm" role="tab" aria-selected="true">By film</button>
+    <button type="button" class="tabbtn" data-target="panel-bycinema" role="tab" aria-selected="false">By cinema</button>
+  </nav>
+
+  {% if any_upcoming %}
+  <div class="daytoggle">
+    <button type="button" class="daytogglebtn active" data-mode="today">Today</button>
+    <button type="button" class="daytogglebtn" data-mode="upcoming">Coming up</button>
+  </div>
+  {% endif %}
+
+  <main>
+    <section id="panel-byfilm" class="tabpanel active">
+      {% for film in films %}{{ film_card(film) }}{% endfor %}
+      {% if not films %}<p class="empty">No listings yet — check back soon.</p>{% endif %}
+    </section>
+
+    <section id="panel-bycinema" class="tabpanel">
+      {% for cinema in tier1_cinemas %}{{ cinema_card(cinema, cinema_entries[cinema.id]) }}{% endfor %}
+      {% if tier2_cinemas %}
+      <details class="further-afield-section">
+        <summary>Further afield</summary>
+        {% for cinema in tier2_cinemas %}{{ cinema_card(cinema, cinema_entries[cinema.id]) }}{% endfor %}
+      </details>
+      {% endif %}
+    </section>
+  </main>
+
+  <footer>
+    <p>confirm times before booking &middot; data refreshed daily</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  document.querySelectorAll('.tabbtn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.tabbtn').forEach(function (b) {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.tabpanel').forEach(function (p) {
+        p.classList.remove('active');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      document.getElementById(btn.dataset.target).classList.add('active');
+    });
+  });
+
+  document.querySelectorAll('.daytogglebtn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.daytogglebtn').forEach(function (b) {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+      document.documentElement.setAttribute('data-day-mode', btn.dataset.mode);
+    });
+  });
+})();
+</script>
+</body>
+</html>
