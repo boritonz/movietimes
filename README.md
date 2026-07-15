@@ -24,6 +24,16 @@ Tier 1 cinemas are always shown expanded; tier 2 (currently just Bridgeway)
 is shown collapsed under a "Further afield" divider in both views, since
 it's a longer trip from most of the city.
 
+### What each cinema actually provides
+
+| Source | Cinemas | Payload |
+| --- | --- | --- |
+| Veezi (server-rendered HTML) | Hollywood, Capitol, Bridgeway | films + session times |
+| EVT `GetSessions` JSON | Rialto, Event ×3 | films + session times |
+| Reading Vista API | Reading New Lynn | films + session times |
+| Flicks (primary) | Academy | films only — times are a click-through |
+| Flicks (fallback) | Silky Otter ×2 | films only — silkyotter.co.nz is a fully client-rendered Vista "Lumos" SPA whose film API sits behind a runtime auth/discovery flow; not worth solving for v1 |
+
 ## Architecture
 
 ```
@@ -61,7 +71,7 @@ pip install -r requirements.txt
 
 python scrape.py     # writes data/latest.json (falls back per-cinema on failure)
 python render.py     # writes docs/index.html from data/latest.json (or data/seed.json)
-python -m pytest tests/test_core.py -q   # unit tests, no network
+python -m pytest tests/ -q   # unit tests against saved fixtures, no network
 ```
 
 Open `docs/index.html` directly in a browser - it's a single self-contained
@@ -96,12 +106,19 @@ straight to `main`, so the Pages site updates a minute or two later.
   session on the page falls outside that window, which `scrape.py` treats
   as a failure and falls back accordingly, rather than publishing dates
   nobody should trust.
-- **Flicks per-cinema pages SSR inconsistently.** Some Flicks cinema pages
-  render fully server-side, others need JS to populate the film list, and
-  some return a 404-looking shell for cinemas that do have a working page
-  through their own site. Because of that, Flicks is used as the
-  **fallback** adapter, not the primary source, for any cinema whose own
-  booking platform (Veezi, Silky, Event/EVT, Reading) is working.
+- **Flicks is titles-only, and slugs matter.** With the correct cinema slug,
+  `flicks.co.nz/cinema/<slug>/?view=all-movies` server-renders the full film
+  list for every cinema here — an earlier belief that its SSR was
+  inconsistent turned out to be a wrong slug. But session times are never in
+  the static markup (they're behind a JS modal), so Flicks is the
+  **fallback** adapter: titles + a link out, used only when a cinema's own
+  platform (Veezi, Silky, EVT, Reading) fails. When that happens the scrape
+  records it in `latest.json` under `"fallbacks"` — check it occasionally;
+  a primary adapter that silently dies would otherwise look healthy forever.
+- **EVT may block datacenter IPs.** The EVT `GetSessions` endpoints worked
+  fine from a residential connection but haven't been proven from a GitHub
+  Actions runner. If the Actions log shows the four EVT cinemas riding the
+  Flicks fallback every night, that's why — they'll still show titles.
 - **Film lists churn weekly, session times churn daily.** New Zealand
   cinema programmes turn over on Thursdays, so film titles, notes and tags
   are comparatively stable within a week. Session times are re-published
