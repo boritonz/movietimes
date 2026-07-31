@@ -7,7 +7,7 @@ docs/index.html straight off disk or serve it from GitHub Pages.
 from __future__ import annotations
 
 import json
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -46,27 +46,81 @@ def format_nz_datetime(iso_str: str | None) -> str:
     return f"{format_nz_date(dt.date())} {dt.year}, {hour12}:{dt.minute:02d}{ampm}"
 
 
-def session_views(sessions: list[dict], today: date) -> tuple[list[str], list[dict]]:
+def parse_time_to_mins(t: str) -> int:
+    """Parse a '6:15pm'-style time string into minutes since midnight.
+
+    Used to emit machine-readable data-mins attributes so the page can hide
+    past sessions client-side (the page itself is only rendered once daily).
+
+    '12:00pm' (noon) == 720. '12:15am' (just after midnight) == 15.
+    """
+    s = t.strip().lower()
+    ampm = s[-2:]
+    if ampm not in ("am", "pm"):
+        raise ValueError(f"unrecognised time format: {t!r}")
+    hour_str, minute_str = s[:-2].split(":")
+    hour = int(hour_str)
+    minute = int(minute_str)
+    if ampm == "am":
+        if hour == 12:
+            hour = 0
+    else:
+        if hour != 12:
+            hour += 12
+    return hour * 60 + minute
+
+
+NOTE_MAX_CHARS = 60
+
+
+def truncate_note(note: str | None, limit: int = NOTE_MAX_CHARS) -> str | None:
+    """Notes render only up to `limit` chars — this is a decision tool, not a
+    listings database. Longer notes get truncated with an ellipsis."""
+    if not note:
+        return None
+    if len(note) <= limit:
+        return note
+    return note[:limit].rstrip() + "…"
+
+
+# How far ahead "Coming up" renders. The full scraped horizon still lives in
+# latest.json (see normalise.DATE_WINDOW_DAYS) - this just caps what's worth
+# putting on a decision-grade page.
+COMING_UP_WINDOW_DAYS = 2
+
+
+def _time_entry(t: str) -> dict:
+    return {"display": t, "mins": parse_time_to_mins(t)}
+
+
+def session_views(sessions: list[dict], today: date) -> tuple[list[dict], list[dict]]:
     """Split a film's sessions into (today's times, upcoming grouped by date).
 
-    today_times: sorted list of "6:15pm"-style strings for `today`.
+    today_times: sorted list of {"display": "6:15pm", "mins": 1095} for `today`.
     upcoming: list of {"date": "YYYY-MM-DD", "label": "Thu 16 Jul", "times": [...]}
-              sorted by date, for sessions strictly after `today`.
+              sorted by date, for sessions strictly after `today` and within
+              COMING_UP_WINDOW_DAYS (decision-grade cut - see render.py docstring
+              item 5; the rest of the scraped horizon stays in latest.json only).
     """
     today_iso = today.isoformat()
-    today_times = sorted(s["time"] for s in sessions if s.get("date") == today_iso)
+    horizon_iso = (today + timedelta(days=COMING_UP_WINDOW_DAYS)).isoformat()
 
-    by_date: dict[str, list[str]] = {}
+    today_times = sorted(
+        (_time_entry(s["time"]) for s in sessions if s.get("date") == today_iso),
+        key=lambda t: t["mins"],
+    )
+
+    by_date: dict[str, list[dict]] = {}
     for s in sessions:
         d = s.get("date")
-        if d and d > today_iso:
-            by_date.setdefault(d, []).append(s["time"])
+        if d and today_iso < d <= horizon_iso:
+            by_date.setdefault(d, []).append(_time_entry(s["time"]))
 
     upcoming = [
         {
             "date": d,
             "label": format_nz_date(date.fromisoformat(d)),
-            "times": sorted(times),
+            "times": sorted(times, key=lambda t: t["mins"]),
         }
         for d, times in sorted(by_date.items())
     ]
@@ -99,6 +153,14 @@ def build_context(data: dict, today: date, cinemas: list[dict] = CINEMAS) -> dic
                 pass
         stale_lines.append(f"{cinema['name']}: showing older listings from {stale_date}")
 
+    fetched_dt = None
+    if data.get("fetchedAt"):
+        try:
+            fetched_dt = datetime.fromisoformat(data["fetchedAt"])
+        except ValueError:
+            fetched_dt = None
+    fetched_date_short = format_nz_date(fetched_dt.date()) if fetched_dt else "an earlier date"
+
     # --- by-film aggregation -------------------------------------------
     film_buckets: dict[str, dict] = {}
     any_upcoming = False
@@ -118,7 +180,7 @@ def build_context(data: dict, today: date, cinemas: list[dict] = CINEMAS) -> dic
                 "cinemaName": cinema["name"],
                 "sourceUrl": source_url,
                 "tier": cinema["tier"],
-                "note": film.get("note"),
+                "note": truncate_note(film.get("note")),
                 "todayTimes": today_times,
                 "upcoming": upcoming,
             }
@@ -128,18 +190,63 @@ def build_context(data: dict, today: date, cinemas: list[dict] = CINEMAS) -> dic
             bucket["tags"].update(film.get("tags") or [])
             bucket["venues"].append(venue)
 
+    # Films with zero rendered sessions anywhere (titles-only cinemas like
+    # Academy/Silky, or films whose only sessions fall outside the
+    # COMING_UP_WINDOW_DAYS cut) don't earn a full card - demote them to a
+    # compact link list (item 4/5: decision tool, not a listings database).
     films = []
+    also_showing = []
     for bucket in film_buckets.values():
         tier1_venues = [v for v in bucket["venues"] if v["tier"] == 1]
         tier2_venues = [v for v in bucket["venues"] if v["tier"] != 1]
+        venue_count = len(bucket["venues"])
+
+        today_entries = [t for v in bucket["venues"] for t in v["todayTimes"]]
+        upcoming_entries = [
+            (u["date"], t)
+            for v in bucket["venues"]
+            for u in v["upcoming"]
+            for t in u["times"]
+        ]
+
+        if not today_entries and not upcoming_entries:
+            venue_links = sorted(
+                {(v["cinemaName"], v["sourceUrl"]) for v in bucket["venues"]},
+                key=lambda x: x[0].lower(),
+            )
+            also_showing.append({
+                "title": bucket["title"],
+                "venues": venue_links,
+                "kids": "kids" in bucket["tags"],
+            })
+            continue
+
+        plural = "s" if venue_count != 1 else ""
+        if today_entries:
+            earliest = min(today_entries, key=lambda t: t["mins"])
+            summary = f"{venue_count} cinema{plural} · from {earliest['display']}"
+            sort_key = (0, earliest["mins"], -venue_count, bucket["title"].lower())
+        else:
+            earliest_date, earliest_t = min(upcoming_entries, key=lambda p: (p[0], p[1]["mins"]))
+            label = format_nz_date(date.fromisoformat(earliest_date))
+            summary = f"{venue_count} cinema{plural} · from {label}"
+            sort_key = (1, earliest_date, earliest_t["mins"], -venue_count, bucket["title"].lower())
+
         films.append({
             "title": bucket["title"],
             "tags": sorted(bucket["tags"]),
             "tier1Venues": tier1_venues,
             "tier2Venues": tier2_venues,
-            "venueCount": len(bucket["venues"]),
+            "venueCount": venue_count,
+            "hasToday": bool(today_entries),
+            "summary": summary,
+            "_sortKey": sort_key,
         })
-    films.sort(key=lambda f: (-f["venueCount"], f["title"].lower()))
+
+    films.sort(key=lambda f: f["_sortKey"])
+    for f in films:
+        del f["_sortKey"]
+    also_showing.sort(key=lambda f: f["title"].lower())
 
     # --- by-cinema view --------------------------------------------------
     cinema_entries: dict[str, dict] = {}
@@ -154,7 +261,7 @@ def build_context(data: dict, today: date, cinemas: list[dict] = CINEMAS) -> dic
                 any_upcoming = True
             films_out.append({
                 "title": film["title"],
-                "note": film.get("note"),
+                "note": truncate_note(film.get("note")),
                 "tags": film.get("tags") or [],
                 "todayTimes": today_times,
                 "upcoming": upcoming,
@@ -170,8 +277,11 @@ def build_context(data: dict, today: date, cinemas: list[dict] = CINEMAS) -> dic
 
     return {
         "fetched_at_display": format_nz_datetime(data.get("fetchedAt")),
+        "fetched_date_short": fetched_date_short,
+        "today_iso": today.isoformat(),
         "stale_lines": stale_lines,
         "films": films,
+        "also_showing": also_showing,
         "any_upcoming": any_upcoming,
         "cinema_entries": cinema_entries,
         "tier1_cinemas": tier1_cinemas,

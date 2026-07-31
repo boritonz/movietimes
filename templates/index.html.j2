@@ -2,81 +2,80 @@
 {%- for t in tags %}<span class="chip chip-{{ t }}">{{ t }}</span>{% endfor -%}
 {% endmacro %}
 
-{% macro venue_row(v) %}
+{% macro time_list(times) %}
+{%- for t in times %}<span class="t" data-mins="{{ t.mins }}">{{ t.display }}</span>{% if not loop.last %} · {% endif %}{% endfor -%}
+{% endmacro %}
+
+{% macro dayview_times(today_times, upcoming, source_url, today_iso) %}
+<div class="dayview dayview-today" data-date="{{ today_iso }}">
+  {% if today_times %}
+  <span class="times" data-times>{{ time_list(today_times) }}</span>
+  <a class="times-link" data-fallback hidden href="{{ source_url }}" target="_blank" rel="noopener">times &rarr;</a>
+  {% else %}
+  <a class="times-link" href="{{ source_url }}" target="_blank" rel="noopener">times &rarr;</a>
+  {% endif %}
+</div>
+<div class="dayview dayview-upcoming">
+  {% if upcoming %}
+  {% for u in upcoming %}
+  <div class="upcoming-date" data-date="{{ u.date }}"><span class="date-label">{{ u.label }}</span> <span class="times">{{ time_list(u.times) }}</span></div>
+  {% endfor %}
+  {% else %}
+  <a class="times-link" href="{{ source_url }}" target="_blank" rel="noopener">times &rarr;</a>
+  {% endif %}
+</div>
+{% endmacro %}
+
+{% macro venue_row(v, today_iso) %}
 <div class="venue-row">
   <div class="venue-row-top">
     <a class="venue-name" href="{{ v.sourceUrl }}" target="_blank" rel="noopener">{{ v.cinemaName }}</a>
-    <div class="dayview dayview-today">
-      {% if v.todayTimes %}
-      <span class="times">{{ v.todayTimes | join(' · ') }}</span>
-      {% else %}
-      <a class="times-link" href="{{ v.sourceUrl }}" target="_blank" rel="noopener">times &rarr;</a>
-      {% endif %}
-    </div>
-    <div class="dayview dayview-upcoming">
-      {% if v.upcoming %}
-      {% for u in v.upcoming %}
-      <div class="upcoming-date"><span class="date-label">{{ u.label }}</span> <span class="times">{{ u.times | join(' · ') }}</span></div>
-      {% endfor %}
-      {% else %}
-      <a class="times-link" href="{{ v.sourceUrl }}" target="_blank" rel="noopener">times &rarr;</a>
-      {% endif %}
-    </div>
+    {{ dayview_times(v.todayTimes, v.upcoming, v.sourceUrl, today_iso) }}
   </div>
   {% if v.note %}<div class="note">{{ v.note }}</div>{% endif %}
 </div>
 {% endmacro %}
 
-{% macro film_card(film) %}
-<article class="filmcard">
-  <div class="filmcard-head">
-    <h3 class="filmtitle">{{ film.title }}</h3>
-    <span class="cinema-count">{{ film.venueCount }} cinema{{ 's' if film.venueCount != 1 else '' }}</span>
-  </div>
-  {% if film.tags %}<div class="chips">{{ tag_chips(film.tags) }}</div>{% endif %}
-  {% if film.tier1Venues %}
-  <div class="venues">
-    {% for v in film.tier1Venues %}{{ venue_row(v) }}{% endfor %}
-  </div>
-  {% endif %}
-  {% if film.tier2Venues %}
-  <details class="further-afield">
-    <summary>Further afield ({{ film.tier2Venues | length }})</summary>
+{% macro film_card(film, today_iso) %}
+<article class="filmcard" data-kids="{{ '1' if 'kids' in film.tags else '0' }}" data-has-today="{{ '1' if film.hasToday else '0' }}">
+  <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-headtext">
+      <h3 class="filmtitle">{{ film.title }}</h3>
+      {% if film.tags %}<div class="chips">{{ tag_chips(film.tags) }}</div>{% endif %}
+      <p class="filmsummary">{{ film.summary }}</p>
+    </span>
+    <span class="expand-caret" aria-hidden="true">+</span>
+  </button>
+  <div class="filmcard-body">
+    {% if film.tier1Venues %}
     <div class="venues">
-      {% for v in film.tier2Venues %}{{ venue_row(v) }}{% endfor %}
+      {% for v in film.tier1Venues %}{{ venue_row(v, today_iso) }}{% endfor %}
     </div>
-  </details>
-  {% endif %}
+    {% endif %}
+    {% if film.tier2Venues %}
+    <details class="further-afield">
+      <summary>Further afield ({{ film.tier2Venues | length }})</summary>
+      <div class="venues">
+        {% for v in film.tier2Venues %}{{ venue_row(v, today_iso) }}{% endfor %}
+      </div>
+    </details>
+    {% endif %}
+  </div>
 </article>
 {% endmacro %}
 
-{% macro cinema_film_row(film, source_url) %}
+{% macro cinema_film_row(film, source_url, today_iso) %}
 <div class="film-row">
   <div class="film-row-top">
     <span class="film-row-title">{{ film.title }}</span>
     {% if film.tags %}<span class="chips">{{ tag_chips(film.tags) }}</span>{% endif %}
   </div>
-  <div class="dayview dayview-today">
-    {% if film.todayTimes %}
-    <span class="times">{{ film.todayTimes | join(' · ') }}</span>
-    {% else %}
-    <a class="times-link" href="{{ source_url }}" target="_blank" rel="noopener">times &rarr;</a>
-    {% endif %}
-  </div>
-  <div class="dayview dayview-upcoming">
-    {% if film.upcoming %}
-    {% for u in film.upcoming %}
-    <div class="upcoming-date"><span class="date-label">{{ u.label }}</span> <span class="times">{{ u.times | join(' · ') }}</span></div>
-    {% endfor %}
-    {% else %}
-    <a class="times-link" href="{{ source_url }}" target="_blank" rel="noopener">times &rarr;</a>
-    {% endif %}
-  </div>
+  {{ dayview_times(film.todayTimes, film.upcoming, source_url, today_iso) }}
   {% if film.note %}<div class="note">{{ film.note }}</div>{% endif %}
 </div>
 {% endmacro %}
 
-{% macro cinema_card(cinema, entry) %}
+{% macro cinema_card(cinema, entry, today_iso) %}
 <article class="cinemacard">
   <div class="cinemacard-head">
     <h3 class="cinemaname"><a href="{{ entry.sourceUrl }}" target="_blank" rel="noopener">{{ cinema.name }}</a></h3>
@@ -85,7 +84,7 @@
   {% if entry.info %}<div class="cinema-info">{{ entry.info }}</div>{% endif %}
   {% if entry.films %}
   <div class="films">
-    {% for film in entry.films %}{{ cinema_film_row(film, entry.sourceUrl) }}{% endfor %}
+    {% for film in entry.films %}{{ cinema_film_row(film, entry.sourceUrl, today_iso) }}{% endfor %}
   </div>
   {% else %}
   <p class="empty">No listings — check the cinema site.</p>
@@ -94,7 +93,7 @@
 {% endmacro %}
 
 <!DOCTYPE html>
-<html lang="en" data-day-mode="today">
+<html lang="en" data-rendered-date="{{ today_iso }}" data-day-mode="today">
 <head>
 <meta charset="UTF-8">
 <title>Auckland Screens — now showing</title>
@@ -103,6 +102,23 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+(function () {
+  // Set the day-mode attribute as early as possible (before CSS paints) to
+  // avoid a flash of the wrong mode. The bottom-of-body script re-derives
+  // the same value to sync button states and run the session-hiding pass -
+  // small duplication, but keeps this a single self-contained file.
+  try {
+    var stored = localStorage.getItem('movietimes:daymode');
+    var mode = stored;
+    if (!mode) {
+      var now = new Date();
+      mode = (now.getHours() * 60 + now.getMinutes()) >= (16 * 60 + 30) ? 'tonight' : 'today';
+    }
+    document.documentElement.setAttribute('data-day-mode', mode);
+  } catch (e) {}
+})();
+</script>
 <style>
   :root {
     --bg: #161310;
@@ -223,36 +239,107 @@
   .tabpanel { display: none; }
   .tabpanel.active { display: block; }
 
-  html[data-day-mode="today"] .dayview-upcoming { display: none; }
+  html[data-day-mode="today"] .dayview-upcoming,
+  html[data-day-mode="tonight"] .dayview-upcoming { display: none; }
   html[data-day-mode="upcoming"] .dayview-today { display: none; }
+
+  html[data-day-mode="today"] .filmcard.no-session-now,
+  html[data-day-mode="tonight"] .filmcard.no-session-now { display: none; }
+
+  .filmcard.js-filtered, .also-row.js-filtered { display: none; }
+
+  .filmfilters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .film-search {
+    flex: 1;
+    min-width: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+  }
+  .film-search::placeholder { color: var(--muted); }
+  .kids-pill {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 8px;
+    padding: 0 16px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .kids-pill.active {
+    color: #8FCB8F;
+    border-color: rgba(143, 203, 143, 0.5);
+    background: rgba(122, 184, 122, 0.12);
+  }
+
+  .stale-banner {
+    color: var(--muted);
+    font-size: 12.5px;
+    margin: 8px 0 0;
+  }
 
   .filmcard, .cinemacard {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 16px;
-    margin-bottom: 14px;
+    padding: 13px;
+    margin-bottom: 10px;
   }
-  .filmcard-head, .cinemacard-head {
+  .filmcard-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    min-height: 44px;
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+  .cinemacard-head {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     gap: 12px;
   }
+  .filmcard-headtext { flex: 1; min-width: 0; }
   .filmtitle {
-    font-size: 24px;
+    font-size: 20px;
     letter-spacing: 0.03em;
   }
-  .cinema-count {
-    color: var(--gold);
-    font-size: 12px;
-    font-weight: 600;
-    white-space: nowrap;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+  .filmsummary {
+    color: var(--muted);
+    font-size: 12.5px;
+    margin: 4px 0 0;
   }
+  .expand-caret {
+    color: var(--gold);
+    font-size: 18px;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: transform 0.15s ease;
+  }
+  .filmcard.expanded .expand-caret { transform: rotate(45deg); }
+  .filmcard-body { display: none; }
+  .filmcard.expanded .filmcard-body { display: block; margin-top: 10px; }
   .chips {
-    margin-top: 8px;
+    margin-top: 7px;
     display: flex;
     gap: 6px;
     flex-wrap: wrap;
@@ -270,9 +357,9 @@
   .chip-retro { background: transparent; color: var(--gold); border-color: var(--gold); }
   .chip-event { background: rgba(160, 130, 200, 0.16); color: #B79EDB; border-color: rgba(183, 158, 219, 0.4); }
 
-  .venues { margin-top: 12px; }
+  .venues { margin-top: 10px; }
   .venue-row {
-    padding: 8px 0;
+    padding: 7px 0;
     border-top: 1px solid var(--border);
   }
   .venue-row:first-child { border-top: none; padding-top: 0; }
@@ -331,13 +418,48 @@
     border-top: 1px solid var(--border-strong);
   }
 
+  .also-showing { margin-top: 4px; }
+  .also-showing-heading {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 20px 0 4px;
+  }
+  .also-showing-heading::before,
+  .also-showing-heading::after {
+    content: "";
+    flex: 1;
+    border-top: 1px solid var(--border-strong);
+  }
+  .also-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 6px 0;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .also-row:first-child { border-top: none; }
+  .also-title { color: var(--text); }
+  .also-cinemas { color: var(--muted); }
+  .also-cinemas a { color: var(--muted); text-decoration: underline; }
+  .also-cinemas a:hover { color: var(--gold); }
+
   .cinemacard-head { margin-bottom: 4px; }
-  .cinemaname { font-size: 22px; letter-spacing: 0.03em; }
+  .cinemaname { font-size: 19px; letter-spacing: 0.03em; }
   .area { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
   .cinema-info { color: var(--gold); font-size: 12.5px; margin: 6px 0 10px; }
   .films { margin-top: 8px; }
   .film-row {
-    padding: 8px 0;
+    padding: 7px 0;
     border-top: 1px solid var(--border);
   }
   .film-row:first-child { border-top: none; padding-top: 0; }
@@ -373,6 +495,7 @@
       {% for line in stale_lines %}<li>{{ line }}</li>{% endfor %}
     </ul>
     {% endif %}
+    <p id="stale-banner" class="stale-banner" hidden>Listings fetched {{ fetched_date_short }} — today's times may have changed.</p>
   </header>
 
   <nav class="tabs" role="tablist">
@@ -380,25 +503,41 @@
     <button type="button" class="tabbtn" data-target="panel-bycinema" role="tab" aria-selected="false">By cinema</button>
   </nav>
 
-  {% if any_upcoming %}
   <div class="daytoggle">
-    <button type="button" class="daytogglebtn active" data-mode="today">Today</button>
+    <button type="button" class="daytogglebtn" data-mode="tonight">Tonight</button>
+    <button type="button" class="daytogglebtn" data-mode="today">Today</button>
     <button type="button" class="daytogglebtn" data-mode="upcoming">Coming up</button>
   </div>
-  {% endif %}
 
   <main>
     <section id="panel-byfilm" class="tabpanel active">
-      {% for film in films %}{{ film_card(film) }}{% endfor %}
-      {% if not films %}<p class="empty">No listings yet — check back soon.</p>{% endif %}
+      <div class="filmfilters">
+        <input type="search" id="film-search" class="film-search" placeholder="Find a film…" autocomplete="off">
+        <button type="button" id="kids-pill" class="kids-pill" aria-pressed="false">Kids</button>
+      </div>
+      <div id="film-cards">
+        {% for film in films %}{{ film_card(film, today_iso) }}{% endfor %}
+        {% if not films and not also_showing %}<p class="empty">No listings yet — check back soon.</p>{% endif %}
+      </div>
+      {% if also_showing %}
+      <div class="also-showing">
+        <p class="also-showing-heading">Also showing &mdash; times on cinema sites</p>
+        {% for item in also_showing %}
+        <div class="also-row" data-kids="{{ '1' if item.kids else '0' }}">
+          <span class="also-title">{{ item.title }}</span>
+          <span class="also-cinemas">{% for name, url in item.venues %}<a href="{{ url }}" target="_blank" rel="noopener">{{ name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
     </section>
 
     <section id="panel-bycinema" class="tabpanel">
-      {% for cinema in tier1_cinemas %}{{ cinema_card(cinema, cinema_entries[cinema.id]) }}{% endfor %}
+      {% for cinema in tier1_cinemas %}{{ cinema_card(cinema, cinema_entries[cinema.id], today_iso) }}{% endfor %}
       {% if tier2_cinemas %}
       <details class="further-afield-section">
         <summary>Further afield</summary>
-        {% for cinema in tier2_cinemas %}{{ cinema_card(cinema, cinema_entries[cinema.id]) }}{% endfor %}
+        {% for cinema in tier2_cinemas %}{{ cinema_card(cinema, cinema_entries[cinema.id], today_iso) }}{% endfor %}
       </details>
       {% endif %}
     </section>
@@ -411,6 +550,11 @@
 
 <script>
 (function () {
+  var TONIGHT_START_MINS = 18 * 60 + 30; // 6:30pm - the one obvious place this constant lives
+  var STORAGE_KEY = 'movietimes:daymode';
+  var html = document.documentElement;
+
+  // ---- tabs ----
   document.querySelectorAll('.tabbtn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       document.querySelectorAll('.tabbtn').forEach(function (b) {
@@ -426,15 +570,139 @@
     });
   });
 
-  document.querySelectorAll('.daytogglebtn').forEach(function (btn) {
+  // ---- expand/collapse film cards ----
+  document.querySelectorAll('.filmcard-head').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      document.querySelectorAll('.daytogglebtn').forEach(function (b) {
-        b.classList.remove('active');
-      });
-      btn.classList.add('active');
-      document.documentElement.setAttribute('data-day-mode', btn.dataset.mode);
+      var card = btn.closest('.filmcard');
+      var expanded = card.classList.toggle('expanded');
+      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
     });
   });
+
+  function nowMins() {
+    var d = new Date();
+    return d.getHours() * 60 + d.getMinutes();
+  }
+  function todayIsoLocal() {
+    var d = new Date();
+    var mm = String(d.getMonth() + 1).padStart(2, '0');
+    var dd = String(d.getDate()).padStart(2, '0');
+    return d.getFullYear() + '-' + mm + '-' + dd;
+  }
+
+  // ---- hide past sessions (client-side; the page itself is static) ----
+  function applySessionState() {
+    var mode = html.getAttribute('data-day-mode');
+    var banner = document.getElementById('stale-banner');
+    var stale = todayIsoLocal() !== html.getAttribute('data-rendered-date');
+
+    if (stale) {
+      // overnight refresh looks like it failed - skip all hiding, show
+      // everything exactly as rendered, and flag it instead.
+      if (banner) banner.hidden = false;
+      document.querySelectorAll('.dayview-today [data-times]').forEach(function (el) { el.hidden = false; });
+      document.querySelectorAll('.dayview-today .t').forEach(function (el) { el.hidden = false; });
+      document.querySelectorAll('.dayview-today [data-fallback]').forEach(function (el) { el.hidden = true; });
+      document.querySelectorAll('.filmcard').forEach(function (c) { c.classList.remove('no-session-now'); });
+      return;
+    }
+    if (banner) banner.hidden = true;
+
+    var threshold = (mode === 'tonight') ? Math.max(nowMins(), TONIGHT_START_MINS) : nowMins();
+
+    document.querySelectorAll('.dayview-today').forEach(function (container) {
+      var anyVisible = false;
+      container.querySelectorAll('.t').forEach(function (t) {
+        var mins = parseInt(t.getAttribute('data-mins'), 10);
+        var hide = mins < threshold;
+        t.hidden = hide;
+        if (!hide) anyVisible = true;
+      });
+      var timesEl = container.querySelector('[data-times]');
+      var fallback = container.querySelector('[data-fallback]');
+      if (timesEl) {
+        timesEl.hidden = !anyVisible;
+        if (fallback) fallback.hidden = anyVisible;
+      }
+      container.dataset.anyVisible = anyVisible ? '1' : '0';
+    });
+
+    document.querySelectorAll('.filmcard').forEach(function (card) {
+      var hasToday = card.getAttribute('data-has-today') === '1';
+      var visibleNow = false;
+      if (hasToday) {
+        card.querySelectorAll('.dayview-today').forEach(function (c) {
+          if (c.dataset.anyVisible === '1') visibleNow = true;
+        });
+      }
+      card.classList.toggle('no-session-now', !visibleNow);
+    });
+  }
+
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) applySessionState();
+  });
+
+  // ---- day mode pills ----
+  function setMode(mode, persist) {
+    html.setAttribute('data-day-mode', mode);
+    document.querySelectorAll('.daytogglebtn').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.mode === mode);
+    });
+    if (persist) {
+      try { localStorage.setItem(STORAGE_KEY, mode); } catch (e) {}
+    }
+    applySessionState();
+  }
+
+  document.querySelectorAll('.daytogglebtn').forEach(function (btn) {
+    btn.addEventListener('click', function () { setMode(btn.dataset.mode, true); });
+  });
+
+  // ---- search + kids filter (By film view) ----
+  function normalize(s) {
+    return (s || '').normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase();
+  }
+
+  var searchInput = document.getElementById('film-search');
+  var kidsBtn = document.getElementById('kids-pill');
+  var kidsOn = false;
+
+  function applyFilters() {
+    var q = normalize(searchInput ? searchInput.value : '');
+    document.querySelectorAll('#panel-byfilm .filmcard').forEach(function (card) {
+      var title = card.querySelector('.filmtitle');
+      var matchesSearch = !q || normalize(title ? title.textContent : '').indexOf(q) !== -1;
+      var matchesKids = !kidsOn || card.getAttribute('data-kids') === '1';
+      card.classList.toggle('js-filtered', !(matchesSearch && matchesKids));
+    });
+    document.querySelectorAll('.also-row').forEach(function (row) {
+      var title = row.querySelector('.also-title');
+      var matchesSearch = !q || normalize(title ? title.textContent : '').indexOf(q) !== -1;
+      var matchesKids = !kidsOn || row.getAttribute('data-kids') === '1';
+      row.classList.toggle('js-filtered', !(matchesSearch && matchesKids));
+    });
+  }
+
+  if (searchInput) searchInput.addEventListener('input', applyFilters);
+  if (kidsBtn) {
+    kidsBtn.addEventListener('click', function () {
+      kidsOn = !kidsOn;
+      kidsBtn.classList.toggle('active', kidsOn);
+      kidsBtn.setAttribute('aria-pressed', kidsOn ? 'true' : 'false');
+      applyFilters();
+    });
+  }
+
+  // ---- init ----
+  var storedMode = null;
+  try { storedMode = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+  var initialMode = storedMode;
+  if (!initialMode) {
+    initialMode = (nowMins() >= 16 * 60 + 30) ? 'tonight' : 'today';
+  }
+  setMode(initialMode, false);
+  applyFilters();
 })();
 </script>
 </body>
