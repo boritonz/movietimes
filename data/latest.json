@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T21:06:04+12:00",
+  "fetchedAt": "2026-07-31T21:16:05+12:00",
   "errors": {},
   "fallbacks": {
     "silky-orakei": "AdapterError: silky-orakei: no film data on https://www.silkyotter.co.nz/films -- silkyotter.co.nz is a fully client-rendered SPA (Vista 'Lumos' platform) whose film/session API requires a GAS/MovieXchange auth flow this adapter doesn't implement (see module docstring). Falls back to flicks.co.nz via adapters.get_fallback().",
@@ -250,7 +250,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-07-31T21:05:48+12:00",
+      "fetchedAt": "2026-07-31T21:14:22+12:00",
       "sourceUrl": "https://www.flicks.co.nz/cinema/academy-cinemas/"
     },
     "hollywood": {
@@ -270,7 +270,7 @@
           ]
         }
       ],
-      "fetchedAt": "2026-07-31T21:05:48+12:00",
+      "fetchedAt": "2026-07-31T21:14:24+12:00",
       "sourceUrl": "https://ticketing.oz.veezi.com/sessions/?siteToken=fpnccxy3ma159g7z8a3e95asy8"
     },
     "capitol": {
@@ -523,7 +523,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-07-31T21:05:50+12:00",
+      "fetchedAt": "2026-07-31T21:14:25+12:00",
       "sourceUrl": "https://ticketing.oz.veezi.com/sessions/?siteToken=heg709z4rmk2gh10ykam14wxm8"
     },
     "rialto": {
@@ -1539,7 +1539,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-07-31T21:05:53+12:00",
+      "fetchedAt": "2026-07-31T21:14:56+12:00",
       "sourceUrl": "https://www.rialto.co.nz/cinema/newmarket/sessions"
     },
     "silky-orakei": {
@@ -1614,7 +1614,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-07-31T21:05:55+12:00",
+      "fetchedAt": "2026-07-31T21:14:57+12:00",
       "sourceUrl": "https://www.flicks.co.nz/cinema/silky-otter-cinemas-orakei/"
     },
     "silky-ponsonby": {
@@ -1669,7 +1669,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-07-31T21:05:56+12:00",
+      "fetchedAt": "2026-07-31T21:14:59+12:00",
       "sourceUrl": "https://www.flicks.co.nz/cinema/silky-otter-cinemas-ponsonby/"
     },
     "event-queen": {
@@ -1678,10 +1678,6 @@
         {
           "title": "Spider-Man: Brand New Day",
           "sessions": [
-            {
-              "date": "2026-07-31",
-              "time": "8:50pm"
-            },
             {
               "date": "2026-08-01",
               "time": "10:00am"
@@ -2081,33 +2077,6 @@
             {
               "date": "2026-08-05",
               "time": "8:50pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Backrooms",
-          "sessions": [
-            {
-              "date": "2026-07-31",
-              "time": "8:45pm"
-            },
-            {
-              "date": "2026-08-01",
-              "time": "12:00pm"
-            },
-            {
-              "date": "2026-08-02",
-              "time": "12:00pm"
-            },
-            {
-              "date": "2026-08-03",
-              "time": "8:45pm"
-            },
-            {
-              "date": "2026-08-04",
-              "time": "12:00pm"
             }
           ],
           "note": null,
@@ -2886,6 +2855,29 @@
           "tags": []
         },
         {
+          "title": "Backrooms",
+          "sessions": [
+            {
+              "date": "2026-08-01",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-08-02",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-08-03",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-08-04",
+              "time": "12:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "Michael",
           "sessions": [
             {
@@ -3162,7 +3154,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-07-31T21:05:59+12:00",
+      "fetchedAt": "2026-07-31T21:15:26+12:00",
       "sourceUrl": "https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions"
     },
     "event-newmarket": {
@@ -3753,7 +3745,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-07-31T21:06:00+12:00",
+      "fetchedAt": "2026-07-31T21:15:40+12:00",
       "sourceUrl": "https://www.eventcinemas.co.nz/cinema/Newmarket-Westfield/sessions"
     },
     "event-stlukes": {
@@ -3762,10 +3754,6 @@
         {
           "title": "Spider-Man: Brand New Day",
           "sessions": [
-            {
-              "date": "2026-07-31",
-              "time": "8:50pm"
-            },
             {
               "date": "2026-08-01",
               "time": "10:00am"
@@ -4131,29 +4119,6 @@
           "tags": []
         },
         {
-          "title": "Obsession",
-          "sessions": [
-            {
-              "date": "2026-07-31",
-              "time": "8:50pm"
-            },
-            {
-              "date": "2026-08-02",
-              "time": "8:20pm"
-            },
-            {
-              "date": "2026-08-03",
-              "time": "8:50pm"
-            },
-            {
-              "date": "2026-08-05",
-              "time": "8:50pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "The Odyssey",
           "sessions": [
             {
@@ -4512,6 +4477,25 @@
           "tags": []
         },
         {
+          "title": "Obsession",
+          "sessions": [
+            {
+              "date": "2026-08-02",
+              "time": "8:20pm"
+            },
+            {
+              "date": "2026-08-03",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-08-05",
+              "time": "8:50pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "Tiddler + Zog And The Flying Doctors",
           "sessions": [
             {
@@ -4826,7 +4810,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-07-31T21:06:02+12:00",
+      "fetchedAt": "2026-07-31T21:16:02+12:00",
       "sourceUrl": "https://www.eventcinemas.co.nz/cinema/st-lukes/sessions"
     },
     "reading-newlynn": {
@@ -5115,10 +5099,6 @@
         {
           "title": "Spider-Man: Brand New Day",
           "sessions": [
-            {
-              "date": "2026-07-31",
-              "time": "9:00pm"
-            },
             {
               "date": "2026-07-31",
               "time": "9:15pm"
@@ -5781,7 +5761,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-07-31T21:06:03+12:00",
+      "fetchedAt": "2026-07-31T21:16:04+12:00",
       "sourceUrl": "https://www.readingcinemas.co.nz/cinemas"
     },
     "bridgeway": {
@@ -6272,7 +6252,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-07-31T21:06:04+12:00",
+      "fetchedAt": "2026-07-31T21:16:05+12:00",
       "sourceUrl": "https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70"
     }
   }
