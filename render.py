@@ -7,11 +7,15 @@ docs/index.html straight off disk or serve it from GitHub Pages.
 from __future__ import annotations
 
 import json
+import re
+import urllib.parse
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+import letterboxd
+import tmdb
 from adapters import CINEMAS
 from normalise import dedupe_key, today_nz
 
@@ -88,6 +92,41 @@ def truncate_note(note: str | None, limit: int = NOTE_MAX_CHARS) -> str | None:
 # putting on a decision-grade page.
 COMING_UP_WINDOW_DAYS = 2
 
+POSTER_W154_BASE = "https://image.tmdb.org/t/p/w154"
+POSTER_W342_BASE = "https://image.tmdb.org/t/p/w342"
+
+
+def poster_info(cache_entry: dict | None) -> dict | None:
+    """Build the (src, srcset) pair for a film's poster thumb, or None when
+    the TMDB cache has no match / no poster for this title. A missing match
+    must never break the page - callers render an empty placeholder block
+    instead so titles keep aligning."""
+    if not cache_entry or not cache_entry.get("posterPath"):
+        return None
+    path = cache_entry["posterPath"]
+    return {
+        "src": f"{POSTER_W154_BASE}{path}",
+        "srcset": f"{POSTER_W342_BASE}{path} 2x",
+    }
+
+
+def rating_display(cache_entry: dict | None) -> str | None:
+    """'7.4'-style one-decimal rating string, or None when absent/falsy."""
+    if not cache_entry or not cache_entry.get("rating"):
+        return None
+    return f"{cache_entry['rating']:.1f}"
+
+
+def letterboxd_url(title: str) -> str:
+    """Deep link to a Letterboxd film search for `title`.
+
+    Strips any trailing "(YYYY)" re-release/remake-year hint (same pattern
+    normalise.dedupe_key and tmdb.split_year use) before encoding, since
+    Letterboxd searches on the film's actual name.
+    """
+    clean = re.sub(r"\s*\((?:19|20)\d{2}\)\s*", " ", title).strip()
+    return f"https://letterboxd.com/search/films/{urllib.parse.quote(clean)}/"
+
 
 def _time_entry(t: str) -> dict:
     return {"display": t, "mins": parse_time_to_mins(t)}
@@ -135,9 +174,19 @@ def load_data(latest_path: Path = LATEST_PATH, seed_path: Path = SEED_PATH) -> d
         return json.load(f)
 
 
-def build_context(data: dict, today: date, cinemas: list[dict] = CINEMAS) -> dict:
+def build_context(
+    data: dict,
+    today: date,
+    cinemas: list[dict] = CINEMAS,
+    tmdb_cache: dict | None = None,
+    watchlist: set[str] | None = None,
+) -> dict:
     cinemas_data = data.get("cinemas", {})
     errors = data.get("errors", {})
+    if tmdb_cache is None:
+        tmdb_cache = tmdb.load_cache()
+    if watchlist is None:
+        watchlist = {dedupe_key(t) for t in letterboxd.load_cache().get("films", [])}
 
     # --- header staleness lines ---------------------------------------
     stale_lines = []
@@ -218,6 +267,7 @@ def build_context(data: dict, today: date, cinemas: list[dict] = CINEMAS) -> dic
                 "title": bucket["title"],
                 "venues": venue_links,
                 "kids": "kids" in bucket["tags"],
+                "watchlist": dedupe_key(bucket["title"]) in watchlist,
             })
             continue
 
@@ -232,6 +282,10 @@ def build_context(data: dict, today: date, cinemas: list[dict] = CINEMAS) -> dic
             summary = f"{venue_count} cinema{plural} · from {label}"
             sort_key = (1, earliest_date, earliest_t["mins"], -venue_count, bucket["title"].lower())
 
+        cache_entry = tmdb_cache.get(dedupe_key(bucket["title"]))
+        if dedupe_key(bucket["title"]) in watchlist:
+            bucket["tags"].add("watchlist")
+
         films.append({
             "title": bucket["title"],
             "tags": sorted(bucket["tags"]),
@@ -240,6 +294,9 @@ def build_context(data: dict, today: date, cinemas: list[dict] = CINEMAS) -> dic
             "venueCount": venue_count,
             "hasToday": bool(today_entries),
             "summary": summary,
+            "poster": poster_info(cache_entry),
+            "rating": rating_display(cache_entry),
+            "letterboxd_url": letterboxd_url(bucket["title"]),
             "_sortKey": sort_key,
         })
 
@@ -259,12 +316,14 @@ def build_context(data: dict, today: date, cinemas: list[dict] = CINEMAS) -> dic
             today_times, upcoming = session_views(film.get("sessions") or [], today)
             if upcoming:
                 any_upcoming = True
+            cache_entry = tmdb_cache.get(dedupe_key(film["title"]))
             films_out.append({
                 "title": film["title"],
                 "note": truncate_note(film.get("note")),
                 "tags": film.get("tags") or [],
                 "todayTimes": today_times,
                 "upcoming": upcoming,
+                "rating": rating_display(cache_entry),
             })
         cinema_entries[cinema["id"]] = {
             "sourceUrl": entry.get("sourceUrl") or cinema["url"],

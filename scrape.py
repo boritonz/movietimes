@@ -18,6 +18,8 @@ import json
 import sys
 from pathlib import Path
 
+import letterboxd
+import tmdb
 from adapters import CINEMAS, get_adapter, get_fallback
 from normalise import detect_tags, now_nz_iso, sanity_check_dates
 
@@ -135,6 +137,25 @@ def main() -> int:
     with open(LATEST_PATH, "w", encoding="utf-8") as f:
         json.dump(snapshot, f, indent=2, ensure_ascii=False)
         f.write("\n")
+
+    # Poster/rating resolution is progressive enhancement - a TMDB outage or
+    # API change must never break the scrape itself.
+    try:
+        titles = sorted({
+            film["title"]
+            for entry in snapshot["cinemas"].values()
+            for film in entry.get("films", [])
+        })
+        tmdb.resolve_all(titles)
+    except Exception as exc:  # noqa: BLE001
+        print(f"[tmdb] warning: poster/rating resolution failed: {type(exc).__name__}: {exc}")
+
+    # Same deal for the Letterboxd watchlist - refresh_cache() already keeps
+    # the previous cache on failure, this guards against anything above it.
+    try:
+        letterboxd.refresh_cache()
+    except Exception as exc:  # noqa: BLE001
+        print(f"[letterboxd] warning: watchlist refresh failed: {type(exc).__name__}: {exc}")
 
     total = len(CINEMAS)
     failed = len(snapshot["errors"])

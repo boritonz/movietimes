@@ -358,6 +358,146 @@ def test_build_context_keeps_films_with_today_sessions_as_cards():
     assert ctx["also_showing"] == []
 
 
+# ---------------------------------------------------------------------------
+# render.build_context - TMDB cache join (posters + ratings)
+# ---------------------------------------------------------------------------
+
+def _session_data(title):
+    return {
+        "fetchedAt": "2026-07-31T07:00:00+12:00",
+        "errors": {},
+        "cinemas": {
+            "a": {
+                "sourceUrl": "https://a.example",
+                "films": [
+                    {
+                        "title": title,
+                        "sessions": [{"date": "2026-07-31", "time": "6:30pm"}],
+                        "note": None,
+                        "tags": [],
+                    },
+                ],
+            },
+        },
+    }
+
+
+def test_build_context_renders_poster_and_rating_when_cache_has_hit():
+    today = date(2026, 7, 31)
+    title = "Has A Session"
+    cache = {
+        normalise.dedupe_key(title): {
+            "tmdbId": 123,
+            "posterPath": "/abc123.jpg",
+            "rating": 7.44,
+            "matched": "exact",
+        }
+    }
+    ctx = render.build_context(_session_data(title), today, cinemas=_minimal_cinemas(), tmdb_cache=cache)
+    film = ctx["films"][0]
+    assert film["poster"] == {
+        "src": "https://image.tmdb.org/t/p/w154/abc123.jpg",
+        "srcset": "https://image.tmdb.org/t/p/w342/abc123.jpg 2x",
+    }
+    assert film["rating"] == "7.4"
+
+    html = render.render_html(ctx)
+    assert '<img class="poster-img" src="https://image.tmdb.org/t/p/w154/abc123.jpg"' in html
+    assert "w342/abc123.jpg 2x" in html
+    assert "7.4" in html
+
+
+def test_build_context_renders_placeholder_when_title_missing_from_cache():
+    today = date(2026, 7, 31)
+    title = "Not In Cache At All"
+    ctx = render.build_context(_session_data(title), today, cinemas=_minimal_cinemas(), tmdb_cache={})
+    film = ctx["films"][0]
+    assert film["poster"] is None
+    assert film["rating"] is None
+
+    # must not crash, and must render an empty placeholder instead of <img>
+    html = render.render_html(ctx)
+    assert "poster-placeholder" in html
+    assert title in html
+
+
+def test_build_context_flags_watchlist_films():
+    today = date(2026, 7, 31)
+    title = "Cocoon"
+    watchlist = {normalise.dedupe_key("Cocoon")}
+    ctx = render.build_context(
+        _session_data(title), today, cinemas=_minimal_cinemas(),
+        tmdb_cache={}, watchlist=watchlist,
+    )
+    assert "watchlist" in ctx["films"][0]["tags"]
+    html = render.render_html(ctx)
+    assert "chip-watchlist" in html
+
+    # and not flagged when the watchlist doesn't contain it
+    ctx2 = render.build_context(
+        _session_data("Some Other Film"), today, cinemas=_minimal_cinemas(),
+        tmdb_cache={}, watchlist=watchlist,
+    )
+    assert "watchlist" not in ctx2["films"][0]["tags"]
+
+
+def test_build_context_defaults_tmdb_cache_from_disk_when_not_provided():
+    # Sanity check that build_context() still works with its default
+    # tmdb_cache=None (i.e. it loads data/tmdb_cache.json itself) rather than
+    # requiring every caller to pass one.
+    today = date(2026, 7, 31)
+    ctx = render.build_context(_session_data("Some Random Title Xyz"), today, cinemas=_minimal_cinemas())
+    assert ctx["films"][0]["poster"] is None  # no such title in the real cache
+
+
+# ---------------------------------------------------------------------------
+# render.letterboxd_url
+# ---------------------------------------------------------------------------
+
+def test_letterboxd_url_encodes_apostrophe_and_space():
+    assert render.letterboxd_url("Buffalo '66") == "https://letterboxd.com/search/films/Buffalo%20%2766/"
+
+
+def test_letterboxd_url_strips_release_year_before_encoding():
+    assert render.letterboxd_url("The Odyssey (2026)") == "https://letterboxd.com/search/films/The%20Odyssey/"
+
+
+# ---------------------------------------------------------------------------
+# scrape.main - TMDB resolution must never break the scrape
+# ---------------------------------------------------------------------------
+
+def test_scrape_main_survives_tmdb_resolve_all_failure(tmp_path, monkeypatch, capsys):
+    fixed_snapshot = {
+        "fetchedAt": normalise.now_nz_iso(),
+        "errors": {},
+        "fallbacks": {},
+        "cinemas": {
+            "academy": {
+                "cinemaId": "academy",
+                "films": [{"title": "Some Film", "sessions": [], "note": None, "tags": []}],
+                "info": None,
+                "fetchedAt": normalise.now_nz_iso(),
+                "sourceUrl": "https://www.academycinemas.co.nz",
+            }
+        },
+    }
+
+    monkeypatch.setattr(scrape, "build_snapshot", lambda: fixed_snapshot)
+    monkeypatch.setattr(scrape, "DATA_DIR", tmp_path)
+    monkeypatch.setattr(scrape, "LATEST_PATH", tmp_path / "latest.json")
+
+    def _raise(titles):
+        raise RuntimeError("tmdb is down")
+
+    monkeypatch.setattr(scrape.tmdb, "resolve_all", _raise)
+
+    result = scrape.main()
+
+    assert result == 0
+    assert (tmp_path / "latest.json").exists()
+    assert "tmdb" in capsys.readouterr().out.lower()
+
+
 def test_build_context_sorts_today_films_before_upcoming_only_films():
     today = date(2026, 7, 31)
     data = {

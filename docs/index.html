@@ -113,9 +113,10 @@
     background: var(--surface);
     border: 1px solid var(--border);
     color: var(--muted);
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 18px;
-    letter-spacing: 0.04em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
     padding: 10px 0;
     border-radius: 6px;
     cursor: pointer;
@@ -158,6 +159,9 @@
 
   html[data-day-mode="today"] .filmcard.no-session-now,
   html[data-day-mode="tonight"] .filmcard.no-session-now { display: none; }
+
+  html[data-day-mode="today"] .venue-row.no-session-now,
+  html[data-day-mode="tonight"] .venue-row.no-session-now { display: none; }
 
   .filmcard.js-filtered, .also-row.js-filtered { display: none; }
 
@@ -203,11 +207,16 @@
   }
 
   .filmcard, .cinemacard {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 13px;
-    margin-bottom: 10px;
+    background: none;
+    border: none;
+    border-top: 1px solid var(--border);
+    border-radius: 0;
+    padding: 20px 0;
+    margin-bottom: 0;
+  }
+  .filmcard:first-child, .cinemacard:first-child {
+    border-top: none;
+    padding-top: 0;
   }
   .filmcard-head {
     display: flex;
@@ -231,6 +240,21 @@
     align-items: baseline;
     gap: 12px;
   }
+  .filmcard-poster { flex-shrink: 0; }
+  .poster-img {
+    display: block;
+    width: 48px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+  .poster-placeholder {
+    display: block;
+    width: 48px;
+    height: 72px;
+    border-radius: 3px;
+    background: var(--surface);
+  }
   .filmcard-headtext { flex: 1; min-width: 0; }
   .filmtitle {
     font-size: 20px;
@@ -241,6 +265,21 @@
     font-size: 12.5px;
     margin: 4px 0 0;
   }
+  .rating {
+    color: var(--gold);
+    opacity: 0.85;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .letterboxd-link {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+  .letterboxd-link:hover { color: var(--gold); }
   .expand-caret {
     color: var(--gold);
     font-size: 18px;
@@ -266,6 +305,7 @@
     border-radius: 999px;
     border: 1px solid transparent;
   }
+  .chip-watchlist { background: rgba(228, 168, 60, 0.16); color: var(--gold); border-color: var(--gold); font-weight: 700; }
   .chip-kids { background: rgba(122, 184, 122, 0.14); color: #8FCB8F; border-color: rgba(143, 203, 143, 0.35); }
   .chip-retro { background: transparent; color: var(--gold); border-color: var(--gold); }
   .chip-event { background: rgba(160, 130, 200, 0.16); color: #B79EDB; border-color: rgba(183, 158, 219, 0.4); }
@@ -394,6 +434,7 @@
     font-size: 12px;
     text-align: center;
   }
+  .tmdb-attribution { margin: 6px 0 0; }
 </style>
 </head>
 <body>
@@ -426,9 +467,12 @@
       <div id="film-cards">
 <article class="filmcard" data-kids="0" data-has-today="1">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/iPOn6DinuVyLY17YM9mKuPofV08.jpg" srcset="https://image.tmdb.org/t/p/w342/iPOn6DinuVyLY17YM9mKuPofV08.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Spider-Man: Brand New Day</h3>
-      <p class="filmsummary">6 cinemas · from 9:00pm</p>
+      <p class="filmsummary"><span class="summary-text">6 cinemas · from 9:00pm</span> <span class="rating">&#9733; 8.0</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -513,13 +557,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Spider-Man%3A%20Brand%20New%20Day/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="1">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/bRwnj8WEKBCvmfeUNOukJPwB43K.jpg" srcset="https://image.tmdb.org/t/p/w342/bRwnj8WEKBCvmfeUNOukJPwB43K.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Obsession</h3>
-      <p class="filmsummary">5 cinemas · from 9:15pm</p>
+      <p class="filmsummary"><span class="summary-text">5 cinemas · from 9:15pm</span> <span class="rating">&#9733; 8.2</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -589,13 +637,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Obsession/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/nz7i42yhLIJ4ve9JKgM6NthoLHO.jpg" srcset="https://image.tmdb.org/t/p/w342/nz7i42yhLIJ4ve9JKgM6NthoLHO.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Minions &amp; Monsters</h3>
-      <p class="filmsummary">5 cinemas · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">5 cinemas · from Sat 1 Aug</span> <span class="rating">&#9733; 6.4</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -666,13 +718,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Minions%20%26%20Monsters/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg" srcset="https://image.tmdb.org/t/p/w342/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">The Odyssey</h3>
-      <p class="filmsummary">9 cinemas · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">9 cinemas · from Sat 1 Aug</span> <span class="rating">&#9733; 7.9</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -799,13 +855,17 @@
 </div>
       </div>
     </details>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/The%20Odyssey/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/sfQtVlIHljToOwYjhe21KPGzZWK.jpg" srcset="https://image.tmdb.org/t/p/w342/sfQtVlIHljToOwYjhe21KPGzZWK.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Toy Story 5</h3>
-      <p class="filmsummary">6 cinemas · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">6 cinemas · from Sat 1 Aug</span> <span class="rating">&#9733; 7.4</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -888,13 +948,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Toy%20Story%205/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/zKVgiv5qHCvCLT4A2ymJi5QeXDH.jpg" srcset="https://image.tmdb.org/t/p/w342/zKVgiv5qHCvCLT4A2ymJi5QeXDH.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Moana (2026)</h3>
-      <p class="filmsummary">5 cinemas · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">5 cinemas · from Sat 1 Aug</span> <span class="rating">&#9733; 5.9</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -964,13 +1028,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Moana/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/cEnUUeiiMnhrciM7aMKVP5mCyz2.jpg" srcset="https://image.tmdb.org/t/p/w342/cEnUUeiiMnhrciM7aMKVP5mCyz2.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">I, Object</h3>
-      <p class="filmsummary">3 cinemas · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">3 cinemas · from Sat 1 Aug</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1016,13 +1084,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/I%2C%20Object/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/hPj1RiuhW72lIfa8UrIncDGSSD0.jpg" srcset="https://image.tmdb.org/t/p/w342/hPj1RiuhW72lIfa8UrIncDGSSD0.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Colours Of Time</h3>
-      <p class="filmsummary">2 cinemas · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">2 cinemas · from Sat 1 Aug</span> <span class="rating">&#9733; 7.4</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1060,13 +1132,17 @@
 </div>
       </div>
     </details>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Colours%20Of%20Time/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/gnAsZvBygplNpp8PtjoTEYv3VPB.jpg" srcset="https://image.tmdb.org/t/p/w342/gnAsZvBygplNpp8PtjoTEYv3VPB.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Leviticus</h3>
-      <p class="filmsummary">2 cinemas · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">2 cinemas · from Sat 1 Aug</span> <span class="rating">&#9733; 6.3</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1098,13 +1174,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Leviticus/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/ydbm5Ad1nyZq7eywWsw82Wxdsgg.jpg" srcset="https://image.tmdb.org/t/p/w342/ydbm5Ad1nyZq7eywWsw82Wxdsgg.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">The Stranger (1946)</h3>
-      <p class="filmsummary">2 cinemas · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">2 cinemas · from Sat 1 Aug</span> <span class="rating">&#9733; 6.2</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1136,13 +1216,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/The%20Stranger/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/eg301AEGyYX4gtc0A8DEXQ0VMhK.jpg" srcset="https://image.tmdb.org/t/p/w342/eg301AEGyYX4gtc0A8DEXQ0VMhK.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">H is for Hawk</h3>
-      <p class="filmsummary">4 cinemas · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">4 cinemas · from Sat 1 Aug</span> <span class="rating">&#9733; 7.2</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1205,13 +1289,17 @@
 </div>
       </div>
     </details>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/H%20is%20for%20Hawk/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/zKVgiv5qHCvCLT4A2ymJi5QeXDH.jpg" srcset="https://image.tmdb.org/t/p/w342/zKVgiv5qHCvCLT4A2ymJi5QeXDH.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Moana (Live Action)</h3>
-      <p class="filmsummary">2 cinemas · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">2 cinemas · from Sat 1 Aug</span> <span class="rating">&#9733; 5.9</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1244,13 +1332,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Moana%20%28Live%20Action%29/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/b7Dr8Chzse8VagexAporUu2RtLx.jpg" srcset="https://image.tmdb.org/t/p/w342/b7Dr8Chzse8VagexAporUu2RtLx.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">The Invite</h3>
-      <p class="filmsummary">5 cinemas · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">5 cinemas · from Sat 1 Aug</span> <span class="rating">&#9733; 7.8</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1324,13 +1416,17 @@
 </div>
       </div>
     </details>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/The%20Invite/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/rjmhzdVS3Ia535pFawju857e2Na.jpg" srcset="https://image.tmdb.org/t/p/w342/rjmhzdVS3Ia535pFawju857e2Na.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Dear You</h3>
-      <p class="filmsummary">3 cinemas · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">3 cinemas · from Sat 1 Aug</span> <span class="rating">&#9733; 9.3</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1374,13 +1470,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Dear%20You/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/1QCWdqzTfh2x9UylVpspIU6QTuM.jpg" srcset="https://image.tmdb.org/t/p/w342/1QCWdqzTfh2x9UylVpspIU6QTuM.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Supergirl</h3>
-      <p class="filmsummary">1 cinema · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">1 cinema · from Sat 1 Aug</span> <span class="rating">&#9733; 6.7</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1399,13 +1499,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Supergirl/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/tqlOfb1ekyVYpDumiL9MsK6uirw.jpg" srcset="https://image.tmdb.org/t/p/w342/tqlOfb1ekyVYpDumiL9MsK6uirw.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Detective Conan - Fallen Angel of the Highway</h3>
-<div class="chips"><span class="chip chip-event">event</span></div>      <p class="filmsummary">1 cinema · from Sat 1 Aug</p>
+<div class="chips"><span class="chip chip-event">event</span></div>      <p class="filmsummary"><span class="summary-text">1 cinema · from Sat 1 Aug</span> <span class="rating">&#9733; 7.8</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1425,13 +1529,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Detective%20Conan%20-%20Fallen%20Angel%20of%20the%20Highway/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/lu2sF3dRYGgzhLvoc9yZNSKtlFO.jpg" srcset="https://image.tmdb.org/t/p/w342/lu2sF3dRYGgzhLvoc9yZNSKtlFO.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Primavera</h3>
-      <p class="filmsummary">2 cinemas · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">2 cinemas · from Sat 1 Aug</span> <span class="rating">&#9733; 7.0</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1468,13 +1576,17 @@
 </div>
       </div>
     </details>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Primavera/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/rhGx6E3qRNMgj3i5su2oukNHwIQ.jpg" srcset="https://image.tmdb.org/t/p/w342/rhGx6E3qRNMgj3i5su2oukNHwIQ.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Backrooms</h3>
-      <p class="filmsummary">2 cinemas · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">2 cinemas · from Sat 1 Aug</span> <span class="rating">&#9733; 7.1</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1506,13 +1618,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Backrooms/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/bPZ1ZGMkP1baTD75JckjdJpoRzJ.jpg" srcset="https://image.tmdb.org/t/p/w342/bPZ1ZGMkP1baTD75JckjdJpoRzJ.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Stories About My Body</h3>
-      <p class="filmsummary">1 cinema · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">1 cinema · from Sat 1 Aug</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1532,13 +1648,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Stories%20About%20My%20Body/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/AnJ8IQJI23hNpYXVNaythu061Ru.jpg" srcset="https://image.tmdb.org/t/p/w342/AnJ8IQJI23hNpYXVNaythu061Ru.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Disclosure Day</h3>
-      <p class="filmsummary">1 cinema · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">1 cinema · from Sat 1 Aug</span> <span class="rating">&#9733; 7.4</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1558,13 +1678,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Disclosure%20Day/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/5OvA3i9wZs5jHu0DCrfmXlzAM67.jpg" srcset="https://image.tmdb.org/t/p/w342/5OvA3i9wZs5jHu0DCrfmXlzAM67.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Tuner</h3>
-      <p class="filmsummary">1 cinema · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">1 cinema · from Sat 1 Aug</span> <span class="rating">&#9733; 7.1</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1586,13 +1710,17 @@
 </div>
       </div>
     </details>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Tuner/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/6sBncuk36DL0pEq1x3v2ZNoXDah.jpg" srcset="https://image.tmdb.org/t/p/w342/6sBncuk36DL0pEq1x3v2ZNoXDah.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">The Time Traveller&#39;s Guide to Hamilton Gardens</h3>
-      <p class="filmsummary">1 cinema · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">1 cinema · from Sat 1 Aug</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1614,13 +1742,17 @@
 </div>
       </div>
     </details>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/The%20Time%20Traveller%27s%20Guide%20to%20Hamilton%20Gardens/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/95a1udNepqKENUWKdyJeyOM3XLA.jpg" srcset="https://image.tmdb.org/t/p/w342/95a1udNepqKENUWKdyJeyOM3XLA.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">The Richest Woman In The World</h3>
-      <p class="filmsummary">1 cinema · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">1 cinema · from Sat 1 Aug</span> <span class="rating">&#9733; 6.2</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1639,13 +1771,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/The%20Richest%20Woman%20In%20The%20World/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/gNKQETNDN9sVxpiayzF9bTw5a5q.jpg" srcset="https://image.tmdb.org/t/p/w342/gNKQETNDN9sVxpiayzF9bTw5a5q.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Glenrothan</h3>
-      <p class="filmsummary">1 cinema · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">1 cinema · from Sat 1 Aug</span> <span class="rating">&#9733; 7.1</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1668,13 +1804,17 @@
 </div>
       </div>
     </details>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Glenrothan/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/fzHHWd3dB2Dns936AWkEu7cJAUQ.jpg" srcset="https://image.tmdb.org/t/p/w342/fzHHWd3dB2Dns936AWkEu7cJAUQ.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Exhibition On Screen: Frida Kahlo</h3>
-      <p class="filmsummary">2 cinemas · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">2 cinemas · from Sat 1 Aug</span> <span class="rating">&#9733; 7.2</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1711,13 +1851,17 @@
 </div>
       </div>
     </details>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Exhibition%20On%20Screen%3A%20Frida%20Kahlo/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/ztadKzIIR0ERYqpHteaPFtk7inP.jpg" srcset="https://image.tmdb.org/t/p/w342/ztadKzIIR0ERYqpHteaPFtk7inP.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Evil Dead Burn</h3>
-      <p class="filmsummary">2 cinemas · from Sat 1 Aug</p>
+      <p class="filmsummary"><span class="summary-text">2 cinemas · from Sat 1 Aug</span> <span class="rating">&#9733; 6.8</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1750,13 +1894,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Evil%20Dead%20Burn/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="1" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <span class="poster-placeholder" aria-hidden="true"></span>
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Tiddler + Zog And The Flying Doctors</h3>
-<div class="chips"><span class="chip chip-kids">kids</span></div>      <p class="filmsummary">2 cinemas · from Sun 2 Aug</p>
+<div class="chips"><span class="chip chip-kids">kids</span></div>      <p class="filmsummary"><span class="summary-text">2 cinemas · from Sun 2 Aug</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1787,13 +1935,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Tiddler%20%2B%20Zog%20And%20The%20Flying%20Doctors/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <span class="poster-placeholder" aria-hidden="true"></span>
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Met Opera 2025-26: Eugene Onegin</h3>
-      <p class="filmsummary">1 cinema · from Sun 2 Aug</p>
+      <p class="filmsummary"><span class="summary-text">1 cinema · from Sun 2 Aug</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1812,13 +1964,17 @@
   </div>
 </div>
     </div>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Met%20Opera%202025-26%3A%20Eugene%20Onegin/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 <article class="filmcard" data-kids="0" data-has-today="0">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      <img class="poster-img" src="https://image.tmdb.org/t/p/w154/vPBy6cDPYMcj35lpl3W5kPEc2OB.jpg" srcset="https://image.tmdb.org/t/p/w342/vPBy6cDPYMcj35lpl3W5kPEc2OB.jpg 2x" loading="lazy" alt="" width="48" height="72">
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">Savage House</h3>
-<div class="chips"><span class="chip chip-event">event</span></div>      <p class="filmsummary">5 cinemas · from Sun 2 Aug</p>
+<div class="chips"><span class="chip chip-event">event</span></div>      <p class="filmsummary"><span class="summary-text">5 cinemas · from Sun 2 Aug</span> <span class="rating">&#9733; 6.9</span></p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -1890,6 +2046,7 @@
 </div>
       </div>
     </details>
+    <a class="letterboxd-link" href="https://letterboxd.com/search/films/Savage%20House/" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
       </div>
@@ -2223,7 +2380,7 @@
   <div class="films">
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Obsession</span>
+    <span class="film-row-title">Obsession <span class="rating">&#9733; 8.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2247,7 +2404,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Night on Earth</span>
+    <span class="film-row-title">Night on Earth <span class="rating">&#9733; 7.5</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2259,7 +2416,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Jurassic Park</span>
+    <span class="film-row-title">Jurassic Park <span class="rating">&#9733; 8.0</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2271,7 +2428,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Mulholland Dr.</span>
+    <span class="film-row-title">Mulholland Dr. <span class="rating">&#9733; 7.8</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2283,7 +2440,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Stop! That! Train!</span>
+    <span class="film-row-title">Stop! That! Train! <span class="rating">&#9733; 5.1</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2295,7 +2452,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">A Ghost Story</span>
+    <span class="film-row-title">A Ghost Story <span class="rating">&#9733; 7.1</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2307,7 +2464,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">After Hours</span>
+    <span class="film-row-title">After Hours <span class="rating">&#9733; 7.5</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2319,7 +2476,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Alpha (2025)</span>
+    <span class="film-row-title">Alpha (2025) <span class="rating">&#9733; 6.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2343,7 +2500,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Bonnie and Clyde</span>
+    <span class="film-row-title">Bonnie and Clyde <span class="rating">&#9733; 7.5</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2355,7 +2512,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Bullitt</span>
+    <span class="film-row-title">Bullitt <span class="rating">&#9733; 7.1</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2367,7 +2524,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Chungking Express</span>
+    <span class="film-row-title">Chungking Express <span class="rating">&#9733; 8.0</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2379,7 +2536,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Contagion</span>
+    <span class="film-row-title">Contagion <span class="rating">&#9733; 6.7</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2391,7 +2548,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Disclosure (1994)</span>
+    <span class="film-row-title">Disclosure (1994) <span class="rating">&#9733; 6.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2403,7 +2560,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Double Indemnity</span>
+    <span class="film-row-title">Double Indemnity <span class="rating">&#9733; 8.1</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2415,7 +2572,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Fear and Loathing in Las Vegas</span>
+    <span class="film-row-title">Fear and Loathing in Las Vegas <span class="rating">&#9733; 7.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2427,7 +2584,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Harold &amp; Kumar Go to White Castle</span>
+    <span class="film-row-title">Harold &amp; Kumar Go to White Castle <span class="rating">&#9733; 6.6</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2439,7 +2596,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Jabberwocky</span>
+    <span class="film-row-title">Jabberwocky <span class="rating">&#9733; 6.0</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2451,7 +2608,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">La La Land</span>
+    <span class="film-row-title">La La Land <span class="rating">&#9733; 7.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2463,7 +2620,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Little Caesar</span>
+    <span class="film-row-title">Little Caesar <span class="rating">&#9733; 6.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2475,7 +2632,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Memory (2026)</span>
+    <span class="film-row-title">Memory (2026) <span class="rating">&#9733; 7.0</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2487,7 +2644,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Michael Clayton</span>
+    <span class="film-row-title">Michael Clayton <span class="rating">&#9733; 6.8</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2499,7 +2656,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Midnight in Paris</span>
+    <span class="film-row-title">Midnight in Paris <span class="rating">&#9733; 7.5</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2511,7 +2668,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Network</span>
+    <span class="film-row-title">Network <span class="rating">&#9733; 7.8</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2523,7 +2680,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Resurrection (Kuang ye shi dai)</span>
+    <span class="film-row-title">Resurrection (Kuang ye shi dai) <span class="rating">&#9733; 7.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2535,7 +2692,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Scarlet Street</span>
+    <span class="film-row-title">Scarlet Street <span class="rating">&#9733; 7.6</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2547,7 +2704,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Sleepless City</span>
+    <span class="film-row-title">Sleepless City <span class="rating">&#9733; 6.6</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2559,7 +2716,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Soylent Green</span>
+    <span class="film-row-title">Soylent Green <span class="rating">&#9733; 6.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2571,7 +2728,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Adventures of Baron Munchausen</span>
+    <span class="film-row-title">The Adventures of Baron Munchausen <span class="rating">&#9733; 7.0</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2583,7 +2740,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Firm</span>
+    <span class="film-row-title">The Firm <span class="rating">&#9733; 6.7</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2595,7 +2752,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Imaginarium of Doctor Parnassus</span>
+    <span class="film-row-title">The Imaginarium of Doctor Parnassus <span class="rating">&#9733; 6.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2607,7 +2764,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Stranger (1946)</span>
+    <span class="film-row-title">The Stranger (1946) <span class="rating">&#9733; 6.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2619,7 +2776,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Wizard of Lies</span>
+    <span class="film-row-title">The Wizard of Lies <span class="rating">&#9733; 6.6</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2631,7 +2788,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Woman in the Window (1944)</span>
+    <span class="film-row-title">The Woman in the Window (1944) <span class="rating">&#9733; 7.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2643,7 +2800,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Zero Theorem</span>
+    <span class="film-row-title">The Zero Theorem <span class="rating">&#9733; 6.1</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2655,7 +2812,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Time Bandits</span>
+    <span class="film-row-title">Time Bandits <span class="rating">&#9733; 6.6</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2679,7 +2836,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">When Harry Met Sally</span>
+    <span class="film-row-title">When Harry Met Sally <span class="rating">&#9733; 7.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2691,7 +2848,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">X (2022)</span>
+    <span class="film-row-title">X (2022) <span class="rating">&#9733; 6.7</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/academy-cinemas/" target="_blank" rel="noopener">times &rarr;</a>
@@ -2755,7 +2912,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">H is for Hawk</span>
+    <span class="film-row-title">H is for Hawk <span class="rating">&#9733; 7.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=heg709z4rmk2gh10ykam14wxm8" target="_blank" rel="noopener">times &rarr;</a>
@@ -2793,7 +2950,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Savage House</span>
+    <span class="film-row-title">Savage House <span class="rating">&#9733; 6.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=heg709z4rmk2gh10ykam14wxm8" target="_blank" rel="noopener">times &rarr;</a>
@@ -2817,7 +2974,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Lost Wonder</span>
+    <span class="film-row-title">The Lost Wonder <span class="rating">&#9733; 7.0</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=heg709z4rmk2gh10ykam14wxm8" target="_blank" rel="noopener">times &rarr;</a>
@@ -2829,7 +2986,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Odyssey</span>
+    <span class="film-row-title">The Odyssey <span class="rating">&#9733; 7.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=heg709z4rmk2gh10ykam14wxm8" target="_blank" rel="noopener">times &rarr;</a>
@@ -2862,7 +3019,7 @@
   <div class="films">
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Odyssey</span>
+    <span class="film-row-title">The Odyssey <span class="rating">&#9733; 7.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -2875,7 +3032,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Stranger</span>
+    <span class="film-row-title">The Stranger <span class="rating">&#9733; 6.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -2901,7 +3058,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">H Is For Hawk</span>
+    <span class="film-row-title">H Is For Hawk <span class="rating">&#9733; 7.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -2914,7 +3071,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Invite</span>
+    <span class="film-row-title">The Invite <span class="rating">&#9733; 7.8</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -2927,7 +3084,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Colours Of Time</span>
+    <span class="film-row-title">Colours Of Time <span class="rating">&#9733; 7.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -2940,7 +3097,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Exhibition On Screen: Frida Kahlo</span>
+    <span class="film-row-title">Exhibition On Screen: Frida Kahlo <span class="rating">&#9733; 7.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -2966,7 +3123,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Disclosure Day</span>
+    <span class="film-row-title">Disclosure Day <span class="rating">&#9733; 7.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -2979,7 +3136,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Obsession</span>
+    <span class="film-row-title">Obsession <span class="rating">&#9733; 8.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -2992,7 +3149,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Primavera</span>
+    <span class="film-row-title">Primavera <span class="rating">&#9733; 7.0</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3004,7 +3161,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Moana (Live Action)</span>
+    <span class="film-row-title">Moana (Live Action) <span class="rating">&#9733; 5.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3017,7 +3174,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Richest Woman In The World</span>
+    <span class="film-row-title">The Richest Woman In The World <span class="rating">&#9733; 6.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3029,7 +3186,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Backrooms</span>
+    <span class="film-row-title">Backrooms <span class="rating">&#9733; 7.1</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3053,7 +3210,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Savage House</span>
+    <span class="film-row-title">Savage House <span class="rating">&#9733; 6.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3065,7 +3222,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Devil Wears Prada 2</span>
+    <span class="film-row-title">The Devil Wears Prada 2 <span class="rating">&#9733; 7.1</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3077,7 +3234,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Christophers</span>
+    <span class="film-row-title">The Christophers <span class="rating">&#9733; 6.8</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3089,7 +3246,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Leviticus</span>
+    <span class="film-row-title">Leviticus <span class="rating">&#9733; 6.3</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3101,7 +3258,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Dear You</span>
+    <span class="film-row-title">Dear You <span class="rating">&#9733; 9.3</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3149,7 +3306,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Young Washington</span>
+    <span class="film-row-title">Young Washington <span class="rating">&#9733; 8.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3173,7 +3330,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Harry Potter and the Philosopher&#39;s Stone - 25th Anniversary</span>
+    <span class="film-row-title">Harry Potter and the Philosopher&#39;s Stone - 25th Anniversary <span class="rating">&#9733; 7.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3209,7 +3366,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Wizard Of The Kremlin</span>
+    <span class="film-row-title">The Wizard Of The Kremlin <span class="rating">&#9733; 6.5</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.rialto.co.nz/cinema/newmarket/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3229,7 +3386,7 @@
   <div class="films">
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Spider-Man: Brand New Day</span>
+    <span class="film-row-title">Spider-Man: Brand New Day <span class="rating">&#9733; 8.0</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/silky-otter-cinemas-orakei/" target="_blank" rel="noopener">times &rarr;</a>
@@ -3241,7 +3398,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Odyssey</span>
+    <span class="film-row-title">The Odyssey <span class="rating">&#9733; 7.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/silky-otter-cinemas-orakei/" target="_blank" rel="noopener">times &rarr;</a>
@@ -3253,7 +3410,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Moana (2026)</span>
+    <span class="film-row-title">Moana (2026) <span class="rating">&#9733; 5.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/silky-otter-cinemas-orakei/" target="_blank" rel="noopener">times &rarr;</a>
@@ -3265,7 +3422,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Toy Story 5</span>
+    <span class="film-row-title">Toy Story 5 <span class="rating">&#9733; 7.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/silky-otter-cinemas-orakei/" target="_blank" rel="noopener">times &rarr;</a>
@@ -3277,7 +3434,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Invite</span>
+    <span class="film-row-title">The Invite <span class="rating">&#9733; 7.8</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/silky-otter-cinemas-orakei/" target="_blank" rel="noopener">times &rarr;</a>
@@ -3289,7 +3446,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">H is for Hawk</span>
+    <span class="film-row-title">H is for Hawk <span class="rating">&#9733; 7.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/silky-otter-cinemas-orakei/" target="_blank" rel="noopener">times &rarr;</a>
@@ -3313,7 +3470,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Savage House</span>
+    <span class="film-row-title">Savage House <span class="rating">&#9733; 6.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/silky-otter-cinemas-orakei/" target="_blank" rel="noopener">times &rarr;</a>
@@ -3325,7 +3482,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">One Night Only</span>
+    <span class="film-row-title">One Night Only <span class="rating">&#9733; 6.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/silky-otter-cinemas-orakei/" target="_blank" rel="noopener">times &rarr;</a>
@@ -3337,7 +3494,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">&amp; Sons</span>
+    <span class="film-row-title">&amp; Sons <span class="rating">&#9733; 6.7</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/silky-otter-cinemas-orakei/" target="_blank" rel="noopener">times &rarr;</a>
@@ -3369,7 +3526,7 @@
   <div class="films">
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Spider-Man: Brand New Day</span>
+    <span class="film-row-title">Spider-Man: Brand New Day <span class="rating">&#9733; 8.0</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/silky-otter-cinemas-ponsonby/" target="_blank" rel="noopener">times &rarr;</a>
@@ -3381,7 +3538,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Odyssey</span>
+    <span class="film-row-title">The Odyssey <span class="rating">&#9733; 7.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/silky-otter-cinemas-ponsonby/" target="_blank" rel="noopener">times &rarr;</a>
@@ -3393,7 +3550,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Moana (2026)</span>
+    <span class="film-row-title">Moana (2026) <span class="rating">&#9733; 5.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/silky-otter-cinemas-ponsonby/" target="_blank" rel="noopener">times &rarr;</a>
@@ -3405,7 +3562,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Toy Story 5</span>
+    <span class="film-row-title">Toy Story 5 <span class="rating">&#9733; 7.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/silky-otter-cinemas-ponsonby/" target="_blank" rel="noopener">times &rarr;</a>
@@ -3417,7 +3574,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Minions &amp; Monsters</span>
+    <span class="film-row-title">Minions &amp; Monsters <span class="rating">&#9733; 6.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/silky-otter-cinemas-ponsonby/" target="_blank" rel="noopener">times &rarr;</a>
@@ -3429,7 +3586,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Invite</span>
+    <span class="film-row-title">The Invite <span class="rating">&#9733; 7.8</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/silky-otter-cinemas-ponsonby/" target="_blank" rel="noopener">times &rarr;</a>
@@ -3441,7 +3598,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">One Night Only</span>
+    <span class="film-row-title">One Night Only <span class="rating">&#9733; 6.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.flicks.co.nz/cinema/silky-otter-cinemas-ponsonby/" target="_blank" rel="noopener">times &rarr;</a>
@@ -3473,7 +3630,7 @@
   <div class="films">
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Spider-Man: Brand New Day</span>
+    <span class="film-row-title">Spider-Man: Brand New Day <span class="rating">&#9733; 8.0</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3486,7 +3643,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Odyssey</span>
+    <span class="film-row-title">The Odyssey <span class="rating">&#9733; 7.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3499,7 +3656,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Moana</span>
+    <span class="film-row-title">Moana <span class="rating">&#9733; 5.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3512,7 +3669,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Toy Story 5</span>
+    <span class="film-row-title">Toy Story 5 <span class="rating">&#9733; 7.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3525,7 +3682,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Minions &amp; Monsters</span>
+    <span class="film-row-title">Minions &amp; Monsters <span class="rating">&#9733; 6.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3538,7 +3695,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Obsession</span>
+    <span class="film-row-title">Obsession <span class="rating">&#9733; 8.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3551,7 +3708,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Invite</span>
+    <span class="film-row-title">The Invite <span class="rating">&#9733; 7.8</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3564,7 +3721,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Dear You</span>
+    <span class="film-row-title">Dear You <span class="rating">&#9733; 9.3</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3577,7 +3734,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Leviticus</span>
+    <span class="film-row-title">Leviticus <span class="rating">&#9733; 6.3</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3590,7 +3747,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Detective Conan - Fallen Angel of the Highway</span>
+    <span class="film-row-title">Detective Conan - Fallen Angel of the Highway <span class="rating">&#9733; 7.8</span></span>
 <span class="chips"><span class="chip chip-event">event</span></span>  </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3603,7 +3760,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Evil Dead Burn</span>
+    <span class="film-row-title">Evil Dead Burn <span class="rating">&#9733; 6.8</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3616,7 +3773,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Backrooms</span>
+    <span class="film-row-title">Backrooms <span class="rating">&#9733; 7.1</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3629,7 +3786,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Michael</span>
+    <span class="film-row-title">Michael <span class="rating">&#9733; 8.7</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3641,7 +3798,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">One Night Only</span>
+    <span class="film-row-title">One Night Only <span class="rating">&#9733; 6.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3701,7 +3858,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Stop That Train</span>
+    <span class="film-row-title">Stop That Train <span class="rating">&#9733; 5.1</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3749,7 +3906,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Girl Climber</span>
+    <span class="film-row-title">Girl Climber <span class="rating">&#9733; 6.6</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3785,7 +3942,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Harry Potter And The Philosopher&#39;s Stone (25th Anniversary)</span>
+    <span class="film-row-title">Harry Potter And The Philosopher&#39;s Stone (25th Anniversary) <span class="rating">&#9733; 7.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3829,7 +3986,7 @@
   <div class="films">
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Spider-Man: Brand New Day</span>
+    <span class="film-row-title">Spider-Man: Brand New Day <span class="rating">&#9733; 8.0</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <span class="times" data-times><span class="t" data-mins="1260">9:00pm</span> · <span class="t" data-mins="1290">9:30pm</span></span>
@@ -3843,7 +4000,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Odyssey</span>
+    <span class="film-row-title">The Odyssey <span class="rating">&#9733; 7.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Newmarket-Westfield/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3856,7 +4013,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Moana</span>
+    <span class="film-row-title">Moana <span class="rating">&#9733; 5.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Newmarket-Westfield/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3869,7 +4026,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Toy Story 5</span>
+    <span class="film-row-title">Toy Story 5 <span class="rating">&#9733; 7.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Newmarket-Westfield/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3882,7 +4039,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Minions &amp; Monsters</span>
+    <span class="film-row-title">Minions &amp; Monsters <span class="rating">&#9733; 6.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Newmarket-Westfield/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3943,7 +4100,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Harry Potter And The Philosopher&#39;s Stone (25th Anniversary)</span>
+    <span class="film-row-title">Harry Potter And The Philosopher&#39;s Stone (25th Anniversary) <span class="rating">&#9733; 7.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/Newmarket-Westfield/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3963,7 +4120,7 @@
   <div class="films">
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Spider-Man: Brand New Day</span>
+    <span class="film-row-title">Spider-Man: Brand New Day <span class="rating">&#9733; 8.0</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/st-lukes/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3976,7 +4133,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Odyssey</span>
+    <span class="film-row-title">The Odyssey <span class="rating">&#9733; 7.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/st-lukes/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -3989,7 +4146,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Moana</span>
+    <span class="film-row-title">Moana <span class="rating">&#9733; 5.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/st-lukes/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -4002,7 +4159,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Toy Story 5</span>
+    <span class="film-row-title">Toy Story 5 <span class="rating">&#9733; 7.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/st-lukes/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -4015,7 +4172,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Minions &amp; Monsters</span>
+    <span class="film-row-title">Minions &amp; Monsters <span class="rating">&#9733; 6.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/st-lukes/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -4041,7 +4198,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Supergirl</span>
+    <span class="film-row-title">Supergirl <span class="rating">&#9733; 6.7</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/st-lukes/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -4053,7 +4210,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Obsession</span>
+    <span class="film-row-title">Obsession <span class="rating">&#9733; 8.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/st-lukes/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -4077,7 +4234,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">I Know Who You Are</span>
+    <span class="film-row-title">I Know Who You Are <span class="rating">&#9733; 6.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/st-lukes/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -4089,7 +4246,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Michael</span>
+    <span class="film-row-title">Michael <span class="rating">&#9733; 8.7</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/st-lukes/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -4101,7 +4258,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">One Night Only</span>
+    <span class="film-row-title">One Night Only <span class="rating">&#9733; 6.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/st-lukes/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -4113,7 +4270,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Dear You</span>
+    <span class="film-row-title">Dear You <span class="rating">&#9733; 9.3</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/st-lukes/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -4137,7 +4294,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Savage House</span>
+    <span class="film-row-title">Savage House <span class="rating">&#9733; 6.9</span></span>
 <span class="chips"><span class="chip chip-event">event</span></span>  </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/st-lukes/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -4209,7 +4366,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Harry Potter And The Philosopher&#39;s Stone (25th Anniversary)</span>
+    <span class="film-row-title">Harry Potter And The Philosopher&#39;s Stone (25th Anniversary) <span class="rating">&#9733; 7.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.eventcinemas.co.nz/cinema/st-lukes/sessions" target="_blank" rel="noopener">times &rarr;</a>
@@ -4265,7 +4422,7 @@
   <div class="films">
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Minions &amp; Monsters</span>
+    <span class="film-row-title">Minions &amp; Monsters <span class="rating">&#9733; 6.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.readingcinemas.co.nz/cinemas" target="_blank" rel="noopener">times &rarr;</a>
@@ -4278,7 +4435,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Toy Story 5</span>
+    <span class="film-row-title">Toy Story 5 <span class="rating">&#9733; 7.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.readingcinemas.co.nz/cinemas" target="_blank" rel="noopener">times &rarr;</a>
@@ -4291,7 +4448,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Moana (Live Action)</span>
+    <span class="film-row-title">Moana (Live Action) <span class="rating">&#9733; 5.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.readingcinemas.co.nz/cinemas" target="_blank" rel="noopener">times &rarr;</a>
@@ -4304,7 +4461,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Odyssey</span>
+    <span class="film-row-title">The Odyssey <span class="rating">&#9733; 7.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.readingcinemas.co.nz/cinemas" target="_blank" rel="noopener">times &rarr;</a>
@@ -4317,7 +4474,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Spider-Man: Brand New Day</span>
+    <span class="film-row-title">Spider-Man: Brand New Day <span class="rating">&#9733; 8.0</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <span class="times" data-times><span class="t" data-mins="1275">9:15pm</span></span>
@@ -4331,7 +4488,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Obsession</span>
+    <span class="film-row-title">Obsession <span class="rating">&#9733; 8.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <span class="times" data-times><span class="t" data-mins="1275">9:15pm</span></span>
@@ -4344,7 +4501,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Evil Dead Burn</span>
+    <span class="film-row-title">Evil Dead Burn <span class="rating">&#9733; 6.8</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://www.readingcinemas.co.nz/cinemas" target="_blank" rel="noopener">times &rarr;</a>
@@ -4427,7 +4584,7 @@
   <div class="films">
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">&amp; Sons</span>
+    <span class="film-row-title">&amp; Sons <span class="rating">&#9733; 6.7</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70" target="_blank" rel="noopener">times &rarr;</a>
@@ -4463,7 +4620,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Colours of Time</span>
+    <span class="film-row-title">Colours of Time <span class="rating">&#9733; 7.4</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70" target="_blank" rel="noopener">times &rarr;</a>
@@ -4476,7 +4633,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">De Gaulle: Tilting Iron</span>
+    <span class="film-row-title">De Gaulle: Tilting Iron <span class="rating">&#9733; 7.8</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70" target="_blank" rel="noopener">times &rarr;</a>
@@ -4488,7 +4645,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">EXHIBITION ON SCREEN: Frida Kahlo</span>
+    <span class="film-row-title">EXHIBITION ON SCREEN: Frida Kahlo <span class="rating">&#9733; 7.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70" target="_blank" rel="noopener">times &rarr;</a>
@@ -4500,7 +4657,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Glenrothan</span>
+    <span class="film-row-title">Glenrothan <span class="rating">&#9733; 7.1</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70" target="_blank" rel="noopener">times &rarr;</a>
@@ -4513,7 +4670,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">H is for Hawk</span>
+    <span class="film-row-title">H is for Hawk <span class="rating">&#9733; 7.2</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70" target="_blank" rel="noopener">times &rarr;</a>
@@ -4526,7 +4683,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Jurassic Park</span>
+    <span class="film-row-title">Jurassic Park <span class="rating">&#9733; 8.0</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70" target="_blank" rel="noopener">times &rarr;</a>
@@ -4550,7 +4707,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Primavera</span>
+    <span class="film-row-title">Primavera <span class="rating">&#9733; 7.0</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70" target="_blank" rel="noopener">times &rarr;</a>
@@ -4563,7 +4720,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Savage House</span>
+    <span class="film-row-title">Savage House <span class="rating">&#9733; 6.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70" target="_blank" rel="noopener">times &rarr;</a>
@@ -4587,7 +4744,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Tenor: My Name is Pati</span>
+    <span class="film-row-title">Tenor: My Name is Pati <span class="rating">&#9733; 8.0</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70" target="_blank" rel="noopener">times &rarr;</a>
@@ -4599,7 +4756,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Invite</span>
+    <span class="film-row-title">The Invite <span class="rating">&#9733; 7.8</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70" target="_blank" rel="noopener">times &rarr;</a>
@@ -4611,7 +4768,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">The Odyssey</span>
+    <span class="film-row-title">The Odyssey <span class="rating">&#9733; 7.9</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70" target="_blank" rel="noopener">times &rarr;</a>
@@ -4636,7 +4793,7 @@
 </div>
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">Tuner</span>
+    <span class="film-row-title">Tuner <span class="rating">&#9733; 7.1</span></span>
   </div>
   <div class="dayview dayview-today" data-date="2026-07-31">
   <a class="times-link" href="https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70" target="_blank" rel="noopener">times &rarr;</a>
@@ -4654,6 +4811,7 @@
 
   <footer>
     <p>confirm times before booking &middot; data refreshed daily</p>
+    <p class="tmdb-attribution">Posters and ratings from TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
   </footer>
 </div>
 
@@ -4713,6 +4871,7 @@
       document.querySelectorAll('.dayview-today .t').forEach(function (el) { el.hidden = false; });
       document.querySelectorAll('.dayview-today [data-fallback]').forEach(function (el) { el.hidden = true; });
       document.querySelectorAll('.filmcard').forEach(function (c) { c.classList.remove('no-session-now'); });
+      document.querySelectorAll('.venue-row').forEach(function (r) { r.classList.remove('no-session-now'); });
       return;
     }
     if (banner) banner.hidden = true;
@@ -4729,11 +4888,19 @@
       });
       var timesEl = container.querySelector('[data-times]');
       var fallback = container.querySelector('[data-fallback]');
+      var hadChips = !!timesEl; // chips existed for this venue, vs "never had times"
       if (timesEl) {
         timesEl.hidden = !anyVisible;
         if (fallback) fallback.hidden = anyVisible;
       }
       container.dataset.anyVisible = anyVisible ? '1' : '0';
+
+      // A venue that HAD today-chips but has none left visible is genuinely
+      // done for the day - hide the row instead of showing a misleading
+      // "times -> " link (that link is reserved for venues that never had
+      // scraped times at all).
+      var row = container.closest('.venue-row');
+      if (row) row.classList.toggle('no-session-now', hadChips && !anyVisible);
     });
 
     document.querySelectorAll('.filmcard').forEach(function (card) {
@@ -4745,6 +4912,28 @@
         });
       }
       card.classList.toggle('no-session-now', !visibleNow);
+    });
+
+    updateSummaries();
+  }
+
+  // ---- rewrite stale "from <time>" summaries to "next <time>" (item 3b) ----
+  function updateSummaries() {
+    document.querySelectorAll('.filmcard[data-has-today="1"]').forEach(function (card) {
+      var earliestMins = null;
+      var earliestText = null;
+      card.querySelectorAll('.dayview-today .t').forEach(function (t) {
+        if (t.hidden) return;
+        var mins = parseInt(t.getAttribute('data-mins'), 10);
+        if (earliestMins === null || mins < earliestMins) {
+          earliestMins = mins;
+          earliestText = t.textContent;
+        }
+      });
+      if (earliestText === null) return; // none visible - card is hidden anyway
+      var textEl = card.querySelector('.summary-text');
+      if (!textEl) return;
+      textEl.textContent = textEl.textContent.replace(/\b(from|next) \S+/, 'next ' + earliestText);
     });
   }
 

@@ -39,10 +39,17 @@
 {% macro film_card(film, today_iso) %}
 <article class="filmcard" data-kids="{{ '1' if 'kids' in film.tags else '0' }}" data-has-today="{{ '1' if film.hasToday else '0' }}">
   <button type="button" class="filmcard-head" aria-expanded="false">
+    <span class="filmcard-poster">
+      {% if film.poster %}
+      <img class="poster-img" src="{{ film.poster.src }}" srcset="{{ film.poster.srcset }}" loading="lazy" alt="" width="48" height="72">
+      {% else %}
+      <span class="poster-placeholder" aria-hidden="true"></span>
+      {% endif %}
+    </span>
     <span class="filmcard-headtext">
       <h3 class="filmtitle">{{ film.title }}</h3>
       {% if film.tags %}<div class="chips">{{ tag_chips(film.tags) }}</div>{% endif %}
-      <p class="filmsummary">{{ film.summary }}</p>
+      <p class="filmsummary"><span class="summary-text">{{ film.summary }}</span>{% if film.rating %} <span class="rating">&#9733; {{ film.rating }}</span>{% endif %}</p>
     </span>
     <span class="expand-caret" aria-hidden="true">+</span>
   </button>
@@ -60,6 +67,7 @@
       </div>
     </details>
     {% endif %}
+    <a class="letterboxd-link" href="{{ film.letterboxd_url }}" target="_blank" rel="noopener">Letterboxd &#8599;</a>
   </div>
 </article>
 {% endmacro %}
@@ -67,7 +75,7 @@
 {% macro cinema_film_row(film, source_url, today_iso) %}
 <div class="film-row">
   <div class="film-row-top">
-    <span class="film-row-title">{{ film.title }}</span>
+    <span class="film-row-title">{{ film.title }}{% if film.rating %} <span class="rating">&#9733; {{ film.rating }}</span>{% endif %}</span>
     {% if film.tags %}<span class="chips">{{ tag_chips(film.tags) }}</span>{% endif %}
   </div>
   {{ dayview_times(film.todayTimes, film.upcoming, source_url, today_iso) }}
@@ -200,9 +208,10 @@
     background: var(--surface);
     border: 1px solid var(--border);
     color: var(--muted);
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 18px;
-    letter-spacing: 0.04em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
     padding: 10px 0;
     border-radius: 6px;
     cursor: pointer;
@@ -245,6 +254,9 @@
 
   html[data-day-mode="today"] .filmcard.no-session-now,
   html[data-day-mode="tonight"] .filmcard.no-session-now { display: none; }
+
+  html[data-day-mode="today"] .venue-row.no-session-now,
+  html[data-day-mode="tonight"] .venue-row.no-session-now { display: none; }
 
   .filmcard.js-filtered, .also-row.js-filtered { display: none; }
 
@@ -290,11 +302,16 @@
   }
 
   .filmcard, .cinemacard {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 13px;
-    margin-bottom: 10px;
+    background: none;
+    border: none;
+    border-top: 1px solid var(--border);
+    border-radius: 0;
+    padding: 20px 0;
+    margin-bottom: 0;
+  }
+  .filmcard:first-child, .cinemacard:first-child {
+    border-top: none;
+    padding-top: 0;
   }
   .filmcard-head {
     display: flex;
@@ -318,6 +335,21 @@
     align-items: baseline;
     gap: 12px;
   }
+  .filmcard-poster { flex-shrink: 0; }
+  .poster-img {
+    display: block;
+    width: 48px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+  .poster-placeholder {
+    display: block;
+    width: 48px;
+    height: 72px;
+    border-radius: 3px;
+    background: var(--surface);
+  }
   .filmcard-headtext { flex: 1; min-width: 0; }
   .filmtitle {
     font-size: 20px;
@@ -328,6 +360,21 @@
     font-size: 12.5px;
     margin: 4px 0 0;
   }
+  .rating {
+    color: var(--gold);
+    opacity: 0.85;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .letterboxd-link {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+  .letterboxd-link:hover { color: var(--gold); }
   .expand-caret {
     color: var(--gold);
     font-size: 18px;
@@ -353,6 +400,7 @@
     border-radius: 999px;
     border: 1px solid transparent;
   }
+  .chip-watchlist { background: rgba(228, 168, 60, 0.16); color: var(--gold); border-color: var(--gold); font-weight: 700; }
   .chip-kids { background: rgba(122, 184, 122, 0.14); color: #8FCB8F; border-color: rgba(143, 203, 143, 0.35); }
   .chip-retro { background: transparent; color: var(--gold); border-color: var(--gold); }
   .chip-event { background: rgba(160, 130, 200, 0.16); color: #B79EDB; border-color: rgba(183, 158, 219, 0.4); }
@@ -481,6 +529,7 @@
     font-size: 12px;
     text-align: center;
   }
+  .tmdb-attribution { margin: 6px 0 0; }
 </style>
 </head>
 <body>
@@ -524,7 +573,7 @@
         <p class="also-showing-heading">Also showing &mdash; times on cinema sites</p>
         {% for item in also_showing %}
         <div class="also-row" data-kids="{{ '1' if item.kids else '0' }}">
-          <span class="also-title">{{ item.title }}</span>
+          <span class="also-title">{{ item.title }}{% if item.watchlist %} <span class="chip chip-watchlist">watchlist</span>{% endif %}</span>
           <span class="also-cinemas">{% for name, url in item.venues %}<a href="{{ url }}" target="_blank" rel="noopener">{{ name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</span>
         </div>
         {% endfor %}
@@ -545,6 +594,7 @@
 
   <footer>
     <p>confirm times before booking &middot; data refreshed daily</p>
+    <p class="tmdb-attribution">Posters and ratings from TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
   </footer>
 </div>
 
@@ -604,6 +654,7 @@
       document.querySelectorAll('.dayview-today .t').forEach(function (el) { el.hidden = false; });
       document.querySelectorAll('.dayview-today [data-fallback]').forEach(function (el) { el.hidden = true; });
       document.querySelectorAll('.filmcard').forEach(function (c) { c.classList.remove('no-session-now'); });
+      document.querySelectorAll('.venue-row').forEach(function (r) { r.classList.remove('no-session-now'); });
       return;
     }
     if (banner) banner.hidden = true;
@@ -620,11 +671,19 @@
       });
       var timesEl = container.querySelector('[data-times]');
       var fallback = container.querySelector('[data-fallback]');
+      var hadChips = !!timesEl; // chips existed for this venue, vs "never had times"
       if (timesEl) {
         timesEl.hidden = !anyVisible;
         if (fallback) fallback.hidden = anyVisible;
       }
       container.dataset.anyVisible = anyVisible ? '1' : '0';
+
+      // A venue that HAD today-chips but has none left visible is genuinely
+      // done for the day - hide the row instead of showing a misleading
+      // "times -> " link (that link is reserved for venues that never had
+      // scraped times at all).
+      var row = container.closest('.venue-row');
+      if (row) row.classList.toggle('no-session-now', hadChips && !anyVisible);
     });
 
     document.querySelectorAll('.filmcard').forEach(function (card) {
@@ -636,6 +695,28 @@
         });
       }
       card.classList.toggle('no-session-now', !visibleNow);
+    });
+
+    updateSummaries();
+  }
+
+  // ---- rewrite stale "from <time>" summaries to "next <time>" (item 3b) ----
+  function updateSummaries() {
+    document.querySelectorAll('.filmcard[data-has-today="1"]').forEach(function (card) {
+      var earliestMins = null;
+      var earliestText = null;
+      card.querySelectorAll('.dayview-today .t').forEach(function (t) {
+        if (t.hidden) return;
+        var mins = parseInt(t.getAttribute('data-mins'), 10);
+        if (earliestMins === null || mins < earliestMins) {
+          earliestMins = mins;
+          earliestText = t.textContent;
+        }
+      });
+      if (earliestText === null) return; // none visible - card is hidden anyway
+      var textEl = card.querySelector('.summary-text');
+      if (!textEl) return;
+      textEl.textContent = textEl.textContent.replace(/\b(from|next) \S+/, 'next ' + earliestText);
     });
   }
 
