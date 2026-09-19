@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-19T09:23:21+12:00",
+  "fetchedAt": "2026-09-20T09:12:14+12:00",
   "errors": {},
   "fallbacks": {
     "silky-orakei": "AdapterError: silky-orakei: no film data on https://www.silkyotter.co.nz/films -- silkyotter.co.nz is a fully client-rendered SPA (Vista 'Lumos' platform) whose film/session API requires a GAS/MovieXchange auth flow this adapter doesn't implement (see module docstring). Falls back to flicks.co.nz via adapters.get_fallback().",
@@ -34,13 +34,13 @@
           "tags": []
         },
         {
-          "title": "500 Days in the Wild",
+          "title": "Digger",
           "sessions": [],
           "note": null,
           "tags": []
         },
         {
-          "title": "Digger",
+          "title": "500 Days in the Wild",
           "sessions": [],
           "note": null,
           "tags": []
@@ -64,6 +64,12 @@
           "tags": []
         },
         {
+          "title": "La La Land",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "A Hard Day's Night",
           "sessions": [],
           "note": null,
@@ -82,25 +88,7 @@
           "tags": []
         },
         {
-          "title": "Electroma",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Entourage",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Fallen Angels",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Gozu",
           "sessions": [],
           "note": null,
           "tags": []
@@ -142,12 +130,6 @@
           "tags": []
         },
         {
-          "title": "True Stories",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "12 Angry Men",
           "sessions": [],
           "note": null,
@@ -167,12 +149,6 @@
         },
         {
           "title": "3 Faces",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "A Clockwork Orange",
           "sessions": [],
           "note": null,
           "tags": []
@@ -220,13 +196,25 @@
           "tags": []
         },
         {
-          "title": "Donkey Skin",
+          "title": "Electroma",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Fallen Angels",
           "sessions": [],
           "note": null,
           "tags": []
         },
         {
           "title": "Flashdance",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Gozu",
           "sessions": [],
           "note": null,
           "tags": []
@@ -310,6 +298,12 @@
           "tags": []
         },
         {
+          "title": "True Stories",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "Under the Cherry Moon",
           "sessions": [],
           "note": null,
@@ -322,7 +316,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-09-19T09:21:44+12:00",
+      "fetchedAt": "2026-09-20T09:10:56+12:00",
       "sourceUrl": "https://www.flicks.co.nz/cinema/academy-cinemas/"
     },
     "hollywood": {
@@ -528,7 +522,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-09-19T09:21:45+12:00",
+      "fetchedAt": "2026-09-20T09:10:58+12:00",
       "sourceUrl": "https://ticketing.oz.veezi.com/sessions/?siteToken=fpnccxy3ma159g7z8a3e95asy8"
     },
     "capitol": {
@@ -570,10 +564,6 @@
         {
           "title": "De Gaulle: Liberté (Part 2)",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "11:40am"
-            },
             {
               "date": "2026-09-20",
               "time": "11:40am"
@@ -643,10 +633,6 @@
           "title": "Heart of the Beast - Preview Screenings",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "5:30pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "4:50pm"
             }
@@ -660,17 +646,6 @@
             {
               "date": "2026-09-27",
               "time": "3:10pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Hope",
-          "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "7:30pm"
             }
           ],
           "note": null,
@@ -908,17 +883,6 @@
           "tags": []
         },
         {
-          "title": "Spa Weekend - Fundraiser Event",
-          "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "3:00pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Teenage Sex and Death at Camp Miasma",
           "sessions": [
             {
@@ -945,7 +909,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-09-19T09:21:46+12:00",
+      "fetchedAt": "2026-09-20T09:11:00+12:00",
       "sourceUrl": "https://ticketing.oz.veezi.com/sessions/?siteToken=heg709z4rmk2gh10ykam14wxm8"
     },
     "rialto": {
@@ -954,26 +918,6 @@
         {
           "title": "Hope",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "10:45am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "12:45pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "3:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:15pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "7:30pm"
-            },
             {
               "date": "2026-09-20",
               "time": "10:30am"
@@ -1050,22 +994,6 @@
           "title": "The Weight",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "3:25pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "8:15pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "10:30am"
             },
@@ -1129,14 +1057,6 @@
           "title": "Practical Magic 2",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "2:15pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "7:45pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "1:15pm"
             },
@@ -1175,22 +1095,6 @@
         {
           "title": "De Gaulle Liberte",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "11:00am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "1:50pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "4:30pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "7:30pm"
-            },
             {
               "date": "2026-09-20",
               "time": "10:45am"
@@ -1251,18 +1155,6 @@
           "title": "American Doctor",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "4:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:10pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "10:30am"
             },
@@ -1303,63 +1195,8 @@
           "tags": []
         },
         {
-          "title": "The Voice Of Hind Rajab",
-          "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "12:45pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "5:50pm"
-            },
-            {
-              "date": "2026-09-20",
-              "time": "10:15am"
-            },
-            {
-              "date": "2026-09-20",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-09-21",
-              "time": "1:30pm"
-            },
-            {
-              "date": "2026-09-21",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-09-22",
-              "time": "12:45pm"
-            },
-            {
-              "date": "2026-09-22",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-09-23",
-              "time": "1:30pm"
-            },
-            {
-              "date": "2026-09-23",
-              "time": "5:50pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Tony",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "2:50pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "5:10pm"
-            },
             {
               "date": "2026-09-20",
               "time": "3:30pm"
@@ -1400,14 +1237,6 @@
           "title": "Mum, I'm Alien Pregnant",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "12:50pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "8:15pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "3:00pm"
             },
@@ -1444,16 +1273,47 @@
           "tags": []
         },
         {
-          "title": "De Gaulle Tilting Iron",
+          "title": "The Voice Of Hind Rajab",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "10:30am"
+              "date": "2026-09-20",
+              "time": "10:15am"
             },
             {
-              "date": "2026-09-19",
+              "date": "2026-09-20",
               "time": "5:00pm"
             },
+            {
+              "date": "2026-09-21",
+              "time": "1:30pm"
+            },
+            {
+              "date": "2026-09-21",
+              "time": "5:00pm"
+            },
+            {
+              "date": "2026-09-22",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-09-22",
+              "time": "5:00pm"
+            },
+            {
+              "date": "2026-09-23",
+              "time": "1:30pm"
+            },
+            {
+              "date": "2026-09-23",
+              "time": "5:50pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "De Gaulle Tilting Iron",
+          "sessions": [
             {
               "date": "2026-09-20",
               "time": "10:30am"
@@ -1494,14 +1354,6 @@
           "title": "Lomu",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "2:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "5:10pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "10:45am"
             },
@@ -1522,35 +1374,8 @@
           "tags": []
         },
         {
-          "title": "Heart of the Beast",
-          "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "8:00pm"
-            },
-            {
-              "date": "2026-09-20",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-09-23",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:30am"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Taboo: Egon Schiele",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "10:45am"
-            },
             {
               "date": "2026-09-20",
               "time": "1:00pm"
@@ -1572,12 +1397,27 @@
           "tags": []
         },
         {
-          "title": "& Sons",
+          "title": "Heart of the Beast",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "10:30am"
+              "date": "2026-09-20",
+              "time": "5:00pm"
             },
+            {
+              "date": "2026-09-23",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-10-02",
+              "time": "10:30am"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "& Sons",
+          "sessions": [
             {
               "date": "2026-09-20",
               "time": "12:30pm"
@@ -1934,6 +1774,10 @@
             {
               "date": "2026-11-03",
               "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-04",
+              "time": "10:45am"
             }
           ],
           "note": null,
@@ -1951,7 +1795,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-09-19T09:21:56+12:00",
+      "fetchedAt": "2026-09-20T09:11:08+12:00",
       "sourceUrl": "https://www.rialto.co.nz/cinema/newmarket/sessions"
     },
     "silky-orakei": {
@@ -1988,25 +1832,25 @@
           "tags": []
         },
         {
-          "title": "The Odyssey",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Verity",
           "sessions": [],
           "note": null,
           "tags": []
         },
         {
-          "title": "Oasis: Don't Look Back In Anger",
+          "title": "The Odyssey",
           "sessions": [],
           "note": null,
           "tags": []
         },
         {
           "title": "By Any Means",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Oasis: Don't Look Back In Anger",
           "sessions": [],
           "note": null,
           "tags": []
@@ -2024,12 +1868,6 @@
           "tags": []
         },
         {
-          "title": "Pulp Fiction",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Forrest Gump",
           "sessions": [],
           "note": null,
@@ -2042,7 +1880,7 @@
           "tags": []
         },
         {
-          "title": "Jurassic Park",
+          "title": "Pulp Fiction",
           "sessions": [],
           "note": null,
           "tags": []
@@ -2066,9 +1904,15 @@
           "sessions": [],
           "note": null,
           "tags": []
+        },
+        {
+          "title": "Jurassic Park",
+          "sessions": [],
+          "note": null,
+          "tags": []
         }
       ],
-      "fetchedAt": "2026-09-19T09:21:58+12:00",
+      "fetchedAt": "2026-09-20T09:11:09+12:00",
       "sourceUrl": "https://www.flicks.co.nz/cinema/silky-otter-cinemas-orakei/"
     },
     "silky-ponsonby": {
@@ -2117,13 +1961,13 @@
           "tags": []
         },
         {
-          "title": "The Odyssey",
+          "title": "Verity",
           "sessions": [],
           "note": null,
           "tags": []
         },
         {
-          "title": "Verity",
+          "title": "The Odyssey",
           "sessions": [],
           "note": null,
           "tags": []
@@ -2153,12 +1997,6 @@
           "tags": []
         },
         {
-          "title": "Pulp Fiction",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Forrest Gump",
           "sessions": [],
           "note": null,
@@ -2166,6 +2004,12 @@
         },
         {
           "title": "Interstellar",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Pulp Fiction",
           "sessions": [],
           "note": null,
           "tags": []
@@ -2183,7 +2027,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-09-19T09:22:00+12:00",
+      "fetchedAt": "2026-09-20T09:11:11+12:00",
       "sourceUrl": "https://www.flicks.co.nz/cinema/silky-otter-cinemas-ponsonby/"
     },
     "event-queen": {
@@ -2192,26 +2036,6 @@
         {
           "title": "Resident Evil",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "11:45am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "2:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "4:10pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:30pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "8:50pm"
-            },
             {
               "date": "2026-09-20",
               "time": "11:40am"
@@ -2304,22 +2128,6 @@
           "title": "Forgotten Island",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "11:00am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "12:30pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "3:15pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:00pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "11:00am"
             },
@@ -2378,30 +2186,6 @@
         {
           "title": "Practical Magic 2",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "12:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "2:50pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "3:30pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "5:50pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:30pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "8:40pm"
-            },
             {
               "date": "2026-09-20",
               "time": "11:00am"
@@ -2481,26 +2265,6 @@
         {
           "title": "Spider-Man: Brand New Day",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "12:30pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "2:50pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "4:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "7:10pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "8:15pm"
-            },
             {
               "date": "2026-09-20",
               "time": "12:15pm"
@@ -2589,18 +2353,6 @@
           "title": "Paw Patrol - The Dino Movie",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "11:00am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "1:15pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "3:25pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "11:00am"
             },
@@ -2643,14 +2395,6 @@
         {
           "title": "Heart Of The Beast",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "7:30pm"
-            },
             {
               "date": "2026-09-20",
               "time": "5:30pm"
@@ -2775,22 +2519,6 @@
           "title": "The Odyssey",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "12:40pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "3:30pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "4:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "7:10pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "12:30pm"
             },
@@ -2890,18 +2618,6 @@
           "title": "Coyote vs. Acme",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "11:00am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "12:20pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:40pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "11:00am"
             },
@@ -2945,14 +2661,6 @@
           "title": "Lomu",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "3:50pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:30pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "3:50pm"
             },
@@ -2989,18 +2697,6 @@
         {
           "title": "Hope",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "12:40pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "8:20pm"
-            },
             {
               "date": "2026-09-20",
               "time": "12:10pm"
@@ -3057,10 +2753,6 @@
           "title": "Runner",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "8:50pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "8:40pm"
             },
@@ -3083,18 +2775,6 @@
         {
           "title": "The Transformers: The Movie (40th Anniversary)",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "3:20pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:00pm"
-            },
             {
               "date": "2026-09-20",
               "time": "11:00am"
@@ -3140,14 +2820,6 @@
         {
           "title": "Insidious: Out of the Further",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "4:10pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "8:55pm"
-            },
             {
               "date": "2026-09-20",
               "time": "4:00pm"
@@ -3199,18 +2871,6 @@
         {
           "title": "Once Upon a Time in the Middle East",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "3:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "5:40pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "8:40pm"
-            },
             {
               "date": "2026-09-20",
               "time": "2:30pm"
@@ -3267,10 +2927,6 @@
           "title": "Mum, I'm Alien Pregnant",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "9:00pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "6:10pm"
             },
@@ -3293,10 +2949,6 @@
         {
           "title": "Oasis: Don't Look Back in Anger",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "8:30pm"
-            },
             {
               "date": "2026-09-20",
               "time": "8:30pm"
@@ -3323,10 +2975,6 @@
           "title": "Fall 2: Deadpoint",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "12:40pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "12:10pm"
             },
@@ -3349,10 +2997,6 @@
         {
           "title": "The End of Oak Street",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "1:30pm"
-            },
             {
               "date": "2026-09-20",
               "time": "1:40pm"
@@ -3765,7 +3409,7 @@
           ]
         }
       ],
-      "fetchedAt": "2026-09-19T09:22:35+12:00",
+      "fetchedAt": "2026-09-20T09:11:39+12:00",
       "sourceUrl": "https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions"
     },
     "event-newmarket": {
@@ -3774,22 +3418,6 @@
         {
           "title": "Resident Evil",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "1:15pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "3:45pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:35pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "9:00pm"
-            },
             {
               "date": "2026-09-20",
               "time": "1:00pm"
@@ -3874,22 +3502,6 @@
           "title": "Forgotten Island",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "12:30pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "3:10pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:20pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "10:20am"
             },
@@ -3960,26 +3572,6 @@
         {
           "title": "Practical Magic 2",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "10:00am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "2:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "4:45pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "8:30pm"
-            },
             {
               "date": "2026-09-20",
               "time": "2:00pm"
@@ -4060,18 +3652,6 @@
           "title": "Spider-Man: Brand New Day",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "9:50am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "8:45pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "10:10am"
             },
@@ -4143,18 +3723,6 @@
           "title": "Paw Patrol - The Dino Movie",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "10:00am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "10:45am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "4:10pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "10:00am"
             },
@@ -4193,14 +3761,6 @@
         {
           "title": "Heart Of The Beast",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "7:15pm"
-            },
             {
               "date": "2026-09-20",
               "time": "6:00pm"
@@ -4257,14 +3817,6 @@
           "title": "The Odyssey",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "3:10pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "7:40pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "3:10pm"
             },
@@ -4305,12 +3857,25 @@
           "tags": []
         },
         {
-          "title": "Insidious: Out of the Further",
+          "title": "Kiri And Lou Go Raaa!",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "9:00pm"
+              "date": "2026-09-20",
+              "time": "10:30am"
             },
+            {
+              "date": "2026-09-22",
+              "time": "10:30am"
+            }
+          ],
+          "note": null,
+          "tags": [
+            "kids"
+          ]
+        },
+        {
+          "title": "Insidious: Out of the Further",
+          "sessions": [
             {
               "date": "2026-09-20",
               "time": "8:40pm"
@@ -4330,23 +3895,6 @@
           ],
           "note": null,
           "tags": []
-        },
-        {
-          "title": "Kiri And Lou Go Raaa!",
-          "sessions": [
-            {
-              "date": "2026-09-20",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-09-22",
-              "time": "10:30am"
-            }
-          ],
-          "note": null,
-          "tags": [
-            "kids"
-          ]
         },
         {
           "title": "Avengers: Endgame Encore",
@@ -4498,7 +4046,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-09-19T09:23:00+12:00",
+      "fetchedAt": "2026-09-20T09:11:58+12:00",
       "sourceUrl": "https://www.eventcinemas.co.nz/cinema/Newmarket-Westfield/sessions"
     },
     "event-stlukes": {
@@ -4507,26 +4055,6 @@
         {
           "title": "Resident Evil",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "10:10am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "12:25pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "3:25pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:20pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "9:00pm"
-            },
             {
               "date": "2026-09-20",
               "time": "10:50am"
@@ -4555,22 +4083,6 @@
           "title": "Forgotten Island",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "10:00am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "12:30pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "2:30pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:00pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "10:00am"
             },
@@ -4593,22 +4105,6 @@
         {
           "title": "Practical Magic 2",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "12:15pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "3:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "5:50pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "8:45pm"
-            },
             {
               "date": "2026-09-20",
               "time": "12:00pm"
@@ -4633,22 +4129,6 @@
           "title": "Spider-Man: Brand New Day",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "11:50am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "2:55pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:00pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "11:00am"
             },
@@ -4668,22 +4148,6 @@
           "title": "Paw Patrol - The Dino Movie",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "10:00am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "12:05pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "2:10pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "4:15pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "10:00am"
             },
@@ -4702,10 +4166,6 @@
         {
           "title": "Heart Of The Beast",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "6:00pm"
-            },
             {
               "date": "2026-09-20",
               "time": "4:45pm"
@@ -4730,10 +4190,6 @@
           "title": "The Odyssey",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "5:00pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "4:20pm"
             }
@@ -4744,14 +4200,6 @@
         {
           "title": "Coyote vs. Acme",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "10:00am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "3:40pm"
-            },
             {
               "date": "2026-09-20",
               "time": "10:00am"
@@ -4772,14 +4220,6 @@
           "title": "Hanuman Ansh (Hindi)",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "2:40pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "8:30pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "3:00pm"
             },
@@ -4792,29 +4232,8 @@
           "tags": []
         },
         {
-          "title": "Lomu",
-          "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "6:00pm"
-            }
-          ],
-          "note": null,
-          "tags": [
-            "event"
-          ]
-        },
-        {
           "title": "Hope",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "12:20pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "8:20pm"
-            },
             {
               "date": "2026-09-20",
               "time": "12:10pm"
@@ -4830,18 +4249,6 @@
         {
           "title": "The Transformers: The Movie (40th Anniversary)",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "10:00am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "5:35pm"
-            },
             {
               "date": "2026-09-20",
               "time": "10:30am"
@@ -4864,10 +4271,6 @@
           "title": "Kiri And Lou Go Raaa!",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "10:10am"
-            },
-            {
               "date": "2026-09-20",
               "time": "10:30am"
             }
@@ -4880,14 +4283,6 @@
         {
           "title": "Once Upon a Time in the Middle East",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "3:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "8:30pm"
-            },
             {
               "date": "2026-09-20",
               "time": "3:00pm"
@@ -4904,10 +4299,6 @@
           "title": "Daayra",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "8:30pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "8:05pm"
             }
@@ -4918,10 +4309,6 @@
         {
           "title": "Moana",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "10:20am"
-            },
             {
               "date": "2026-09-20",
               "time": "11:00am"
@@ -4934,23 +4321,8 @@
           "title": "Mirzapur - The Movie",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "7:45pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "7:10pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Vibe (Hindi)",
-          "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "8:35pm"
             }
           ],
           "note": null,
@@ -5068,7 +4440,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-09-19T09:23:18+12:00",
+      "fetchedAt": "2026-09-20T09:12:11+12:00",
       "sourceUrl": "https://www.eventcinemas.co.nz/cinema/st-lukes/sessions"
     },
     "reading-newlynn": {
@@ -5077,22 +4449,6 @@
         {
           "title": "Spider-Man: Brand New Day",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "10:45am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "2:15pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "5:45pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "9:00pm"
-            },
             {
               "date": "2026-09-20",
               "time": "2:15pm"
@@ -5161,14 +4517,6 @@
           "title": "Insidious: Out of the Further",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "1:15pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "9:15pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "1:15pm"
             },
@@ -5207,18 +4555,6 @@
         {
           "title": "Paw Patrol - The Dino Movie",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "10:00am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "12:30pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "3:00pm"
-            },
             {
               "date": "2026-09-20",
               "time": "10:00am"
@@ -5274,22 +4610,6 @@
         {
           "title": "Forgotten Island",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "10:15am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "3:45pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:30pm"
-            },
             {
               "date": "2026-09-20",
               "time": "10:15am"
@@ -5357,26 +4677,6 @@
         {
           "title": "Resident Evil",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "11:00am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "1:30pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "4:15pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:45pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "9:15pm"
-            },
             {
               "date": "2026-09-20",
               "time": "11:00am"
@@ -5465,10 +4765,6 @@
           "title": "Heart of the Beast",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "6:00pm"
-            },
-            {
               "date": "2026-09-24",
               "time": "1:00pm"
             },
@@ -5507,18 +4803,6 @@
         {
           "title": "Coyote vs. Acme",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "4:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:30pm"
-            },
             {
               "date": "2026-09-20",
               "time": "10:30am"
@@ -5575,10 +4859,6 @@
           "title": "Fall 2: Deadpoint",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "9:15pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "6:00pm"
             },
@@ -5617,22 +4897,6 @@
         {
           "title": "Practical Magic 2",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "11:15am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "2:15pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "9:00pm"
-            },
             {
               "date": "2026-09-20",
               "time": "10:00am"
@@ -5712,10 +4976,6 @@
         {
           "title": "Runner",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "8:45pm"
-            },
             {
               "date": "2026-09-20",
               "time": "8:45pm"
@@ -5815,7 +5075,7 @@
           ]
         }
       ],
-      "fetchedAt": "2026-09-19T09:23:20+12:00",
+      "fetchedAt": "2026-09-20T09:12:13+12:00",
       "sourceUrl": "https://www.readingcinemas.co.nz/cinemas"
     },
     "bridgeway": {
@@ -5854,10 +5114,6 @@
           "title": "Case 137",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "1:15pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "12:50pm"
             },
@@ -5893,14 +5149,6 @@
           "title": "Colours of Time",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "10:45am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "3:35pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "10:45am"
             },
@@ -5935,22 +5183,6 @@
         {
           "title": "De Gaulle: Liberté",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "12:05pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "1:30pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "5:10pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "7:30pm"
-            },
             {
               "date": "2026-09-20",
               "time": "1:30pm"
@@ -6011,14 +5243,6 @@
           "title": "De Gaulle: Tilting Iron",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "4:30pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "10:30am"
             },
@@ -6054,10 +5278,6 @@
           "title": "Glenrothan",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "3:05pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "3:10pm"
             },
@@ -6088,10 +5308,6 @@
           "title": "Lomu",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "6:05pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "1:15pm"
             },
@@ -6114,10 +5330,6 @@
         {
           "title": "Primavera",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "8:10pm"
-            },
             {
               "date": "2026-09-20",
               "time": "10:35am"
@@ -6245,10 +5457,6 @@
           "title": "The Time Traveller's Guide to Hamilton Gardens",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "10:30am"
-            },
-            {
               "date": "2026-09-21",
               "time": "2:55pm"
             }
@@ -6259,26 +5467,6 @@
         {
           "title": "The Weight",
           "sessions": [
-            {
-              "date": "2026-09-19",
-              "time": "10:40am"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "3:20pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "5:40pm"
-            },
-            {
-              "date": "2026-09-19",
-              "time": "8:00pm"
-            },
             {
               "date": "2026-09-20",
               "time": "10:40am"
@@ -6378,10 +5566,6 @@
           "title": "Tony",
           "sessions": [
             {
-              "date": "2026-09-19",
-              "time": "8:15pm"
-            },
-            {
               "date": "2026-09-20",
               "time": "8:15pm"
             },
@@ -6444,7 +5628,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-09-19T09:23:21+12:00",
+      "fetchedAt": "2026-09-20T09:12:14+12:00",
       "sourceUrl": "https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70"
     }
   }
