@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-01T11:46:10+13:00",
+  "fetchedAt": "2026-10-02T11:58:44+13:00",
   "errors": {},
   "fallbacks": {
     "silky-orakei": "AdapterError: silky-orakei: no film data on https://www.silkyotter.co.nz/films -- silkyotter.co.nz is a fully client-rendered SPA (Vista 'Lumos' platform) whose film/session API requires a GAS/MovieXchange auth flow this adapter doesn't implement (see module docstring). Falls back to flicks.co.nz via adapters.get_fallback().",
@@ -22,6 +22,12 @@
           "tags": []
         },
         {
+          "title": "Primetime",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "Big Girls Don't Cry",
           "sessions": [],
           "note": null,
@@ -34,19 +40,13 @@
           "tags": []
         },
         {
-          "title": "Primetime",
+          "title": "Sense and Sensibility (1995)",
           "sessions": [],
           "note": null,
           "tags": []
         },
         {
           "title": "Tony",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Sense and Sensibility (1995)",
           "sessions": [],
           "note": null,
           "tags": []
@@ -76,12 +76,6 @@
           "tags": []
         },
         {
-          "title": "Little Shop of Horrors",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Possession (1981)",
           "sessions": [],
           "note": null,
@@ -94,19 +88,13 @@
           "tags": []
         },
         {
-          "title": "Salò, or the 120 Days of Sodom",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "The Fog (1980)",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "A Fish Called Wanda",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Little Shop of Horrors",
           "sessions": [],
           "note": null,
           "tags": []
@@ -130,7 +118,19 @@
           "tags": []
         },
         {
+          "title": "Salò, or the 120 Days of Sodom",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "Teenage Sex and Death at Camp Miasma",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "The Fog (1980)",
           "sessions": [],
           "note": null,
           "tags": []
@@ -154,7 +154,7 @@
           "tags": []
         },
         {
-          "title": "Die My Love",
+          "title": "La Bola Negra",
           "sessions": [],
           "note": null,
           "tags": []
@@ -196,7 +196,7 @@
           "tags": []
         },
         {
-          "title": "La Bola Negra",
+          "title": "Die My Love",
           "sessions": [],
           "note": null,
           "tags": []
@@ -215,6 +215,12 @@
         },
         {
           "title": "Piercing",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "The History of Concrete",
           "sessions": [],
           "note": null,
           "tags": []
@@ -388,29 +394,29 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-10-01T11:44:19+13:00",
+      "fetchedAt": "2026-10-02T11:57:15+13:00",
       "sourceUrl": "https://www.flicks.co.nz/cinema/academy-cinemas/"
     },
     "hollywood": {
       "cinemaId": "hollywood",
       "films": [
         {
-          "title": "Big Girls Don't Cry (2026) *Encore Screening",
+          "title": "ALIEN (1979) in 4D for Halloween",
           "sessions": [
             {
-              "date": "2026-10-18",
-              "time": "6:30pm"
+              "date": "2026-10-31",
+              "time": "8:00pm"
             }
           ],
           "note": null,
           "tags": []
         },
         {
-          "title": "Boorman and The Devil (2026) NZ Premiere",
+          "title": "Big Girls Don't Cry (2026) *Encore Screening",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "7:30pm"
+              "date": "2026-10-18",
+              "time": "6:30pm"
             }
           ],
           "note": null,
@@ -439,6 +445,17 @@
           "tags": [
             "event"
           ]
+        },
+        {
+          "title": "Dressed to Kill (1980)",
+          "sessions": [
+            {
+              "date": "2026-10-22",
+              "time": "7:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
         },
         {
           "title": "Dumbo (1941)",
@@ -474,6 +491,17 @@
           "tags": []
         },
         {
+          "title": "La Bola Negra (2026)",
+          "sessions": [
+            {
+              "date": "2026-10-18",
+              "time": "3:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "NZIFF Presents: The Devils",
           "sessions": [
             {
@@ -485,6 +513,17 @@
           "tags": [
             "event"
           ]
+        },
+        {
+          "title": "Primetime (2026)",
+          "sessions": [
+            {
+              "date": "2026-10-29",
+              "time": "7:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
         },
         {
           "title": "Romancing the Stone (1984)",
@@ -561,12 +600,69 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-10-01T11:44:20+13:00",
+      "fetchedAt": "2026-10-02T11:57:15+13:00",
       "sourceUrl": "https://ticketing.oz.veezi.com/sessions/?siteToken=fpnccxy3ma159g7z8a3e95asy8"
     },
     "capitol": {
       "cinemaId": "capitol",
       "films": [
+        {
+          "title": "500 Miles",
+          "sessions": [
+            {
+              "date": "2026-11-01",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "12:45pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "A Talent for Murder",
+          "sessions": [
+            {
+              "date": "2026-11-01",
+              "time": "5:15pm"
+            },
+            {
+              "date": "2026-11-04",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-06",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-08",
+              "time": "11:45am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Bad Apples",
+          "sessions": [
+            {
+              "date": "2026-10-31",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-10",
+              "time": "8:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
         {
           "title": "Big Girls Don't Cry",
           "sessions": [
@@ -611,12 +707,45 @@
           "tags": []
         },
         {
-          "title": "Digger",
+          "title": "Borges and Me",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "6:30pm"
+              "date": "2026-10-30",
+              "time": "1:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "California Schemin'",
+          "sessions": [
+            {
+              "date": "2026-10-31",
+              "time": "8:00pm"
             },
+            {
+              "date": "2026-11-12",
+              "time": "8:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Derek vs Derek",
+          "sessions": [
+            {
+              "date": "2026-11-11",
+              "time": "6:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Digger",
+          "sessions": [
             {
               "date": "2026-10-02",
               "time": "6:00pm"
@@ -674,12 +803,34 @@
           "tags": []
         },
         {
-          "title": "Heart of the Beast",
+          "title": "Elsinore",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "4:30pm"
+              "date": "2026-11-14",
+              "time": "8:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Everybody to Kenmure Street",
+          "sessions": [
+            {
+              "date": "2026-10-29",
+              "time": "3:30pm"
             },
+            {
+              "date": "2026-11-16",
+              "time": "5:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Heart of the Beast",
+          "sessions": [
             {
               "date": "2026-10-02",
               "time": "4:00pm"
@@ -709,6 +860,127 @@
           "tags": []
         },
         {
+          "title": "Hill",
+          "sessions": [
+            {
+              "date": "2026-11-02",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "1:15pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Ink",
+          "sessions": [
+            {
+              "date": "2026-11-14",
+              "time": "5:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Kenny Dalglish",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "1:15pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Mother's Pride",
+          "sessions": [
+            {
+              "date": "2026-11-01",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-03",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-06",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-09",
+              "time": "1:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "My Duchess",
+          "sessions": [
+            {
+              "date": "2026-10-31",
+              "time": "3:15pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "3:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Once Upon a Time in a Cinema",
+          "sessions": [
+            {
+              "date": "2026-10-30",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-04",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-05",
+              "time": "1:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Parky",
+          "sessions": [
+            {
+              "date": "2026-11-10",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "Pitchblack Playback: Nirvana",
           "sessions": [
             {
@@ -720,12 +992,38 @@
           "tags": []
         },
         {
-          "title": "Resident Evil",
+          "title": "Prima Facie",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "9:00pm"
+              "date": "2026-11-15",
+              "time": "5:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Queen at Sea",
+          "sessions": [
+            {
+              "date": "2026-11-02",
+              "time": "5:30pm"
             },
+            {
+              "date": "2026-11-11",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:15pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Resident Evil",
+          "sessions": [
             {
               "date": "2026-10-02",
               "time": "8:30pm"
@@ -868,6 +1166,21 @@
           "tags": []
         },
         {
+          "title": "Tender Loving Care",
+          "sessions": [
+            {
+              "date": "2026-10-31",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "5:45pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "Terror-Fi Presents: HUNDREDS OF BEAVERS (One Night",
           "sessions": [
             {
@@ -884,6 +1197,67 @@
             {
               "date": "2026-10-08",
               "time": "9:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "The Incomer",
+          "sessions": [
+            {
+              "date": "2026-11-02",
+              "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-05",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "8:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "The Lost Children of Tuam",
+          "sessions": [
+            {
+              "date": "2026-11-03",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-09",
+              "time": "7:45pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "8:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "The Three Urns",
+          "sessions": [
+            {
+              "date": "2026-10-29",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-04",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-09",
+              "time": "5:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "1:00pm"
             }
           ],
           "note": null,
@@ -935,9 +1309,105 @@
           ],
           "note": null,
           "tags": []
+        },
+        {
+          "title": "The Uprising",
+          "sessions": [
+            {
+              "date": "2026-10-30",
+              "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-03",
+              "time": "7:45pm"
+            },
+            {
+              "date": "2026-11-10",
+              "time": "3:15pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "7:40pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Virginia Woolf's Night & Day",
+          "sessions": [
+            {
+              "date": "2026-10-29",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-02",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-04",
+              "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-10",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "7:45pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Whitetail",
+          "sessions": [
+            {
+              "date": "2026-10-29",
+              "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-03",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-07",
+              "time": "11:45am"
+            },
+            {
+              "date": "2026-11-09",
+              "time": "3:15pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "5:45pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Wicker",
+          "sessions": [
+            {
+              "date": "2026-10-28",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-10-30",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-01",
+              "time": "7:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
         }
       ],
-      "fetchedAt": "2026-10-01T11:44:22+13:00",
+      "fetchedAt": "2026-10-02T11:57:17+13:00",
       "sourceUrl": "https://ticketing.oz.veezi.com/sessions/?siteToken=heg709z4rmk2gh10ykam14wxm8"
     },
     "rialto": {
@@ -946,26 +1416,6 @@
         {
           "title": "Verity",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "1:15pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "2:45pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:00pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:45am"
-            },
             {
               "date": "2026-10-02",
               "time": "1:15pm"
@@ -1082,26 +1532,6 @@
           "title": "Digger",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "1:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "3:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "7:45pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:30am"
-            },
-            {
               "date": "2026-10-02",
               "time": "1:15pm"
             },
@@ -1217,26 +1647,6 @@
           "title": "Heart of the Beast",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "12:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "2:45pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "5:40pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:10pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:30am"
-            },
-            {
               "date": "2026-10-02",
               "time": "2:30pm"
             },
@@ -1336,14 +1746,6 @@
           "title": "Shaun The Sheep: The Beast Of Mossy Bottom",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "1:15pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "5:50pm"
-            },
-            {
               "date": "2026-10-02",
               "time": "12:50pm"
             },
@@ -1423,18 +1825,6 @@
           "title": "De Gaulle Liberte",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "2:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:45am"
-            },
-            {
               "date": "2026-10-02",
               "time": "7:30pm"
             },
@@ -1495,79 +1885,8 @@
           "tags": []
         },
         {
-          "title": "Exhibition on Screen: James Mcneill Whistler",
-          "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "8:00pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:45am"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "3:00pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "12:45pm"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "10:45am"
-            },
-            {
-              "date": "2026-10-08",
-              "time": "12:45pm"
-            },
-            {
-              "date": "2026-10-09",
-              "time": "10:45am"
-            },
-            {
-              "date": "2026-10-10",
-              "time": "10:45am"
-            },
-            {
-              "date": "2026-10-11",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-10-12",
-              "time": "12:45pm"
-            },
-            {
-              "date": "2026-10-13",
-              "time": "10:45am"
-            },
-            {
-              "date": "2026-10-14",
-              "time": "6:00pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "De Gaulle Tilting Iron",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "7:20pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:45am"
-            },
             {
               "date": "2026-10-02",
               "time": "1:55pm"
@@ -1632,14 +1951,6 @@
           "title": "The Weight",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "12:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "5:10pm"
-            },
-            {
               "date": "2026-10-02",
               "time": "12:30pm"
             },
@@ -1695,10 +2006,6 @@
           "title": "Last Man Standing",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "5:00pm"
-            },
-            {
               "date": "2026-10-02",
               "time": "12:40pm"
             },
@@ -1747,16 +2054,39 @@
           "tags": []
         },
         {
-          "title": "Tony",
+          "title": "Hope",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "3:10pm"
+              "date": "2026-10-02",
+              "time": "7:20pm"
             },
             {
-              "date": "2026-10-01",
-              "time": "5:00pm"
+              "date": "2026-10-03",
+              "time": "7:40pm"
             },
+            {
+              "date": "2026-10-04",
+              "time": "1:40pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "7:00pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "6:30pm"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "6:20pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Tony",
+          "sessions": [
             {
               "date": "2026-10-02",
               "time": "2:45pm"
@@ -1798,54 +2128,78 @@
           "tags": []
         },
         {
-          "title": "Hope",
+          "title": "Mum, I'm Alien Pregnant",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "7:30pm"
-            },
-            {
               "date": "2026-10-02",
-              "time": "7:20pm"
+              "time": "8:10pm"
             },
             {
               "date": "2026-10-03",
-              "time": "7:40pm"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "1:40pm"
+              "time": "12:50pm"
             },
             {
               "date": "2026-10-05",
-              "time": "7:00pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "6:30pm"
+              "time": "2:45pm"
             },
             {
               "date": "2026-10-07",
-              "time": "6:20pm"
+              "time": "12:40pm"
             }
           ],
           "note": null,
           "tags": []
         },
         {
-          "title": "American Doctor",
+          "title": "Exhibition on Screen: James Mcneill Whistler",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "3:45pm"
+              "date": "2026-10-03",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-10-04",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "5:30pm"
             },
             {
               "date": "2026-10-06",
-              "time": "1:55pm"
+              "time": "12:45pm"
             },
             {
               "date": "2026-10-07",
-              "time": "5:00pm"
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-10-08",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-10-09",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-10-10",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-10-11",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-10-12",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-10-13",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-10-14",
+              "time": "6:00pm"
             }
           ],
           "note": null,
@@ -1854,10 +2208,6 @@
         {
           "title": "An Evening With Victor Hugo",
           "sessions": [
-            {
-              "date": "2026-10-02",
-              "time": "10:30am"
-            },
             {
               "date": "2026-10-03",
               "time": "3:40pm"
@@ -1877,29 +2227,6 @@
             {
               "date": "2026-10-07",
               "time": "12:50pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Mum, I'm Alien Pregnant",
-          "sessions": [
-            {
-              "date": "2026-10-02",
-              "time": "8:10pm"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "12:50pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "2:45pm"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "12:40pm"
             }
           ],
           "note": null,
@@ -1938,6 +2265,21 @@
             {
               "date": "2026-10-07",
               "time": "12:50pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "American Doctor",
+          "sessions": [
+            {
+              "date": "2026-10-06",
+              "time": "1:55pm"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "5:00pm"
             }
           ],
           "note": null,
@@ -2374,6 +2716,10 @@
             {
               "date": "2026-11-15",
               "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:45pm"
             }
           ],
           "note": null,
@@ -2467,6 +2813,10 @@
             {
               "date": "2026-11-12",
               "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "5:30pm"
             }
           ],
           "note": null,
@@ -2709,6 +3059,10 @@
             {
               "date": "2026-11-12",
               "time": "11:30am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:15pm"
             }
           ],
           "note": null,
@@ -2732,6 +3086,10 @@
             {
               "date": "2026-11-12",
               "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "7:30pm"
             }
           ],
           "note": null,
@@ -2789,6 +3147,10 @@
             {
               "date": "2026-11-09",
               "time": "7:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "1:15pm"
             }
           ],
           "note": null,
@@ -2865,6 +3227,10 @@
             {
               "date": "2026-11-14",
               "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "11:15am"
             }
           ],
           "note": null,
@@ -2971,7 +3337,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-10-01T11:44:33+13:00",
+      "fetchedAt": "2026-10-02T11:57:30+13:00",
       "sourceUrl": "https://www.rialto.co.nz/cinema/newmarket/sessions"
     },
     "silky-orakei": {
@@ -2984,13 +3350,13 @@
           "tags": []
         },
         {
-          "title": "Heart of the Beast",
+          "title": "Dune: Part Three",
           "sessions": [],
           "note": null,
           "tags": []
         },
         {
-          "title": "Dune: Part Three",
+          "title": "Heart of the Beast",
           "sessions": [],
           "note": null,
           "tags": []
@@ -3026,6 +3392,12 @@
           "tags": []
         },
         {
+          "title": "Wild Horse Nine",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "Sense and Sensibility (2026)",
           "sessions": [],
           "note": null,
@@ -3052,7 +3424,7 @@
           ]
         }
       ],
-      "fetchedAt": "2026-10-01T11:44:35+13:00",
+      "fetchedAt": "2026-10-02T11:57:31+13:00",
       "sourceUrl": "https://www.flicks.co.nz/cinema/silky-otter-cinemas-orakei/"
     },
     "silky-ponsonby": {
@@ -3065,13 +3437,13 @@
           "tags": []
         },
         {
-          "title": "Heart of the Beast",
+          "title": "Dune: Part Three",
           "sessions": [],
           "note": null,
           "tags": []
         },
         {
-          "title": "Dune: Part Three",
+          "title": "Heart of the Beast",
           "sessions": [],
           "note": null,
           "tags": []
@@ -3125,6 +3497,12 @@
           "tags": []
         },
         {
+          "title": "Wild Horse Nine",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "Sense and Sensibility (2026)",
           "sessions": [],
           "note": null,
@@ -3143,7 +3521,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-10-01T11:44:37+13:00",
+      "fetchedAt": "2026-10-02T11:57:33+13:00",
       "sourceUrl": "https://www.flicks.co.nz/cinema/silky-otter-cinemas-ponsonby/"
     },
     "event-queen": {
@@ -3152,22 +3530,6 @@
         {
           "title": "Verity",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "12:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "3:20pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:40pm"
-            },
             {
               "date": "2026-10-02",
               "time": "12:30pm"
@@ -3295,30 +3657,6 @@
         {
           "title": "Heart Of The Beast",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "11:25am"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "1:40pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "4:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "6:20pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:40pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "11:25am"
-            },
             {
               "date": "2026-10-02",
               "time": "1:40pm"
@@ -3459,26 +3797,6 @@
           "title": "Digger",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "12:10pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "2:20pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "3:10pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:30pm"
-            },
-            {
               "date": "2026-10-02",
               "time": "12:10pm"
             },
@@ -3603,28 +3921,83 @@
           "tags": []
         },
         {
-          "title": "Resident Evil",
+          "title": "Forgotten Island",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "12:00pm"
+              "date": "2026-10-02",
+              "time": "1:00pm"
             },
             {
-              "date": "2026-10-01",
-              "time": "2:10pm"
+              "date": "2026-10-02",
+              "time": "3:25pm"
             },
             {
-              "date": "2026-10-01",
-              "time": "4:25pm"
+              "date": "2026-10-03",
+              "time": "11:10am"
             },
             {
-              "date": "2026-10-01",
-              "time": "6:40pm"
+              "date": "2026-10-03",
+              "time": "1:00pm"
             },
             {
-              "date": "2026-10-01",
-              "time": "9:00pm"
+              "date": "2026-10-03",
+              "time": "3:40pm"
             },
+            {
+              "date": "2026-10-04",
+              "time": "11:20am"
+            },
+            {
+              "date": "2026-10-04",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-10-04",
+              "time": "3:40pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "11:10am"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "3:25pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "11:10am"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "3:25pm"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "11:10am"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "3:25pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Resident Evil",
+          "sessions": [
             {
               "date": "2026-10-02",
               "time": "12:00pm"
@@ -3750,103 +4123,8 @@
           "tags": []
         },
         {
-          "title": "Forgotten Island",
-          "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "3:40pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "11:10am"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "3:25pm"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "11:10am"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "3:40pm"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "11:20am"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "3:40pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "11:10am"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "3:25pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "11:10am"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "3:25pm"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "11:10am"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "3:25pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Paw Patrol - The Dino Movie",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "1:25pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "11:20am"
-            },
             {
               "date": "2026-10-02",
               "time": "1:25pm"
@@ -3899,14 +4177,6 @@
           "title": "Shaun the Sheep: The Beast of Mossy Bottom",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "1:40pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "11:00am"
-            },
-            {
               "date": "2026-10-02",
               "time": "1:40pm"
             },
@@ -3957,18 +4227,6 @@
         {
           "title": "Spider-Man: Brand New Day",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "2:05pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "5:10pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:35pm"
-            },
             {
               "date": "2026-10-02",
               "time": "2:20pm"
@@ -4036,14 +4294,6 @@
         {
           "title": "Coyote vs. Acme",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "3:45pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "6:10pm"
-            },
             {
               "date": "2026-10-02",
               "time": "12:00pm"
@@ -4113,16 +4363,70 @@
           "tags": []
         },
         {
-          "title": "Demon Agent",
+          "title": "Drishyam - The Conclusion",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "3:25pm"
+              "date": "2026-10-02",
+              "time": "8:30pm"
             },
             {
-              "date": "2026-10-01",
-              "time": "6:00pm"
+              "date": "2026-10-03",
+              "time": "8:30pm"
             },
+            {
+              "date": "2026-10-04",
+              "time": "7:45pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "8:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Avengers: Endgame Encore",
+          "sessions": [
+            {
+              "date": "2026-10-02",
+              "time": "4:45pm"
+            },
+            {
+              "date": "2026-10-03",
+              "time": "1:45pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "1:25pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "4:45pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "4:45pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Demon Agent",
+          "sessions": [
             {
               "date": "2026-10-02",
               "time": "3:25pm"
@@ -4190,14 +4494,6 @@
         {
           "title": "The Odyssey",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "7:20pm"
-            },
             {
               "date": "2026-10-02",
               "time": "5:00pm"
@@ -4278,10 +4574,6 @@
           "title": "Dhoomakethu",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "8:15pm"
-            },
-            {
               "date": "2026-10-02",
               "time": "8:25pm"
             },
@@ -4308,22 +4600,6 @@
         {
           "title": "Beware Boiuna",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "3:20pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "6:05pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:50pm"
-            },
             {
               "date": "2026-10-02",
               "time": "12:00pm"
@@ -4396,14 +4672,6 @@
           "title": "Hope",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "12:40pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:30pm"
-            },
-            {
               "date": "2026-10-02",
               "time": "12:40pm"
             },
@@ -4459,14 +4727,6 @@
           "title": "Once Upon a Time in the Middle East",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "4:10pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:10pm"
-            },
-            {
               "date": "2026-10-02",
               "time": "4:10pm"
             },
@@ -4497,10 +4757,6 @@
         {
           "title": "V (Kongqiang)",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "8:20pm"
-            },
             {
               "date": "2026-10-02",
               "time": "8:20pm"
@@ -4533,10 +4789,6 @@
           "title": "Insidious: Out of the Further",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "5:50pm"
-            },
-            {
               "date": "2026-10-02",
               "time": "2:25pm"
             },
@@ -4555,72 +4807,6 @@
             {
               "date": "2026-10-07",
               "time": "2:25pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Avengers: Endgame Encore",
-          "sessions": [
-            {
-              "date": "2026-10-02",
-              "time": "10:45am"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "4:45pm"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "1:45pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "1:25pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "4:45pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "10:45am"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "4:45pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Drishyam - The Conclusion",
-          "sessions": [
-            {
-              "date": "2026-10-02",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "7:45pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "8:30pm"
             }
           ],
           "note": null,
@@ -4993,6 +5179,57 @@
           "tags": []
         },
         {
+          "title": "Primetime",
+          "sessions": [
+            {
+              "date": "2026-10-28",
+              "time": "6:30pm"
+            },
+            {
+              "date": "2026-10-29",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-10-29",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-10-30",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-10-30",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-10-31",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-10-31",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-10-31",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-01",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-01",
+              "time": "5:30pm"
+            },
+            {
+              "date": "2026-11-01",
+              "time": "8:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "Ozzy & Black Sabbath: Back To The Beginning",
           "sessions": [
             {
@@ -5087,7 +5324,7 @@
           ]
         }
       ],
-      "fetchedAt": "2026-10-01T11:45:12+13:00",
+      "fetchedAt": "2026-10-02T11:58:00+13:00",
       "sourceUrl": "https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions"
     },
     "event-newmarket": {
@@ -5096,22 +5333,6 @@
         {
           "title": "Verity",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "2:50pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:50pm"
-            },
             {
               "date": "2026-10-02",
               "time": "1:15pm"
@@ -5240,22 +5461,6 @@
           "title": "Heart Of The Beast",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "12:40pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "3:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "6:35pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "9:00pm"
-            },
-            {
               "date": "2026-10-02",
               "time": "1:30pm"
             },
@@ -5367,14 +5572,6 @@
           "title": "Digger",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "2:40pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "3:10pm"
-            },
-            {
               "date": "2026-10-02",
               "time": "2:50pm"
             },
@@ -5463,16 +5660,79 @@
           "tags": []
         },
         {
-          "title": "Resident Evil",
+          "title": "Forgotten Island",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "1:10pm"
+              "date": "2026-10-02",
+              "time": "1:00pm"
             },
             {
-              "date": "2026-10-01",
-              "time": "9:10pm"
+              "date": "2026-10-02",
+              "time": "3:40pm"
             },
+            {
+              "date": "2026-10-03",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-10-03",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-10-03",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-10-04",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-10-04",
+              "time": "12:50pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "12:50pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "3:25pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "1:45pm"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "3:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Resident Evil",
+          "sessions": [
             {
               "date": "2026-10-02",
               "time": "3:50pm"
@@ -5546,99 +5806,8 @@
           "tags": []
         },
         {
-          "title": "Forgotten Island",
-          "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "1:25pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "4:00pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:20am"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "3:40pm"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "10:20am"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "3:45pm"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "10:00am"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "12:50pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "10:20am"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "12:50pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "3:25pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "12:00pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "1:45pm"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "10:20am"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "3:30pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Paw Patrol - The Dino Movie",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "8:45pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:15am"
-            },
             {
               "date": "2026-10-02",
               "time": "12:30pm"
@@ -5691,14 +5860,6 @@
           "title": "Spider-Man: Brand New Day",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "9:50am"
-            },
-            {
               "date": "2026-10-02",
               "time": "8:45pm"
             },
@@ -5743,16 +5904,39 @@
           "tags": []
         },
         {
-          "title": "Shaun the Sheep: The Beast of Mossy Bottom",
+          "title": "Practical Magic 2",
           "sessions": [
             {
               "date": "2026-10-02",
-              "time": "9:25am"
+              "time": "5:45pm"
             },
             {
-              "date": "2026-10-02",
-              "time": "11:25am"
+              "date": "2026-10-03",
+              "time": "5:45pm"
             },
+            {
+              "date": "2026-10-04",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "5:35pm"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "5:50pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Shaun the Sheep: The Beast of Mossy Bottom",
+          "sessions": [
             {
               "date": "2026-10-03",
               "time": "9:25am"
@@ -5801,10 +5985,6 @@
           "title": "Avengers: Endgame Encore",
           "sessions": [
             {
-              "date": "2026-10-02",
-              "time": "11:20am"
-            },
-            {
               "date": "2026-10-03",
               "time": "11:20am"
             },
@@ -5823,37 +6003,6 @@
             {
               "date": "2026-10-07",
               "time": "10:50am"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Practical Magic 2",
-          "sessions": [
-            {
-              "date": "2026-10-02",
-              "time": "5:45pm"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "5:45pm"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "5:50pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "5:50pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "5:35pm"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "5:50pm"
             }
           ],
           "note": null,
@@ -6079,7 +6228,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-10-01T11:45:39+13:00",
+      "fetchedAt": "2026-10-02T11:58:21+13:00",
       "sourceUrl": "https://www.eventcinemas.co.nz/cinema/Newmarket-Westfield/sessions"
     },
     "event-stlukes": {
@@ -6088,30 +6237,6 @@
         {
           "title": "Verity",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "11:30am"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "12:40pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "3:20pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "5:50pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:35pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "11:30am"
-            },
             {
               "date": "2026-10-02",
               "time": "12:40pm"
@@ -6242,26 +6367,6 @@
           "title": "Heart Of The Beast",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "2:45pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "4:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "6:20pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:30pm"
-            },
-            {
               "date": "2026-10-02",
               "time": "1:00pm"
             },
@@ -6365,18 +6470,6 @@
           "title": "Digger",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "3:10pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:45pm"
-            },
-            {
               "date": "2026-10-02",
               "time": "3:00pm"
             },
@@ -6453,135 +6546,8 @@
           "tags": []
         },
         {
-          "title": "Resident Evil",
-          "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "2:20pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "4:15pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "6:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:50pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "2:20pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "4:15pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "6:30pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "8:50pm"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "4:15pm"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "6:30pm"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "8:50pm"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "4:15pm"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "6:30pm"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "8:50pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "2:20pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "4:15pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "6:30pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "8:50pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "2:20pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "4:15pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "6:30pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "8:50pm"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "2:20pm"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "4:15pm"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "6:30pm"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "8:50pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Forgotten Island",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "12:35pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "3:05pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "6:10pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:10am"
-            },
             {
               "date": "2026-10-02",
               "time": "12:35pm"
@@ -6657,6 +6623,105 @@
             {
               "date": "2026-10-07",
               "time": "4:30pm"
+            },
+            {
+              "date": "2026-10-18",
+              "time": "11:00am"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Resident Evil",
+          "sessions": [
+            {
+              "date": "2026-10-02",
+              "time": "2:20pm"
+            },
+            {
+              "date": "2026-10-02",
+              "time": "4:15pm"
+            },
+            {
+              "date": "2026-10-02",
+              "time": "6:30pm"
+            },
+            {
+              "date": "2026-10-02",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-10-03",
+              "time": "4:15pm"
+            },
+            {
+              "date": "2026-10-03",
+              "time": "6:30pm"
+            },
+            {
+              "date": "2026-10-03",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-10-04",
+              "time": "4:15pm"
+            },
+            {
+              "date": "2026-10-04",
+              "time": "6:30pm"
+            },
+            {
+              "date": "2026-10-04",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "2:20pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "4:15pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "6:30pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "2:20pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "4:15pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "6:30pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "2:20pm"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "4:15pm"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "6:30pm"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "8:50pm"
             }
           ],
           "note": null,
@@ -6665,18 +6730,6 @@
         {
           "title": "Paw Patrol - The Dino Movie",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "12:05pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "2:10pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:00am"
-            },
             {
               "date": "2026-10-02",
               "time": "12:05pm"
@@ -6753,18 +6806,6 @@
           "title": "Shaun the Sheep: The Beast of Mossy Bottom",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "11:50am"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "1:50pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "9:50am"
-            },
-            {
               "date": "2026-10-02",
               "time": "11:50am"
             },
@@ -6836,22 +6877,6 @@
           "title": "Spider-Man: Brand New Day",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "12:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:40pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:00am"
-            },
-            {
               "date": "2026-10-02",
               "time": "12:00pm"
             },
@@ -6915,14 +6940,6 @@
           "title": "Coyote vs. Acme",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "3:30pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:10am"
-            },
-            {
               "date": "2026-10-02",
               "time": "3:30pm"
             },
@@ -6961,201 +6978,6 @@
             {
               "date": "2026-10-07",
               "time": "3:30pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Demon Agent",
-          "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "5:55pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:50pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "5:55pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "8:50pm"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "5:55pm"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "5:55pm"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "10:15am"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "5:55pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "8:35pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "5:55pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "8:50pm"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "10:15am"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "5:55pm"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "8:35pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Practical Magic 2",
-          "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "5:00pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Dhoomakethu",
-          "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "8:15pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "8:15pm"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "8:15pm"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "7:45pm"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "8:15pm"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "7:30pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Hanuman Ansh (Hindi)",
-          "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "5:25pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "8:30pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Avengers: Endgame Encore",
-          "sessions": [
-            {
-              "date": "2026-10-02",
-              "time": "10:45am"
-            },
-            {
-              "date": "2026-10-03",
-              "time": "10:45am"
-            },
-            {
-              "date": "2026-10-04",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-10-05",
-              "time": "12:50pm"
-            },
-            {
-              "date": "2026-10-06",
-              "time": "10:45am"
-            },
-            {
-              "date": "2026-10-07",
-              "time": "12:50pm"
             }
           ],
           "note": null,
@@ -7217,6 +7039,127 @@
           "tags": []
         },
         {
+          "title": "Demon Agent",
+          "sessions": [
+            {
+              "date": "2026-10-02",
+              "time": "5:55pm"
+            },
+            {
+              "date": "2026-10-02",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-10-03",
+              "time": "5:55pm"
+            },
+            {
+              "date": "2026-10-04",
+              "time": "5:55pm"
+            },
+            {
+              "date": "2026-10-04",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "5:55pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "8:35pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "5:55pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "5:55pm"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "8:35pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Practical Magic 2",
+          "sessions": [
+            {
+              "date": "2026-10-02",
+              "time": "5:30pm"
+            },
+            {
+              "date": "2026-10-03",
+              "time": "5:30pm"
+            },
+            {
+              "date": "2026-10-04",
+              "time": "5:00pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "5:00pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "5:30pm"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "5:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Dhoomakethu",
+          "sessions": [
+            {
+              "date": "2026-10-02",
+              "time": "8:15pm"
+            },
+            {
+              "date": "2026-10-03",
+              "time": "8:15pm"
+            },
+            {
+              "date": "2026-10-04",
+              "time": "7:45pm"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "8:15pm"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "7:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "Prem Keetanu",
           "sessions": [
             {
@@ -7236,12 +7179,71 @@
           "tags": []
         },
         {
-          "title": "Kiri And Lou Go Raaa!",
+          "title": "Hanuman Ansh (Hindi)",
           "sessions": [
             {
               "date": "2026-10-02",
-              "time": "10:20am"
+              "time": "8:30pm"
             },
+            {
+              "date": "2026-10-03",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-10-04",
+              "time": "5:25pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "8:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Avengers: Endgame Encore",
+          "sessions": [
+            {
+              "date": "2026-10-03",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-10-04",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-10-05",
+              "time": "12:50pm"
+            },
+            {
+              "date": "2026-10-06",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-10-07",
+              "time": "12:50pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "The Hunger Games Marathon - Films 1-4",
+          "sessions": [
+            {
+              "date": "2026-10-03",
+              "time": "11:00am"
+            }
+          ],
+          "note": null,
+          "tags": [
+            "event"
+          ]
+        },
+        {
+          "title": "Kiri And Lou Go Raaa!",
+          "sessions": [
             {
               "date": "2026-10-03",
               "time": "10:30am"
@@ -7265,19 +7267,6 @@
           ],
           "note": null,
           "tags": []
-        },
-        {
-          "title": "The Hunger Games Marathon - Films 1-4",
-          "sessions": [
-            {
-              "date": "2026-10-03",
-              "time": "11:00am"
-            }
-          ],
-          "note": null,
-          "tags": [
-            "event"
-          ]
         },
         {
           "title": "The Odyssey",
@@ -7486,7 +7475,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-10-01T11:46:05+13:00",
+      "fetchedAt": "2026-10-02T11:58:41+13:00",
       "sourceUrl": "https://www.eventcinemas.co.nz/cinema/st-lukes/sessions"
     },
     "reading-newlynn": {
@@ -7495,10 +7484,6 @@
         {
           "title": "Spider-Man: Brand New Day",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "8:45pm"
-            },
             {
               "date": "2026-10-02",
               "time": "5:15pm"
@@ -7530,26 +7515,6 @@
         {
           "title": "Digger",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "2:15pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:15pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "9:00pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:45am"
-            },
             {
               "date": "2026-10-02",
               "time": "2:15pm"
@@ -7673,34 +7638,6 @@
         {
           "title": "Verity",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "1:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "3:45pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "6:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "9:15pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:15am"
-            },
             {
               "date": "2026-10-02",
               "time": "1:00pm"
@@ -7873,18 +7810,6 @@
           "title": "Paw Patrol - The Dino Movie",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "12:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "3:00pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:15am"
-            },
-            {
               "date": "2026-10-02",
               "time": "12:30pm"
             },
@@ -7960,18 +7885,6 @@
           "title": "Forgotten Island",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "1:15pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "4:00pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:30am"
-            },
-            {
               "date": "2026-10-02",
               "time": "1:15pm"
             },
@@ -8046,18 +7959,6 @@
         {
           "title": "Resident Evil",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "4:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:30pm"
-            },
             {
               "date": "2026-10-02",
               "time": "4:30pm"
@@ -8137,26 +8038,6 @@
         {
           "title": "Heart of the Beast",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "2:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "5:45pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "6:45pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "9:15pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "11:00am"
-            },
             {
               "date": "2026-10-02",
               "time": "2:30pm"
@@ -8281,14 +8162,6 @@
           "title": "Shaun the Sheep: The Beast of Mossy Bottom",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "12:45pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:30am"
-            },
-            {
               "date": "2026-10-02",
               "time": "12:45pm"
             },
@@ -8362,18 +8235,6 @@
         {
           "title": "Coyote vs. Acme",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "12:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "3:00pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:00am"
-            },
             {
               "date": "2026-10-02",
               "time": "12:30pm"
@@ -8450,14 +8311,6 @@
           "title": "Practical Magic 2",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "5:45pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "11:30am"
-            },
-            {
               "date": "2026-10-03",
               "time": "11:30am"
             },
@@ -8510,18 +8363,6 @@
         {
           "title": "Beware Boiúna",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "3:00pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "5:45pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:30pm"
-            },
             {
               "date": "2026-10-02",
               "time": "3:00pm"
@@ -8639,7 +8480,7 @@
               "time": "8:30pm"
             }
           ],
-          "note": "opens Fri 2 Oct",
+          "note": null,
           "tags": []
         },
         {
@@ -8649,7 +8490,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-10-01T11:46:08+13:00",
+      "fetchedAt": "2026-10-02T11:58:43+13:00",
       "sourceUrl": "https://www.readingcinemas.co.nz/cinemas"
     },
     "bridgeway": {
@@ -8763,6 +8604,10 @@
             {
               "date": "2026-11-14",
               "time": "2:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "11:00am"
             }
           ],
           "note": null,
@@ -8794,10 +8639,6 @@
         {
           "title": "Colours of Time",
           "sessions": [
-            {
-              "date": "2026-10-02",
-              "time": "10:10am"
-            },
             {
               "date": "2026-10-02",
               "time": "12:05pm"
@@ -8845,14 +8686,6 @@
         {
           "title": "De Gaulle: Liberté",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "4:10pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "7:10pm"
-            },
             {
               "date": "2026-10-02",
               "time": "4:10pm"
@@ -8909,10 +8742,6 @@
           "title": "De Gaulle: Tilting Iron",
           "sessions": [
             {
-              "date": "2026-10-02",
-              "time": "10:55am"
-            },
-            {
               "date": "2026-10-03",
               "time": "10:55am"
             },
@@ -8958,6 +8787,10 @@
             {
               "date": "2026-11-13",
               "time": "3:15pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "5:45pm"
             }
           ],
           "note": null,
@@ -8966,14 +8799,6 @@
         {
           "title": "Digger",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "12:35pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "5:30pm"
-            },
             {
               "date": "2026-10-02",
               "time": "12:30pm"
@@ -9070,10 +8895,6 @@
           "title": "EXHIBITION ON SCREEN: James McNeill Whistler",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "7:30pm"
-            },
-            {
               "date": "2026-10-04",
               "time": "10:30am"
             }
@@ -9118,22 +8939,6 @@
         {
           "title": "Heart of the Beast",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "1:30pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "3:35pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "5:40pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "8:00pm"
-            },
             {
               "date": "2026-10-02",
               "time": "12:45pm"
@@ -9274,6 +9079,10 @@
             {
               "date": "2026-11-10",
               "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:30pm"
             }
           ],
           "note": null,
@@ -9390,10 +9199,6 @@
           "title": "Primavera",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "1:55pm"
-            },
-            {
               "date": "2026-10-02",
               "time": "1:55pm"
             },
@@ -9442,6 +9247,10 @@
             },
             {
               "date": "2026-11-12",
+              "time": "7:45pm"
+            },
+            {
+              "date": "2026-11-16",
               "time": "7:45pm"
             }
           ],
@@ -9516,16 +9325,19 @@
           ]
         },
         {
-          "title": "Shaun the sheep: The beast of Mossy Bottom",
+          "title": "Sense and Sensibility",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "1:10pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:20am"
-            },
+              "date": "2026-10-15",
+              "time": "7:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Shaun the sheep: The beast of Mossy Bottom",
+          "sessions": [
             {
               "date": "2026-10-03",
               "time": "10:40am"
@@ -9732,14 +9544,6 @@
           "title": "The Weight",
           "sessions": [
             {
-              "date": "2026-10-01",
-              "time": "2:55pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "5:10pm"
-            },
-            {
               "date": "2026-10-02",
               "time": "2:35pm"
             },
@@ -9812,18 +9616,6 @@
         {
           "title": "Verity",
           "sessions": [
-            {
-              "date": "2026-10-01",
-              "time": "3:10pm"
-            },
-            {
-              "date": "2026-10-01",
-              "time": "7:45pm"
-            },
-            {
-              "date": "2026-10-02",
-              "time": "10:15am"
-            },
             {
               "date": "2026-10-02",
               "time": "3:00pm"
@@ -9936,6 +9728,10 @@
             {
               "date": "2026-11-11",
               "time": "11:15am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "1:15pm"
             }
           ],
           "note": null,
@@ -9961,7 +9757,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-10-01T11:46:10+13:00",
+      "fetchedAt": "2026-10-02T11:58:44+13:00",
       "sourceUrl": "https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70"
     }
   }
