@@ -1,8 +1,6 @@
 {
-  "fetchedAt": "2026-11-09T11:38:41+13:00",
-  "errors": {
-    "academy": "AdapterError: request to https://www.flicks.co.nz/cinema/academy-cinemas/?view=all-movies failed: HTTPSConnectionPool(host='www.flicks.co.nz', port=443): Read timed out. (read timeout=15)"
-  },
+  "fetchedAt": "2026-11-10T14:49:46+13:00",
+  "errors": {},
   "fallbacks": {
     "silky-orakei": "AdapterError: silky-orakei: no film data on https://www.silkyotter.co.nz/films -- silkyotter.co.nz is a fully client-rendered SPA (Vista 'Lumos' platform) whose film/session API requires a GAS/MovieXchange auth flow this adapter doesn't implement (see module docstring). Falls back to flicks.co.nz via adapters.get_fallback().",
     "silky-ponsonby": "AdapterError: silky-ponsonby: no film data on https://www.silkyotter.co.nz/films -- silkyotter.co.nz is a fully client-rendered SPA (Vista 'Lumos' platform) whose film/session API requires a GAS/MovieXchange auth flow this adapter doesn't implement (see module docstring). Falls back to flicks.co.nz via adapters.get_fallback()."
@@ -11,6 +9,12 @@
     "academy": {
       "cinemaId": "academy",
       "films": [
+        {
+          "title": "Dune: Part Three",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
         {
           "title": "Wicker",
           "sessions": [],
@@ -24,31 +28,25 @@
           "tags": []
         },
         {
-          "title": "Primetime",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Godzilla Minus Zero",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "You Can See Everything",
           "sessions": [],
           "note": null,
           "tags": []
         },
         {
-          "title": "Verity",
+          "title": "Primetime",
           "sessions": [],
           "note": null,
           "tags": []
         },
         {
           "title": "Fatherland",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Verity",
           "sessions": [],
           "note": null,
           "tags": []
@@ -66,13 +64,19 @@
           "tags": []
         },
         {
-          "title": "Digger",
+          "title": "The Fox",
           "sessions": [],
           "note": null,
           "tags": []
         },
         {
-          "title": "The Fox",
+          "title": "Behemoth!",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Digger",
           "sessions": [],
           "note": null,
           "tags": []
@@ -84,19 +88,7 @@
           "tags": []
         },
         {
-          "title": "Before Sunset",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Blue Velvet",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Ken Russell's The Devils",
           "sessions": [],
           "note": null,
           "tags": []
@@ -108,7 +100,7 @@
           "tags": []
         },
         {
-          "title": "The Conversation",
+          "title": "Before Sunset",
           "sessions": [],
           "note": null,
           "tags": []
@@ -120,13 +112,7 @@
           "tags": []
         },
         {
-          "title": "Bullets Over Broadway",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Dangerous Game",
+          "title": "Ken Russell's The Devils",
           "sessions": [],
           "note": null,
           "tags": []
@@ -144,25 +130,19 @@
           "tags": []
         },
         {
-          "title": "Odd Man Out",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Rear Window",
           "sessions": [],
           "note": null,
           "tags": []
         },
         {
-          "title": "Southland Tales",
+          "title": "The Blackout",
           "sessions": [],
           "note": null,
           "tags": []
         },
         {
-          "title": "The Blackout",
+          "title": "The Conversation",
           "sessions": [],
           "note": null,
           "tags": []
@@ -198,6 +178,12 @@
           "tags": []
         },
         {
+          "title": "Bullets Over Broadway",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "Child's Play (1972)",
           "sessions": [],
           "note": null,
@@ -205,6 +191,12 @@
         },
         {
           "title": "Citizenfour",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Dangerous Game",
           "sessions": [],
           "note": null,
           "tags": []
@@ -234,6 +226,12 @@
           "tags": []
         },
         {
+          "title": "Odd Man Out",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "Pandora and the Flying Dutchman",
           "sessions": [],
           "note": null,
@@ -247,6 +245,12 @@
         },
         {
           "title": "Some Like It Hot (1959)",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Southland Tales",
           "sessions": [],
           "note": null,
           "tags": []
@@ -282,7 +286,7 @@
           "tags": []
         },
         {
-          "title": "Mona Lisa and the Blood Moon",
+          "title": "Scooby-Doo",
           "sessions": [],
           "note": null,
           "tags": []
@@ -312,7 +316,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-08T11:25:50+13:00",
+      "fetchedAt": "2026-11-10T14:47:48+13:00",
       "sourceUrl": "https://www.flicks.co.nz/cinema/academy-cinemas/"
     },
     "hollywood": {
@@ -444,7 +448,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-09T11:36:14+13:00",
+      "fetchedAt": "2026-11-10T14:47:49+13:00",
       "sourceUrl": "https://ticketing.oz.veezi.com/sessions/?siteToken=fpnccxy3ma159g7z8a3e95asy8"
     },
     "capitol": {
@@ -637,6 +641,19 @@
           "tags": []
         },
         {
+          "title": "Heated Rivalry: Season 1 - Marathon Event",
+          "sessions": [
+            {
+              "date": "2026-12-05",
+              "time": "2:00pm"
+            }
+          ],
+          "note": null,
+          "tags": [
+            "event"
+          ]
+        },
+        {
           "title": "Hill",
           "sessions": [
             {
@@ -694,17 +711,6 @@
             {
               "date": "2026-11-24",
               "time": "8:00pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Mother's Pride",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "1:00pm"
             }
           ],
           "note": null,
@@ -848,10 +854,6 @@
           "title": "The Lost Children of Tuam",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "7:45pm"
-            },
-            {
               "date": "2026-11-13",
               "time": "8:00pm"
             },
@@ -866,10 +868,6 @@
         {
           "title": "The Three Urns",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "5:30pm"
-            },
             {
               "date": "2026-11-13",
               "time": "1:00pm"
@@ -905,10 +903,6 @@
           "title": "Virginia Woolf's Night & Day",
           "sessions": [
             {
-              "date": "2026-11-10",
-              "time": "1:15pm"
-            },
-            {
               "date": "2026-11-15",
               "time": "7:45pm"
             }
@@ -930,10 +924,6 @@
         {
           "title": "Whitetail",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "3:15pm"
-            },
             {
               "date": "2026-11-12",
               "time": "5:45pm"
@@ -977,7 +967,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-09T11:36:16+13:00",
+      "fetchedAt": "2026-11-10T14:47:50+13:00",
       "sourceUrl": "https://ticketing.oz.veezi.com/sessions/?siteToken=heg709z4rmk2gh10ykam14wxm8"
     },
     "rialto": {
@@ -987,30 +977,6 @@
           "title": "Wicker",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "12:30pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "2:50pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "5:10pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "10:50am"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "1:10pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "3:30pm"
             },
@@ -1040,6 +1006,118 @@
             },
             {
               "date": "2026-11-11",
+              "time": "8:10pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "5:15pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:50pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "5:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "8:20pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "4:40pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "7:50pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "10:10am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "5:10pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "7:50pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "5:10pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "7:50pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:50pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "5:10pm"
+            },
+            {
+              "date": "2026-11-18",
               "time": "8:10pm"
             }
           ],
@@ -1049,30 +1127,6 @@
         {
           "title": "Wild Horse Nine",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "12:45pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "3:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "7:20pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "10:50am"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "12:40pm"
-            },
             {
               "date": "2026-11-10",
               "time": "2:55pm"
@@ -1104,6 +1158,90 @@
             {
               "date": "2026-11-11",
               "time": "8:10pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:50pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "5:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "12:40pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "12:15pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "3:15pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "5:25pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "10:10am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:15pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "7:40pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:55pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "2:50pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "5:20pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:40pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "5:20pm"
             }
           ],
           "note": null,
@@ -1112,22 +1250,6 @@
         {
           "title": "Primetime",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "2:45pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "10:20am"
-            },
             {
               "date": "2026-11-10",
               "time": "3:10pm"
@@ -1155,6 +1277,34 @@
             {
               "date": "2026-11-11",
               "time": "8:20pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:35pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "5:15pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "5:20pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "5:20pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:45pm"
             }
           ],
           "note": null,
@@ -1163,22 +1313,6 @@
         {
           "title": "Pressure",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "12:25pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "7:10pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "10:20am"
-            },
             {
               "date": "2026-11-10",
               "time": "4:00pm"
@@ -1206,53 +1340,84 @@
             {
               "date": "2026-11-11",
               "time": "8:20pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:50pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:40pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "4:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "5:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:30am"
             }
           ],
           "note": null,
           "tags": []
         },
         {
-          "title": "Flesh And Bronze",
+          "title": "Wildwood",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "5:30pm"
-            },
-            {
               "date": "2026-11-10",
-              "time": "12:45pm"
+              "time": "2:50pm"
             },
             {
               "date": "2026-11-11",
-              "time": "10:45am"
+              "time": "2:45pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Sense and Sensibility",
+          "sessions": [
+            {
+              "date": "2026-11-10",
+              "time": "7:30pm"
             },
             {
-              "date": "2026-11-12",
-              "time": "12:45pm"
+              "date": "2026-11-11",
+              "time": "5:30pm"
             },
             {
               "date": "2026-11-13",
-              "time": "10:45am"
+              "time": "12:55pm"
             },
             {
               "date": "2026-11-14",
-              "time": "10:45am"
-            },
-            {
-              "date": "2026-11-15",
-              "time": "1:00pm"
+              "time": "12:30pm"
             },
             {
               "date": "2026-11-16",
-              "time": "12:45pm"
+              "time": "2:15pm"
             },
             {
               "date": "2026-11-17",
-              "time": "10:45am"
+              "time": "2:15pm"
             },
             {
               "date": "2026-11-18",
-              "time": "6:00pm"
+              "time": "3:15pm"
             }
           ],
           "note": null,
@@ -1261,18 +1426,6 @@
         {
           "title": "Naza",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "12:55pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "10:20am"
-            },
             {
               "date": "2026-11-10",
               "time": "6:15pm"
@@ -1284,184 +1437,26 @@
             {
               "date": "2026-11-11",
               "time": "5:10pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Sense and Sensibility",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "3:10pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "11:15am"
+              "date": "2026-11-12",
+              "time": "1:50pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "5:30pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "BIFF26 Kenny Dalglish",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "3:30pm"
-            },
-            {
-              "date": "2026-11-13",
-              "time": "11:15am"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "1:00pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "BIFF26 The Incomer",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "5:45pm"
+              "date": "2026-11-14",
+              "time": "5:40pm"
             },
             {
               "date": "2026-11-15",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-11-17",
-              "time": "5:45pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "La Bola Negra",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "2:00pm"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "12:30pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "BIFF26 California Schemin'",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "1:15pm"
-            },
-            {
-              "date": "2026-11-18",
-              "time": "10:45am"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "BIFF26 Everybody to Kenmure Street",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "7:45pm"
+              "time": "2:45pm"
             },
             {
               "date": "2026-11-16",
-              "time": "1:15pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Klara and the Sun",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "12:30pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "7:40pm"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "10:20am"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Digger",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "2:15pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "12:10pm"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "12:50pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Gentle Monster",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "2:35pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "BIFF26 Parky",
-          "sessions": [
-            {
-              "date": "2026-11-10",
-              "time": "11:00am"
-            },
-            {
-              "date": "2026-11-13",
-              "time": "5:45pm"
+              "time": "4:00pm"
             },
             {
               "date": "2026-11-18",
-              "time": "1:00pm"
+              "time": "5:40pm"
             }
           ],
           "note": null,
@@ -1487,25 +1482,6 @@
           "tags": []
         },
         {
-          "title": "BIFF26 The Three Urns",
-          "sessions": [
-            {
-              "date": "2026-11-10",
-              "time": "3:45pm"
-            },
-            {
-              "date": "2026-11-12",
-              "time": "11:30am"
-            },
-            {
-              "date": "2026-11-16",
-              "time": "3:15pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "BIFF26 Mother's Pride",
           "sessions": [
             {
@@ -1525,30 +1501,34 @@
           "tags": []
         },
         {
-          "title": "Wildwood",
+          "title": "BIFF26 The Three Urns",
           "sessions": [
             {
               "date": "2026-11-10",
-              "time": "2:50pm"
+              "time": "3:45pm"
             },
             {
-              "date": "2026-11-11",
-              "time": "2:45pm"
+              "date": "2026-11-12",
+              "time": "11:30am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:15pm"
             }
           ],
           "note": null,
           "tags": []
         },
         {
-          "title": "BIFF26 The Uprising",
+          "title": "Klara and the Sun",
           "sessions": [
             {
               "date": "2026-11-10",
-              "time": "1:00pm"
+              "time": "7:40pm"
             },
             {
-              "date": "2026-11-12",
-              "time": "7:45pm"
+              "date": "2026-11-11",
+              "time": "10:20am"
             }
           ],
           "note": null,
@@ -1582,11 +1562,19 @@
             },
             {
               "date": "2026-11-12",
+              "time": "1:40pm"
+            },
+            {
+              "date": "2026-11-12",
               "time": "7:30pm"
             },
             {
               "date": "2026-11-13",
               "time": "10:30am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "2:00pm"
             },
             {
               "date": "2026-11-13",
@@ -1606,6 +1594,10 @@
             },
             {
               "date": "2026-11-15",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-15",
               "time": "1:30pm"
             },
             {
@@ -1618,7 +1610,15 @@
             },
             {
               "date": "2026-11-16",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-16",
               "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "10:30am"
             },
             {
               "date": "2026-11-17",
@@ -1634,7 +1634,73 @@
             },
             {
               "date": "2026-11-18",
+              "time": "1:40pm"
+            },
+            {
+              "date": "2026-11-18",
               "time": "7:30pm"
+            },
+            {
+              "date": "2026-12-04",
+              "time": "10:30am"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Flesh And Bronze",
+          "sessions": [
+            {
+              "date": "2026-11-11",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "6:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "BIFF26 Derek vs Derek",
+          "sessions": [
+            {
+              "date": "2026-11-11",
+              "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "1:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "11:00am"
             }
           ],
           "note": null,
@@ -1664,19 +1730,42 @@
           "tags": []
         },
         {
-          "title": "BIFF26 Derek vs Derek",
+          "title": "BIFF26 Once Upon a Time in A Cinema",
           "sessions": [
             {
               "date": "2026-11-11",
-              "time": "8:00pm"
+              "time": "1:15pm"
             },
             {
               "date": "2026-11-12",
-              "time": "1:30pm"
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "5:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "La Bola Negra",
+          "sessions": [
+            {
+              "date": "2026-11-11",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "2:20pm"
             },
             {
               "date": "2026-11-17",
-              "time": "11:00am"
+              "time": "10:50am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:30am"
             }
           ],
           "note": null,
@@ -1698,19 +1787,23 @@
           "tags": []
         },
         {
-          "title": "BIFF26 Once Upon a Time in A Cinema",
+          "title": "Digger",
           "sessions": [
             {
               "date": "2026-11-11",
-              "time": "1:15pm"
+              "time": "12:50pm"
             },
             {
-              "date": "2026-11-12",
-              "time": "5:45pm"
+              "date": "2026-11-13",
+              "time": "3:20pm"
             },
             {
               "date": "2026-11-16",
-              "time": "5:30pm"
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:00pm"
             }
           ],
           "note": null,
@@ -1737,6 +1830,342 @@
             {
               "date": "2026-11-11",
               "time": "3:10pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Ebenezer",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "5:25pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:05pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "5:35pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "8:10pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "2:50pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "8:15pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "12:40pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "5:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "7:50pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:35pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "5:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "7:20pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "2:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "5:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "7:40pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "5:20pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "8:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Fatherland",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:40pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "5:35pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:20pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "6:20pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "8:20pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "12:55pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:10pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "7:40pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:15pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "7:50pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:25pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "5:55pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "7:50pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "6:10pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "8:10pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Yellow Letters",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "8:10pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:40pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "12:50pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "7:45pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "7:40pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "7:40pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:10pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "7:40pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "8:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "The Mosquito Bowl",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:50pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "12:55pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "1:50pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "2:15pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "2:30pm"
             }
           ],
           "note": null,
@@ -1774,6 +2203,47 @@
           "tags": []
         },
         {
+          "title": "BIFF26 The Uprising",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "7:45pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "BIFF26 Parky",
+          "sessions": [
+            {
+              "date": "2026-11-13",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "1:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "BIFF26 Kenny Dalglish",
+          "sessions": [
+            {
+              "date": "2026-11-13",
+              "time": "11:15am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "1:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "BIFF26 Whitetail",
           "sessions": [
             {
@@ -1805,6 +2275,21 @@
             {
               "date": "2026-11-14",
               "time": "5:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "500 Days In The Wild",
+          "sessions": [
+            {
+              "date": "2026-11-14",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:00pm"
             }
           ],
           "note": null,
@@ -1852,6 +2337,21 @@
           "tags": []
         },
         {
+          "title": "BIFF26 The Incomer",
+          "sessions": [
+            {
+              "date": "2026-11-15",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "5:45pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "BIFF26 Tender Loving Care",
           "sessions": [
             {
@@ -1874,6 +2374,17 @@
           "tags": []
         },
         {
+          "title": "BIFF26 Everybody to Kenmure Street",
+          "sessions": [
+            {
+              "date": "2026-11-16",
+              "time": "1:15pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "BIFF26 Borges and Me",
           "sessions": [
             {
@@ -1890,6 +2401,17 @@
             {
               "date": "2026-11-18",
               "time": "7:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "BIFF26 California Schemin'",
+          "sessions": [
+            {
+              "date": "2026-11-18",
+              "time": "10:45am"
             }
           ],
           "note": null,
@@ -2301,7 +2823,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-09T11:36:28+13:00",
+      "fetchedAt": "2026-11-10T14:47:59+13:00",
       "sourceUrl": "https://www.rialto.co.nz/cinema/newmarket/sessions"
     },
     "silky-orakei": {
@@ -2326,7 +2848,7 @@
           "tags": []
         },
         {
-          "title": "The Hunger Games: Sunrise on the Reaping",
+          "title": "Ebenezer",
           "sessions": [],
           "note": null,
           "tags": []
@@ -2338,7 +2860,7 @@
           "tags": []
         },
         {
-          "title": "Pressure",
+          "title": "The Hunger Games: Sunrise on the Reaping",
           "sessions": [],
           "note": null,
           "tags": []
@@ -2350,7 +2872,7 @@
           "tags": []
         },
         {
-          "title": "Focker-in-Law",
+          "title": "Pressure",
           "sessions": [],
           "note": null,
           "tags": []
@@ -2362,7 +2884,7 @@
           "tags": []
         },
         {
-          "title": "Ebenezer",
+          "title": "Focker-in-Law",
           "sessions": [],
           "note": null,
           "tags": []
@@ -2388,7 +2910,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-09T11:36:35+13:00",
+      "fetchedAt": "2026-11-10T14:48:01+13:00",
       "sourceUrl": "https://www.flicks.co.nz/cinema/silky-otter-cinemas-orakei/"
     },
     "silky-ponsonby": {
@@ -2413,7 +2935,7 @@
           "tags": []
         },
         {
-          "title": "The Hunger Games: Sunrise on the Reaping",
+          "title": "Ebenezer",
           "sessions": [],
           "note": null,
           "tags": []
@@ -2425,7 +2947,7 @@
           "tags": []
         },
         {
-          "title": "Pressure",
+          "title": "The Hunger Games: Sunrise on the Reaping",
           "sessions": [],
           "note": null,
           "tags": []
@@ -2437,7 +2959,7 @@
           "tags": []
         },
         {
-          "title": "Focker-in-Law",
+          "title": "Pressure",
           "sessions": [],
           "note": null,
           "tags": []
@@ -2449,13 +2971,7 @@
           "tags": []
         },
         {
-          "title": "Ebenezer",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Clayface",
+          "title": "Focker-in-Law",
           "sessions": [],
           "note": null,
           "tags": []
@@ -2479,12 +2995,6 @@
           "tags": []
         },
         {
-          "title": "Verity",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Klara and the Sun",
           "sessions": [],
           "note": null,
@@ -2503,7 +3013,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-09T11:36:40+13:00",
+      "fetchedAt": "2026-11-10T14:48:03+13:00",
       "sourceUrl": "https://www.flicks.co.nz/cinema/silky-otter-cinemas-ponsonby/"
     },
     "event-queen": {
@@ -2512,26 +3022,6 @@
         {
           "title": "Wicker",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "3:30pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "8:40pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "1:00pm"
-            },
             {
               "date": "2026-11-10",
               "time": "3:30pm"
@@ -2563,61 +3053,90 @@
             {
               "date": "2026-11-11",
               "time": "8:40pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Wild Horse Nine",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "1:20pm"
             },
             {
-              "date": "2026-11-09",
-              "time": "3:30pm"
+              "date": "2026-11-12",
+              "time": "1:10pm"
             },
             {
-              "date": "2026-11-09",
-              "time": "6:00pm"
+              "date": "2026-11-12",
+              "time": "3:45pm"
             },
             {
-              "date": "2026-11-09",
-              "time": "8:35pm"
+              "date": "2026-11-12",
+              "time": "6:10pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "1:20pm"
+              "date": "2026-11-13",
+              "time": "1:10pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "3:30pm"
+              "date": "2026-11-13",
+              "time": "3:45pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "6:00pm"
+              "date": "2026-11-13",
+              "time": "6:10pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "6:30pm"
+              "date": "2026-11-14",
+              "time": "1:00pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "8:35pm"
+              "date": "2026-11-14",
+              "time": "3:45pm"
             },
             {
-              "date": "2026-11-11",
-              "time": "1:20pm"
+              "date": "2026-11-14",
+              "time": "6:10pm"
             },
             {
-              "date": "2026-11-11",
-              "time": "3:30pm"
+              "date": "2026-11-15",
+              "time": "1:00pm"
             },
             {
-              "date": "2026-11-11",
-              "time": "6:00pm"
+              "date": "2026-11-15",
+              "time": "3:25pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "6:10pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "6:10pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "6:10pm"
             }
           ],
           "note": null,
@@ -2626,30 +3145,6 @@
         {
           "title": "Godzilla: Minus Zero",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "12:30pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "2:30pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "3:20pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "8:45pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "12:30pm"
-            },
             {
               "date": "2026-11-10",
               "time": "2:30pm"
@@ -2688,7 +3183,246 @@
             },
             {
               "date": "2026-11-12",
+              "time": "12:25pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-12",
               "time": "5:10pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:25pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "5:10pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "8:35pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "12:10pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "5:15pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "11:50am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "2:40pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "4:20pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:25pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "5:10pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:25pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "5:10pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "2:55pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "8:45pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Wild Horse Nine",
+          "sessions": [
+            {
+              "date": "2026-11-10",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-10",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-10",
+              "time": "6:30pm"
+            },
+            {
+              "date": "2026-11-10",
+              "time": "8:35pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "1:20pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "4:45pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "12:15pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "5:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "6:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "2:25pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "4:55pm"
             }
           ],
           "note": null,
@@ -2697,26 +3431,6 @@
         {
           "title": "Ramayana - Rise of a Legend (Hindi)",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "12:15pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "3:25pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "8:40pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "12:15pm"
-            },
             {
               "date": "2026-11-10",
               "time": "3:00pm"
@@ -2751,7 +3465,19 @@
             },
             {
               "date": "2026-11-12",
+              "time": "5:00pm"
+            },
+            {
+              "date": "2026-11-12",
               "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "5:00pm"
             },
             {
               "date": "2026-11-13",
@@ -2763,6 +3489,10 @@
             },
             {
               "date": "2026-11-14",
+              "time": "5:00pm"
+            },
+            {
+              "date": "2026-11-14",
               "time": "8:00pm"
             },
             {
@@ -2771,7 +3501,19 @@
             },
             {
               "date": "2026-11-15",
+              "time": "4:30pm"
+            },
+            {
+              "date": "2026-11-15",
               "time": "7:10pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "5:00pm"
             },
             {
               "date": "2026-11-16",
@@ -2779,7 +3521,138 @@
             },
             {
               "date": "2026-11-17",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "5:00pm"
+            },
+            {
+              "date": "2026-11-17",
               "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "2:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "5:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "7:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Wildwood",
+          "sessions": [
+            {
+              "date": "2026-11-10",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-10",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "12:20pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "12:20pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "6:10pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:20pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "6:10pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "12:20pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "12:10pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:20pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "6:10pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:20pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "6:10pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:20pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "6:10pm"
             }
           ],
           "note": null,
@@ -2788,34 +3661,6 @@
         {
           "title": "Primetime",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "12:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "2:10pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "3:50pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "6:35pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "9:00pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "12:00pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "2:10pm"
-            },
             {
               "date": "2026-11-10",
               "time": "3:50pm"
@@ -2847,60 +3692,89 @@
             {
               "date": "2026-11-11",
               "time": "8:25pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Clayface",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "1:00pm"
             },
             {
-              "date": "2026-11-09",
-              "time": "3:55pm"
+              "date": "2026-11-12",
+              "time": "3:50pm"
             },
             {
-              "date": "2026-11-09",
-              "time": "6:20pm"
+              "date": "2026-11-12",
+              "time": "6:15pm"
             },
             {
-              "date": "2026-11-09",
+              "date": "2026-11-12",
               "time": "8:50pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "12:35pm"
+              "date": "2026-11-13",
+              "time": "3:50pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "3:55pm"
+              "date": "2026-11-13",
+              "time": "6:15pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "6:20pm"
-            },
-            {
-              "date": "2026-11-10",
+              "date": "2026-11-13",
               "time": "8:50pm"
             },
             {
-              "date": "2026-11-11",
-              "time": "1:00pm"
+              "date": "2026-11-14",
+              "time": "3:50pm"
             },
             {
-              "date": "2026-11-11",
-              "time": "3:55pm"
+              "date": "2026-11-14",
+              "time": "6:15pm"
             },
             {
-              "date": "2026-11-11",
-              "time": "6:20pm"
+              "date": "2026-11-14",
+              "time": "8:50pm"
             },
             {
-              "date": "2026-11-11",
+              "date": "2026-11-15",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "5:55pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:50pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:50pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:50pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-18",
               "time": "8:50pm"
             }
           ],
@@ -2911,18 +3785,6 @@
           "title": "Pressure",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "1:20pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "6:20pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "1:20pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "6:20pm"
             },
@@ -2933,6 +3795,93 @@
             {
               "date": "2026-11-11",
               "time": "6:20pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Clayface",
+          "sessions": [
+            {
+              "date": "2026-11-10",
+              "time": "3:55pm"
+            },
+            {
+              "date": "2026-11-10",
+              "time": "6:20pm"
+            },
+            {
+              "date": "2026-11-10",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "3:55pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "6:20pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "12:15pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:15pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "12:15pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "8:40pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:15pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:15pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "9:00pm"
             }
           ],
           "note": null,
@@ -2942,26 +3891,6 @@
           "title": "Street Fighter",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "12:20pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "3:05pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "5:55pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "12:20pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "3:05pm"
             },
@@ -2980,49 +3909,54 @@
             {
               "date": "2026-11-11",
               "time": "3:05pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Wildwood",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "12:20pm"
             },
             {
-              "date": "2026-11-09",
-              "time": "3:10pm"
+              "date": "2026-11-12",
+              "time": "12:00pm"
             },
             {
-              "date": "2026-11-09",
-              "time": "6:00pm"
+              "date": "2026-11-12",
+              "time": "8:35pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "12:20pm"
+              "date": "2026-11-13",
+              "time": "12:00pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "3:10pm"
+              "date": "2026-11-14",
+              "time": "12:00pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "6:00pm"
+              "date": "2026-11-14",
+              "time": "8:35pm"
             },
             {
-              "date": "2026-11-11",
-              "time": "12:20pm"
+              "date": "2026-11-15",
+              "time": "11:30am"
             },
             {
-              "date": "2026-11-11",
-              "time": "3:10pm"
+              "date": "2026-11-15",
+              "time": "8:15pm"
             },
             {
-              "date": "2026-11-11",
-              "time": "6:00pm"
+              "date": "2026-11-16",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "8:35pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "8:35pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:00pm"
             }
           ],
           "note": null,
@@ -3032,62 +3966,12 @@
           "title": "Scene - Tamil",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "8:25pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "8:25pm"
             },
             {
               "date": "2026-11-11",
               "time": "8:25pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Crawlers",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "4:45pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "4:45pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Klara And The Sun",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "12:50pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "5:50pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "12:50pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "5:50pm"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "12:50pm"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "5:50pm"
             }
           ],
           "note": null,
@@ -3097,16 +3981,51 @@
           "title": "Karaoke Murder",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "9:00pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "9:00pm"
             },
             {
               "date": "2026-11-11",
               "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "1:35pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "1:35pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "1:35pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "1:35pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "1:35pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "1:35pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Crawlers",
+          "sessions": [
+            {
+              "date": "2026-11-10",
+              "time": "4:45pm"
             }
           ],
           "note": null,
@@ -3116,18 +4035,6 @@
           "title": "Resident Evil",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "4:20pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "6:50pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "8:50pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "4:20pm"
             },
@@ -3152,19 +4059,19 @@
           "tags": []
         },
         {
-          "title": "Days of Being Wild",
+          "title": "Klara And The Sun",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "12:00pm"
-            },
-            {
               "date": "2026-11-10",
-              "time": "12:00pm"
+              "time": "5:50pm"
             },
             {
               "date": "2026-11-11",
-              "time": "12:00pm"
+              "time": "12:50pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "5:50pm"
             }
           ],
           "note": null,
@@ -3239,10 +4146,22 @@
             },
             {
               "date": "2026-11-15",
-              "time": "6:00pm"
+              "time": "5:45pm"
             },
             {
               "date": "2026-11-15",
+              "time": "7:10pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:35pm"
+            },
+            {
+              "date": "2026-11-16",
               "time": "7:10pm"
             },
             {
@@ -3260,6 +4179,29 @@
             {
               "date": "2026-11-17",
               "time": "7:10pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:35pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "7:10pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Days of Being Wild",
+          "sessions": [
+            {
+              "date": "2026-11-11",
+              "time": "12:00pm"
             }
           ],
           "note": null,
@@ -3270,6 +4212,14 @@
           "sessions": [
             {
               "date": "2026-11-12",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-12",
               "time": "3:20pm"
             },
             {
@@ -3277,12 +4227,28 @@
               "time": "6:00pm"
             },
             {
+              "date": "2026-11-12",
+              "time": "8:40pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:45pm"
+            },
+            {
               "date": "2026-11-13",
               "time": "3:20pm"
             },
             {
-              "date": "2026-11-13",
-              "time": "6:00pm"
+              "date": "2026-11-14",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "12:45pm"
             },
             {
               "date": "2026-11-14",
@@ -3298,15 +4264,47 @@
             },
             {
               "date": "2026-11-15",
+              "time": "11:50am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "2:45pm"
+            },
+            {
+              "date": "2026-11-15",
               "time": "3:20pm"
             },
             {
               "date": "2026-11-15",
-              "time": "4:00pm"
+              "time": "6:00pm"
             },
             {
-              "date": "2026-11-15",
+              "date": "2026-11-16",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-16",
               "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:45pm"
             },
             {
               "date": "2026-11-17",
@@ -3315,6 +4313,313 @@
             {
               "date": "2026-11-17",
               "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "6:10pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "How To Rob A Bank",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "2:50pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "2:50pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "2:50pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "2:50pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "6:40pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "2:50pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "2:50pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:15pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "8:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Black Sheeps",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "2:45pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "2:45pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "2:45pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "2:15pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "2:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "2:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "2:45pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "9:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Traces Of Justice",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "2:40pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "8:35pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "2:40pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "5:35pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "2:40pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "8:35pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "2:40pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "8:35pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "2:40pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "8:35pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Remember",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "5:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "6:15pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Donga Naa Koduku",
+          "sessions": [
+            {
+              "date": "2026-11-13",
+              "time": "8:40pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "8:40pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "8:10pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "8:40pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "8:40pm"
             }
           ],
           "note": null,
@@ -3857,6 +5162,28 @@
           "tags": [
             "event"
           ]
+        },
+        {
+          "title": "Dune",
+          "sessions": [
+            {
+              "date": "2026-12-06",
+              "time": "4:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Dune: Part Two",
+          "sessions": [
+            {
+              "date": "2026-12-06",
+              "time": "7:15pm"
+            }
+          ],
+          "note": null,
+          "tags": []
         },
         {
           "title": "Avengers: Doomsday",
@@ -4661,7 +5988,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-09T11:37:19+13:00",
+      "fetchedAt": "2026-11-10T14:48:36+13:00",
       "sourceUrl": "https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions"
     },
     "event-newmarket": {
@@ -4671,24 +5998,12 @@
           "title": "Wicker",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "12:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "3:40pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "7:00pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "12:50pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "3:50pm"
+            },
+            {
+              "date": "2026-11-10",
+              "time": "6:20pm"
             },
             {
               "date": "2026-11-10",
@@ -4708,50 +6023,91 @@
             },
             {
               "date": "2026-11-11",
-              "time": "7:30pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Wild Horse Nine",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "12:30pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "3:10pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "10:00am"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "12:40pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "3:20pm"
-            },
-            {
-              "date": "2026-11-10",
               "time": "6:20pm"
             },
             {
-              "date": "2026-11-11",
-              "time": "10:00am"
+              "date": "2026-11-12",
+              "time": "10:40am"
             },
             {
-              "date": "2026-11-11",
+              "date": "2026-11-12",
+              "time": "1:05pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "4:10pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "6:40pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "6:40pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "1:50pm"
+            },
+            {
+              "date": "2026-11-14",
               "time": "3:15pm"
             },
             {
-              "date": "2026-11-11",
+              "date": "2026-11-14",
               "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "1:50pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "6:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "10:40am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "6:35pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:20pm"
             }
           ],
           "note": null,
@@ -4760,26 +6116,6 @@
         {
           "title": "Godzilla: Minus Zero",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "11:35am"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "2:55pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "5:55pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "9:00pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "12:10pm"
-            },
             {
               "date": "2026-11-10",
               "time": "2:40pm"
@@ -4807,6 +6143,204 @@
             {
               "date": "2026-11-11",
               "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "11:45am"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:15pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "8:35pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "8:35pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "11:30am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "5:40pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "8:40pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "11:30am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Wild Horse Nine",
+          "sessions": [
+            {
+              "date": "2026-11-10",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-10",
+              "time": "6:20pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "3:15pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "7:15pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "7:45pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "12:20pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "4:10pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "7:15pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:50pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Wildwood",
+          "sessions": [
+            {
+              "date": "2026-11-10",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "10:50am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:10pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:10am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "11:00am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:20pm"
             }
           ],
           "note": null,
@@ -4815,14 +6349,6 @@
         {
           "title": "Primetime",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "2:40pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "8:50pm"
-            },
             {
               "date": "2026-11-10",
               "time": "3:15pm"
@@ -4842,6 +6368,81 @@
             {
               "date": "2026-11-11",
               "time": "9:10pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "6:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "6:25pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "2:45pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "2:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "6:20pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:15pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Heart Of The Beast",
+          "sessions": [
+            {
+              "date": "2026-11-10",
+              "time": "3:25pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:50pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "4:20pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "4:15pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "1:00pm"
             }
           ],
           "note": null,
@@ -4850,18 +6451,6 @@
         {
           "title": "Clayface",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "12:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "9:15pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "11:50am"
-            },
             {
               "date": "2026-11-10",
               "time": "9:00pm"
@@ -4877,45 +6466,26 @@
             {
               "date": "2026-11-11",
               "time": "9:10pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Heart Of The Beast",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "1:10pm"
             },
             {
-              "date": "2026-11-09",
-              "time": "6:20pm"
+              "date": "2026-11-12",
+              "time": "9:10pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "10:25am"
+              "date": "2026-11-13",
+              "time": "9:00pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "3:25pm"
+              "date": "2026-11-14",
+              "time": "9:10pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "6:20pm"
+              "date": "2026-11-15",
+              "time": "9:00pm"
             },
             {
-              "date": "2026-11-11",
-              "time": "10:15am"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "12:45pm"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "3:10pm"
+              "date": "2026-11-16",
+              "time": "8:50pm"
             }
           ],
           "note": null,
@@ -4924,10 +6494,6 @@
         {
           "title": "Street Fighter",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "8:50pm"
-            },
             {
               "date": "2026-11-10",
               "time": "8:50pm"
@@ -4941,71 +6507,35 @@
           "tags": []
         },
         {
-          "title": "Wildwood",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "2:45pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "12:50pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "3:20pm"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "6:10pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Paw Patrol - The Dino Movie",
-          "sessions": [
-            {
-              "date": "2026-11-10",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-12-13",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-12-15",
-              "time": "10:30am"
-            }
-          ],
-          "note": null,
-          "tags": [
-            "kids"
-          ]
-        },
-        {
           "title": "You Can See Everything",
           "sessions": [
             {
               "date": "2026-11-11",
               "time": "7:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:45pm"
             },
             {
               "date": "2026-11-13",
@@ -5014,6 +6544,78 @@
             {
               "date": "2026-11-13",
               "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "1:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "5:20pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "1:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "5:15pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "7:20pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "11:45am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:40pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:25am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "2:10pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "5:30pm"
             }
           ],
           "note": null,
@@ -5024,6 +6626,10 @@
           "sessions": [
             {
               "date": "2026-11-12",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-12",
               "time": "3:10pm"
             },
             {
@@ -5032,6 +6638,10 @@
             },
             {
               "date": "2026-11-13",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-13",
               "time": "3:10pm"
             },
             {
@@ -5039,20 +6649,193 @@
               "time": "6:00pm"
             },
             {
+              "date": "2026-11-14",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "12:20pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:45pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:45am"
+            },
+            {
               "date": "2026-11-15",
               "time": "3:20pm"
             },
             {
               "date": "2026-11-15",
-              "time": "6:10pm"
+              "time": "6:35pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:25pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "10:30am"
             },
             {
               "date": "2026-11-17",
               "time": "3:10pm"
             },
             {
+              "date": "2026-11-18",
+              "time": "12:20pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "2:50pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "6:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "How To Rob A Bank",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:40pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "9:10pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:35pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "8:40pm"
+            },
+            {
               "date": "2026-11-17",
-              "time": "6:00pm"
+              "time": "3:50pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "9:10pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Black Sheeps",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "1:45pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "9:10pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "1:25pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "9:10pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "9:20pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "9:15pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "1:50pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "9:10pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "9:10pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "9:10pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Pressure",
+          "sessions": [
+            {
+              "date": "2026-11-13",
+              "time": "10:30am"
             }
           ],
           "note": null,
@@ -5137,6 +6920,39 @@
           "note": null,
           "tags": [
             "event",
+            "kids"
+          ]
+        },
+        {
+          "title": "Paw Patrol - The Dino Movie",
+          "sessions": [
+            {
+              "date": "2026-11-14",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-12-13",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-12-15",
+              "time": "10:30am"
+            }
+          ],
+          "note": null,
+          "tags": [
             "kids"
           ]
         },
@@ -5904,7 +7720,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-09T11:37:57+13:00",
+      "fetchedAt": "2026-11-10T14:49:08+13:00",
       "sourceUrl": "https://www.eventcinemas.co.nz/cinema/Newmarket-Westfield/sessions"
     },
     "event-stlukes": {
@@ -5913,26 +7729,6 @@
         {
           "title": "Wicker",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "1:20pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "3:50pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "6:20pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "10:50am"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "1:30pm"
-            },
             {
               "date": "2026-11-10",
               "time": "4:00pm"
@@ -5958,12 +7754,108 @@
               "time": "6:00pm"
             },
             {
+              "date": "2026-11-12",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "6:20pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "6:20pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:05pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:20pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "1:05pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "5:55pm"
+            },
+            {
               "date": "2026-11-16",
               "time": "10:30am"
             },
             {
+              "date": "2026-11-16",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:40pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "6:20pm"
+            },
+            {
               "date": "2026-11-18",
               "time": "10:30am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:40pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "6:15pm"
             }
           ],
           "note": null,
@@ -5972,32 +7864,111 @@
           ]
         },
         {
-          "title": "Wild Horse Nine",
+          "title": "Godzilla: Minus Zero",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "1:05pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "3:40pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "6:15pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "8:40pm"
+              "date": "2026-11-10",
+              "time": "3:00pm"
             },
             {
               "date": "2026-11-10",
-              "time": "10:20am"
+              "time": "6:00pm"
             },
             {
               "date": "2026-11-10",
-              "time": "12:40pm"
+              "time": "8:50pm"
             },
+            {
+              "date": "2026-11-11",
+              "time": "1:20pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "4:30pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "2:40pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:05pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "4:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "7:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "1:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "4:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "2:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "1:30pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "4:30pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "7:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Wild Horse Nine",
+          "sessions": [
             {
               "date": "2026-11-10",
               "time": "3:45pm"
@@ -6029,49 +8000,58 @@
             {
               "date": "2026-11-11",
               "time": "8:40pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Godzilla: Minus Zero",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "1:20pm"
             },
             {
-              "date": "2026-11-09",
-              "time": "4:30pm"
+              "date": "2026-11-12",
+              "time": "10:45am"
             },
             {
-              "date": "2026-11-09",
-              "time": "7:30pm"
+              "date": "2026-11-12",
+              "time": "6:25pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "3:00pm"
+              "date": "2026-11-13",
+              "time": "10:45am"
             },
             {
-              "date": "2026-11-10",
-              "time": "6:00pm"
+              "date": "2026-11-13",
+              "time": "6:25pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "8:50pm"
+              "date": "2026-11-14",
+              "time": "3:50pm"
             },
             {
-              "date": "2026-11-11",
-              "time": "1:20pm"
+              "date": "2026-11-14",
+              "time": "6:25pm"
             },
             {
-              "date": "2026-11-11",
-              "time": "4:30pm"
+              "date": "2026-11-15",
+              "time": "6:10pm"
             },
             {
-              "date": "2026-11-11",
-              "time": "7:30pm"
+              "date": "2026-11-16",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "6:25pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:20pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "6:25pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "6:25pm"
             }
           ],
           "note": null,
@@ -6080,30 +8060,6 @@
         {
           "title": "Ramayana - Rise of a Legend (Hindi)",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "2:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "3:05pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "6:15pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "7:10pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "11:10am"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "2:15pm"
-            },
             {
               "date": "2026-11-10",
               "time": "3:20pm"
@@ -6131,6 +8087,201 @@
             {
               "date": "2026-11-11",
               "time": "7:10pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "11:10am"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "6:30pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "11:10am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "6:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "11:10am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:50am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "7:10pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "10:40am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "2:50pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "7:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "11:00am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "6:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:50am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "7:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Wildwood",
+          "sessions": [
+            {
+              "date": "2026-11-10",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-10",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:35pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:35pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "10:40am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "12:20pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:10am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:35pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:35pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:35pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "5:45pm"
             }
           ],
           "note": null,
@@ -6139,18 +8290,6 @@
         {
           "title": "Primetime",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "3:30pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "8:45pm"
-            },
             {
               "date": "2026-11-10",
               "time": "3:30pm"
@@ -6170,6 +8309,62 @@
             {
               "date": "2026-11-11",
               "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:55pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:55pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:25pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "8:40pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:50pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:50pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "8:40pm"
             }
           ],
           "note": null,
@@ -6178,14 +8373,6 @@
         {
           "title": "Clayface",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "8:45pm"
-            },
             {
               "date": "2026-11-10",
               "time": "3:50pm"
@@ -6209,33 +8396,14 @@
             {
               "date": "2026-11-11",
               "time": "8:45pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Pressure",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "12:50pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "10:30am"
+              "date": "2026-11-14",
+              "time": "12:40pm"
             },
             {
-              "date": "2026-11-10",
-              "time": "12:50pm"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "12:50pm"
+              "date": "2026-11-15",
+              "time": "12:10pm"
             }
           ],
           "note": null,
@@ -6244,26 +8412,6 @@
         {
           "title": "Street Fighter",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "12:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "2:45pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "10:20am"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "1:00pm"
-            },
             {
               "date": "2026-11-10",
               "time": "8:30pm"
@@ -6279,56 +8427,14 @@
             {
               "date": "2026-11-11",
               "time": "8:30pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Wildwood",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "3:10pm"
             },
             {
-              "date": "2026-11-09",
-              "time": "6:00pm"
+              "date": "2026-11-14",
+              "time": "10:15am"
             },
             {
-              "date": "2026-11-10",
-              "time": "3:10pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "3:10pm"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "6:00pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Klara And The Sun",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "12:50pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "12:50pm"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "12:50pm"
+              "date": "2026-11-15",
+              "time": "10:15am"
             }
           ],
           "note": null,
@@ -6338,90 +8444,12 @@
           "title": "Disco",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "8:00pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "8:35pm"
             },
             {
               "date": "2026-11-11",
               "time": "8:00pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Paw Patrol - The Dino Movie",
-          "sessions": [
-            {
-              "date": "2026-11-10",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-11-22",
-              "time": "11:00am"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-12-13",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-12-15",
-              "time": "10:30am"
-            }
-          ],
-          "note": null,
-          "tags": [
-            "kids"
-          ]
-        },
-        {
-          "title": "Heart Of The Beast",
-          "sessions": [
-            {
-              "date": "2026-11-10",
-              "time": "10:40am"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "10:40am"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Sense and Sensibility",
-          "sessions": [
-            {
-              "date": "2026-11-10",
-              "time": "11:00am"
-            },
-            {
-              "date": "2026-11-11",
-              "time": "11:00am"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Crawlers",
-          "sessions": [
-            {
-              "date": "2026-11-10",
-              "time": "1:00pm"
             }
           ],
           "note": null,
@@ -6448,6 +8476,10 @@
             },
             {
               "date": "2026-11-13",
+              "time": "10:50am"
+            },
+            {
+              "date": "2026-11-13",
               "time": "12:10pm"
             },
             {
@@ -6461,6 +8493,10 @@
             {
               "date": "2026-11-14",
               "time": "2:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:25pm"
             },
             {
               "date": "2026-11-14",
@@ -6484,7 +8520,7 @@
             },
             {
               "date": "2026-11-16",
-              "time": "7:00pm"
+              "time": "7:15pm"
             },
             {
               "date": "2026-11-17",
@@ -6500,15 +8536,119 @@
             },
             {
               "date": "2026-11-18",
+              "time": "10:40am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "2:20pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "6:45pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Heart Of The Beast",
+          "sessions": [
+            {
+              "date": "2026-11-11",
+              "time": "10:40am"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "10:10am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:10am"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Pressure",
+          "sessions": [
+            {
+              "date": "2026-11-11",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-11",
+              "time": "12:50pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "10:10am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:10am"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Sense and Sensibility",
+          "sessions": [
+            {
+              "date": "2026-11-11",
               "time": "11:00am"
             },
             {
-              "date": "2026-11-18",
-              "time": "2:40pm"
+              "date": "2026-11-12",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:30pm"
             },
             {
               "date": "2026-11-18",
-              "time": "6:30pm"
+              "time": "12:20pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Klara And The Sun",
+          "sessions": [
+            {
+              "date": "2026-11-11",
+              "time": "12:50pm"
             }
           ],
           "note": null,
@@ -6518,12 +8658,48 @@
           "title": "Ebenezer",
           "sessions": [
             {
+              "date": "2026-11-12",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "12:40pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:15pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:40pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:15pm"
+            },
+            {
               "date": "2026-11-13",
               "time": "6:00pm"
             },
             {
               "date": "2026-11-14",
-              "time": "3:20pm"
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "12:40pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:15pm"
             },
             {
               "date": "2026-11-14",
@@ -6531,6 +8707,14 @@
             },
             {
               "date": "2026-11-15",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "12:40pm"
+            },
+            {
+              "date": "2026-11-15",
               "time": "3:20pm"
             },
             {
@@ -6538,12 +8722,241 @@
               "time": "6:00pm"
             },
             {
+              "date": "2026-11-16",
+              "time": "10:50am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "11:00am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:40pm"
+            },
+            {
               "date": "2026-11-17",
               "time": "3:20pm"
             },
             {
               "date": "2026-11-17",
               "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "11:00am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "5:45pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "How To Rob A Bank",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "12:40pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:40pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:40pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "8:40pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "2:40pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:40pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "8:50pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "8:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Black Sheeps",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "1:20pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "1:20pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "1:35pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "1:20pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "8:55pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "1:20pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "8:55pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Traces Of Justice",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "11:00am"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "8:40pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "8:40pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "8:40pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "8:10pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "8:10pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:20pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "8:40pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "8:10pm"
             }
           ],
           "note": null,
@@ -6644,6 +9057,58 @@
           "tags": [
             "kids"
           ]
+        },
+        {
+          "title": "Paw Patrol - The Dino Movie",
+          "sessions": [
+            {
+              "date": "2026-11-14",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "11:00am"
+            },
+            {
+              "date": "2026-11-22",
+              "time": "11:00am"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-12-13",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-12-15",
+              "time": "10:30am"
+            }
+          ],
+          "note": null,
+          "tags": [
+            "kids"
+          ]
+        },
+        {
+          "title": "Forgotten Island",
+          "sessions": [
+            {
+              "date": "2026-11-14",
+              "time": "10:40am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:40am"
+            }
+          ],
+          "note": null,
+          "tags": []
         },
         {
           "title": "The Hunger Games: Sunrise on the Reaping",
@@ -6963,6 +9428,28 @@
           "tags": [
             "event"
           ]
+        },
+        {
+          "title": "Dune",
+          "sessions": [
+            {
+              "date": "2026-12-06",
+              "time": "3:40pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Dune: Part Two",
+          "sessions": [
+            {
+              "date": "2026-12-06",
+              "time": "7:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
         },
         {
           "title": "Shaun the Sheep: The Beast of Mossy Bottom",
@@ -7562,19 +10049,162 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-09T11:38:37+13:00",
+      "fetchedAt": "2026-11-10T14:49:42+13:00",
       "sourceUrl": "https://www.eventcinemas.co.nz/cinema/st-lukes/sessions"
     },
     "reading-newlynn": {
       "cinemaId": "reading-newlynn",
       "films": [
         {
-          "title": "Heart of the Beast",
+          "title": "How to Rob a Bank",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "3:45pm"
+              "date": "2026-11-12",
+              "time": "10:00am"
             },
+            {
+              "date": "2026-11-12",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "1:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "4:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "1:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "4:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "11:30am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "2:15pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "4:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "9:00pm"
+            }
+          ],
+          "note": "opens Thu 12 Nov",
+          "tags": []
+        },
+        {
+          "title": "Heart of the Beast",
+          "sessions": [
             {
               "date": "2026-11-10",
               "time": "3:45pm"
@@ -7591,14 +10221,6 @@
           "title": "Sense and Sensibility",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "6:15pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "10:30am"
-            },
-            {
               "date": "2026-11-10",
               "time": "6:15pm"
             },
@@ -7609,6 +10231,34 @@
             {
               "date": "2026-11-11",
               "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "11:30am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "11:30am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "11:30am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "11:30am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "11:30am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "11:30am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "11:30am"
             }
           ],
           "note": null,
@@ -8426,14 +11076,6 @@
           "title": "Pressure",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "4:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "6:00pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "4:00pm"
             },
@@ -8457,18 +11099,6 @@
           "title": "Klara and the Sun",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "12:45pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "5:45pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "12:45pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "5:45pm"
             },
@@ -8479,6 +11109,30 @@
             {
               "date": "2026-11-11",
               "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:00pm"
             }
           ],
           "note": null,
@@ -8488,30 +11142,6 @@
           "title": "Street Fighter",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "11:45am"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "3:30pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "6:15pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "9:00pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "10:00am"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "11:45am"
-            },
-            {
               "date": "2026-11-10",
               "time": "3:30pm"
             },
@@ -8542,6 +11172,78 @@
             {
               "date": "2026-11-11",
               "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "6:15pm"
             }
           ],
           "note": null,
@@ -8551,26 +11253,6 @@
           "title": "Clayface",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "12:30pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "6:30pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "9:00pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "10:00am"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "12:30pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "6:30pm"
             },
@@ -8593,6 +11275,86 @@
             {
               "date": "2026-11-11",
               "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "5:45pm"
             }
           ],
           "note": null,
@@ -8602,30 +11364,6 @@
           "title": "Wildwood",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "2:45pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "9:00pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "10:00am"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "1:00pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "2:45pm"
             },
@@ -8656,35 +11394,218 @@
             {
               "date": "2026-11-11",
               "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "2:30pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "2:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "2:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "2:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "2:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "2:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:30pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "2:30pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "8:30pm"
             }
           ],
           "note": null,
           "tags": []
         },
         {
+          "title": "Ebenezer",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "9:15pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "9:15pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "9:15pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "9:15pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "9:15pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "9:15pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:30pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "9:15pm"
+            }
+          ],
+          "note": "opens Thu 12 Nov",
+          "tags": []
+        },
+        {
           "title": "Godzilla Minus Zero (Japanese)",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "2:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "5:45pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "10:45am"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "2:00pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "5:45pm"
             },
@@ -8707,6 +11628,62 @@
             {
               "date": "2026-11-11",
               "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "4:45pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "4:45pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "4:45pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "4:45pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "4:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "4:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "4:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "9:00pm"
             }
           ],
           "note": null,
@@ -8716,22 +11693,6 @@
           "title": "Wild Horse Nine",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "9:15pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "10:15am"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "1:00pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "9:15pm"
             },
@@ -8746,6 +11707,34 @@
             {
               "date": "2026-11-11",
               "time": "9:15pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "1:15pm"
             }
           ],
           "note": null,
@@ -8759,7 +11748,27 @@
               "time": "10:00am"
             },
             {
+              "date": "2026-11-14",
+              "time": "11:45am"
+            },
+            {
               "date": "2026-11-15",
+              "time": "10:00am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "11:45am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "4:15pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "4:15pm"
+            },
+            {
+              "date": "2026-11-18",
               "time": "10:00am"
             },
             {
@@ -8793,10 +11802,6 @@
           "title": "Crawlers",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "5:15pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "5:15pm"
             },
@@ -8812,22 +11817,6 @@
           "title": "Ramayana: Rise of a Legend (Hindi)",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "1:30pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "3:15pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "1:30pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "3:15pm"
             },
@@ -8842,6 +11831,62 @@
             {
               "date": "2026-11-11",
               "time": "3:15pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "7:45pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "7:45pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "7:45pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "7:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "7:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "7:45pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "11:45am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "5:00pm"
             }
           ],
           "note": null,
@@ -8851,22 +11896,6 @@
           "title": "Wicker",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "12:45pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "3:15pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "12:45pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "3:15pm"
             },
@@ -8885,9 +11914,227 @@
             {
               "date": "2026-11-11",
               "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "10:15am"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:30pm"
             }
           ],
           "note": null,
+          "tags": []
+        },
+        {
+          "title": "Black Sheeps",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "9:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "1:15pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "9:00pm"
+            }
+          ],
+          "note": "opens Thu 12 Nov",
+          "tags": []
+        },
+        {
+          "title": "Traces of Justice (Mandarin)",
+          "sessions": [
+            {
+              "date": "2026-11-12",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "6:15pm"
+            }
+          ],
+          "note": "opens Thu 12 Nov",
           "tags": []
         },
         {
@@ -8899,7 +12146,23 @@
             },
             {
               "date": "2026-11-12",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-12",
+              "time": "4:15pm"
+            },
+            {
+              "date": "2026-11-12",
               "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-13",
+              "time": "4:15pm"
             },
             {
               "date": "2026-11-13",
@@ -8907,11 +12170,63 @@
             },
             {
               "date": "2026-11-14",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-14",
+              "time": "4:15pm"
+            },
+            {
+              "date": "2026-11-14",
               "time": "8:00pm"
             },
             {
               "date": "2026-11-15",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-15",
               "time": "4:15pm"
+            },
+            {
+              "date": "2026-11-15",
+              "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "4:15pm"
+            },
+            {
+              "date": "2026-11-16",
+              "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "4:15pm"
+            },
+            {
+              "date": "2026-11-17",
+              "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "12:45pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "4:15pm"
+            },
+            {
+              "date": "2026-11-18",
+              "time": "8:00pm"
             }
           ],
           "note": "opens Thu 12 Nov",
@@ -8929,7 +12244,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-09T11:38:39+13:00",
+      "fetchedAt": "2026-11-10T14:49:45+13:00",
       "sourceUrl": "https://www.readingcinemas.co.nz/cinemas"
     },
     "bridgeway": {
@@ -9001,23 +12316,8 @@
           "tags": []
         },
         {
-          "title": "Big Girls Don't Cry",
-          "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "8:00pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Borges and Me",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "1:30pm"
-            },
             {
               "date": "2026-11-14",
               "time": "2:45pm"
@@ -9049,10 +12349,6 @@
           "title": "Calle Málaga (Malaga Street)",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "3:20pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "3:20pm"
             },
@@ -9079,14 +12375,6 @@
           "title": "De Gaulle: Liberté",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "1:05pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "1:05pm"
-            },
-            {
               "date": "2026-11-11",
               "time": "1:05pm"
             }
@@ -9097,10 +12385,6 @@
         {
           "title": "Derek vs Derek",
           "sessions": [
-            {
-              "date": "2026-11-10",
-              "time": "11:30am"
-            },
             {
               "date": "2026-11-13",
               "time": "3:15pm"
@@ -9181,10 +12465,6 @@
           "title": "Hill",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "3:45pm"
-            },
-            {
               "date": "2026-11-11",
               "time": "7:45pm"
             },
@@ -9229,14 +12509,6 @@
         {
           "title": "La Bola Negra",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "4:05pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "7:05pm"
-            },
             {
               "date": "2026-11-10",
               "time": "4:05pm"
@@ -9294,10 +12566,6 @@
           "title": "Once Upon a Time in a Cinema",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "7:45pm"
-            },
-            {
               "date": "2026-11-12",
               "time": "11:15am"
             },
@@ -9340,22 +12608,6 @@
           "title": "Pressure",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "1:15pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "5:35pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "11:05am"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "1:15pm"
-            },
-            {
               "date": "2026-11-10",
               "time": "5:35pm"
             },
@@ -9394,10 +12646,6 @@
           "title": "Primavera",
           "sessions": [
             {
-              "date": "2026-11-10",
-              "time": "10:50am"
-            },
-            {
               "date": "2026-11-11",
               "time": "10:45am"
             }
@@ -9408,10 +12656,6 @@
         {
           "title": "Primetime",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "5:40pm"
-            },
             {
               "date": "2026-11-10",
               "time": "7:50pm"
@@ -9576,10 +12820,6 @@
           "title": "The Lost Children of Tuam",
           "sessions": [
             {
-              "date": "2026-11-10",
-              "time": "1:30pm"
-            },
-            {
               "date": "2026-11-15",
               "time": "3:00pm"
             },
@@ -9625,10 +12865,6 @@
           "title": "Virginia Woolf's Night & Day",
           "sessions": [
             {
-              "date": "2026-11-09",
-              "time": "5:45pm"
-            },
-            {
               "date": "2026-11-12",
               "time": "3:30pm"
             },
@@ -9658,22 +12894,6 @@
         {
           "title": "Wicker",
           "sessions": [
-            {
-              "date": "2026-11-09",
-              "time": "1:10pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "3:25pm"
-            },
-            {
-              "date": "2026-11-09",
-              "time": "7:40pm"
-            },
-            {
-              "date": "2026-11-10",
-              "time": "1:10pm"
-            },
             {
               "date": "2026-11-10",
               "time": "3:25pm"
@@ -9706,10 +12926,6 @@
           "title": "Wildwood",
           "sessions": [
             {
-              "date": "2026-11-10",
-              "time": "10:40am"
-            },
-            {
               "date": "2026-11-11",
               "time": "12:20pm"
             }
@@ -9718,7 +12934,7 @@
           "tags": []
         },
         {
-          "title": "Yellow Letters",
+          "title": "Yellow letters",
           "sessions": [
             {
               "date": "2026-11-12",
@@ -9752,7 +12968,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-09T11:38:41+13:00",
+      "fetchedAt": "2026-11-10T14:49:46+13:00",
       "sourceUrl": "https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70"
     }
   }
