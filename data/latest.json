@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-27T15:01:23+13:00",
+  "fetchedAt": "2026-11-28T14:45:11+13:00",
   "errors": {},
   "fallbacks": {
     "silky-orakei": "AdapterError: silky-orakei: no film data on https://www.silkyotter.co.nz/films -- silkyotter.co.nz is a fully client-rendered SPA (Vista 'Lumos' platform) whose film/session API requires a GAS/MovieXchange auth flow this adapter doesn't implement (see module docstring). Falls back to flicks.co.nz via adapters.get_fallback().",
@@ -172,12 +172,6 @@
           "tags": []
         },
         {
-          "title": "Ken Russell's The Devils",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Nosferatu (1922)",
           "sessions": [],
           "note": null,
@@ -215,6 +209,12 @@
         },
         {
           "title": "Don't Look Now",
+          "sessions": [],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Ken Russell's The Devils",
           "sessions": [],
           "note": null,
           "tags": []
@@ -262,12 +262,6 @@
           "tags": []
         },
         {
-          "title": "Body Snatchers",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Breathless",
           "sessions": [],
           "note": null,
@@ -280,18 +274,6 @@
           "tags": []
         },
         {
-          "title": "Child's Play (1972)",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Dangerous Game",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Eastern Promises",
           "sessions": [],
           "note": null,
@@ -299,12 +281,6 @@
         },
         {
           "title": "Edward Scissorhands",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Evil Under The Sun",
           "sessions": [],
           "note": null,
           "tags": []
@@ -352,12 +328,6 @@
           "tags": []
         },
         {
-          "title": "Pandora and the Flying Dutchman",
-          "sessions": [],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Phantom Thread",
           "sessions": [],
           "note": null,
@@ -400,7 +370,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-27T14:59:28+13:00",
+      "fetchedAt": "2026-11-28T14:43:23+13:00",
       "sourceUrl": "https://www.flicks.co.nz/cinema/academy-cinemas/"
     },
     "hollywood": {
@@ -488,17 +458,6 @@
           "tags": []
         },
         {
-          "title": "STOP MAKING SENSE (1984) Dance Along",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "8:00pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "The 27th Annual 24 Hour Movie Marathon",
           "sessions": [
             {
@@ -578,7 +537,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-27T14:59:30+13:00",
+      "fetchedAt": "2026-11-28T14:43:24+13:00",
       "sourceUrl": "https://ticketing.oz.veezi.com/sessions/?siteToken=fpnccxy3ma159g7z8a3e95asy8"
     },
     "capitol": {
@@ -621,21 +580,6 @@
             {
               "date": "2026-12-14",
               "time": "7:00pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Chopin, A Sonata in Paris",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "3:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "12:45pm"
             }
           ],
           "note": null,
@@ -685,7 +629,7 @@
           "tags": []
         },
         {
-          "title": "IFF - I Saw a King",
+          "title": "IFF26 I Saw a King",
           "sessions": [
             {
               "date": "2027-01-09",
@@ -696,18 +640,7 @@
           "tags": []
         },
         {
-          "title": "IFF - Napoli, New York",
-          "sessions": [
-            {
-              "date": "2027-01-08",
-              "time": "7:30pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "IFF - Siblings",
+          "title": "IFF26 Siblings",
           "sessions": [
             {
               "date": "2027-01-07",
@@ -718,7 +651,29 @@
           "tags": []
         },
         {
-          "title": "IFF - Once Upon a Time in the We",
+          "title": "IFF26 Bread and Tulips",
+          "sessions": [
+            {
+              "date": "2027-01-12",
+              "time": "7:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "IFF26 Napoli, New York",
+          "sessions": [
+            {
+              "date": "2027-01-08",
+              "time": "7:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "IFF26 Once Upon a Time in the We",
           "sessions": [
             {
               "date": "2027-01-09",
@@ -729,7 +684,7 @@
           "tags": []
         },
         {
-          "title": "IFF - The Last One for The Road",
+          "title": "IFF26 The Last One for The Road",
           "sessions": [
             {
               "date": "2027-01-10",
@@ -740,7 +695,18 @@
           "tags": []
         },
         {
-          "title": "IFF - Trifole",
+          "title": "IFF26 The Tasters",
+          "sessions": [
+            {
+              "date": "2027-01-11",
+              "time": "7:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "IFF26 Trifole",
           "sessions": [
             {
               "date": "2027-01-10",
@@ -751,7 +717,7 @@
           "tags": []
         },
         {
-          "title": "Italian Film Festival - Somebody to Love x",
+          "title": "Italian Film Festival 26 - Somebody to Love x",
           "sessions": [
             {
               "date": "2027-01-06",
@@ -828,10 +794,6 @@
         {
           "title": "The Fox",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "5:40pm"
-            },
             {
               "date": "2026-11-28",
               "time": "5:40pm"
@@ -929,10 +891,6 @@
           "title": "You Can See Everything",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "7:30pm"
-            },
-            {
               "date": "2026-11-28",
               "time": "7:30pm"
             },
@@ -965,663 +923,12 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-27T14:59:31+13:00",
+      "fetchedAt": "2026-11-28T14:43:24+13:00",
       "sourceUrl": "https://ticketing.oz.veezi.com/sessions/?siteToken=heg709z4rmk2gh10ykam14wxm8"
     },
     "rialto": {
       "cinemaId": "rialto",
       "films": [
-        {
-          "title": "The Fox",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "5:10pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "8:20pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "10:40am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "5:20pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "10:40am"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "1:45pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "7:40pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "12:35pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "3:10pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "3:55pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "8:10pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "1:10pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "5:45pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "8:30pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "The Incomer",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "8:20pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "2:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "8:00pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "3:00pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "7:20pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "10:50am"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "7:10pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "5:40pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "8:00pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "1:35pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "5:15pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "8:20pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "The Hunger Games: Sunrise on the Reaping",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "10:40am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "2:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "3:45pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "7:10pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "3:45pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "6:15pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "12:45pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "3:10pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "7:45pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "You Can See Everything",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "7:15pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "4:30pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "7:15pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "11:00am"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "1:25pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "7:00pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "11:15am"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "1:30pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "7:20pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "2:15pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-12-04",
-              "time": "10:30am"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Wicker",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "3:10pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "10:40am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:30pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "5:40pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "12:50pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "10:50am"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "5:10pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "1:30pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "5:50pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "12:55pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "5:30pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Bad Apples",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "2:50pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "8:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "3:50pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "8:00pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "4:50pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "1:10pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "5:10pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "10:40am"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "5:20pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "3:50pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "6:00pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Steal This Story, Please!",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "5:20pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:15pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "10:40am"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "7:20pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "10:50am"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "7:20pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "3:00pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "5:10pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "11:00am"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "7:50pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Buddy",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "3:25pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "3:20pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "7:40pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "3:45pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "12:50pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "8:10pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "3:20pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Fatherland",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "4:15pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "12:50pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "6:15pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "12:55pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "10:50am"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "4:00pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "10:40am"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "3:55pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "3:15pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Wild Horse Nine",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "3:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "3:10pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "2:30pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "2:35pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "2:45pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "The Only Living Pickpocket In New York",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "6:15pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "8:15pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "3:00pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Erupcja",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "3:35pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "3:10pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "1:10pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "1:55pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Notes To Eternity",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "7:45pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "7:00pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
         {
           "title": "Dante's Wondrous Vision",
           "sessions": [
@@ -1706,31 +1013,459 @@
           "tags": []
         },
         {
-          "title": "National Theatre Live: Les Liaisons Dangereuses",
+          "title": "The Fox",
           "sessions": [
             {
               "date": "2026-11-28",
+              "time": "5:20pm"
+            },
+            {
+              "date": "2026-11-28",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "10:40am"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "1:45pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "5:30pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "7:40pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "12:35pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "3:55pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "8:10pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "5:45pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "8:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "The Incomer",
+          "sessions": [
+            {
+              "date": "2026-11-28",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-11-28",
+              "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "5:00pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "7:20pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "10:50am"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "7:10pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "5:40pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "8:00pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "1:35pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "5:15pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "8:20pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "The Hunger Games: Sunrise on the Reaping",
+          "sessions": [
+            {
+              "date": "2026-11-28",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "7:10pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-12-01",
               "time": "12:45pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "7:45pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "You Can See Everything",
+          "sessions": [
+            {
+              "date": "2026-11-28",
+              "time": "4:30pm"
+            },
+            {
+              "date": "2026-11-28",
+              "time": "7:15pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "11:00am"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "1:25pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "7:00pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "11:15am"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "1:30pm"
             },
             {
               "date": "2026-11-30",
               "time": "6:00pm"
             },
             {
+              "date": "2026-12-01",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "7:20pm"
+            },
+            {
               "date": "2026-12-02",
-              "time": "10:45am"
+              "time": "2:15pm"
             },
             {
-              "date": "2026-12-05",
-              "time": "10:45am"
+              "date": "2026-12-02",
+              "time": "7:30pm"
             },
             {
-              "date": "2026-12-07",
-              "time": "10:45am"
+              "date": "2026-12-04",
+              "time": "10:30am"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Wicker",
+          "sessions": [
+            {
+              "date": "2026-11-28",
+              "time": "5:40pm"
             },
             {
-              "date": "2026-12-09",
-              "time": "12:45pm"
+              "date": "2026-11-29",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "12:50pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "5:00pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "10:50am"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "5:10pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "1:30pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "5:50pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "12:55pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "5:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Bad Apples",
+          "sessions": [
+            {
+              "date": "2026-11-28",
+              "time": "3:50pm"
+            },
+            {
+              "date": "2026-11-28",
+              "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "4:50pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "5:10pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "10:40am"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "5:20pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "3:50pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "6:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Buddy",
+          "sessions": [
+            {
+              "date": "2026-11-28",
+              "time": "3:25pm"
+            },
+            {
+              "date": "2026-11-28",
+              "time": "8:30pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "7:40pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "3:45pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "7:30pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "12:50pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "8:10pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "3:20pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Steal This Story, Please!",
+          "sessions": [
+            {
+              "date": "2026-11-28",
+              "time": "5:00pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "10:40am"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "7:20pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "10:50am"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "7:20pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "3:00pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "5:10pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "11:00am"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "7:50pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Fatherland",
+          "sessions": [
+            {
+              "date": "2026-11-28",
+              "time": "6:15pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "12:55pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "5:00pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "10:50am"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "4:00pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "10:40am"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "3:55pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "3:15pm"
             }
           ],
           "note": null,
@@ -1764,12 +1499,61 @@
           "tags": []
         },
         {
-          "title": "Chopin",
+          "title": "Wild Horse Nine",
           "sessions": [
             {
               "date": "2026-11-28",
-              "time": "10:30am"
+              "time": "3:10pm"
             },
+            {
+              "date": "2026-11-29",
+              "time": "2:30pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "2:35pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "2:45pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Notes To Eternity",
+          "sessions": [
+            {
+              "date": "2026-11-28",
+              "time": "5:30pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "7:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "The Only Living Pickpocket In New York",
+          "sessions": [
+            {
+              "date": "2026-11-28",
+              "time": "8:15pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "3:00pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Chopin",
+          "sessions": [
             {
               "date": "2026-11-29",
               "time": "10:30am"
@@ -1785,6 +1569,52 @@
             {
               "date": "2026-12-02",
               "time": "10:45am"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Erupcja",
+          "sessions": [
+            {
+              "date": "2026-11-29",
+              "time": "3:10pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "1:10pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "1:55pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "National Theatre Live: Les Liaisons Dangereuses",
+          "sessions": [
+            {
+              "date": "2026-11-30",
+              "time": "6:00pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-12-05",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-12-07",
+              "time": "10:45am"
+            },
+            {
+              "date": "2026-12-09",
+              "time": "12:45pm"
             }
           ],
           "note": null,
@@ -2133,7 +1963,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-27T14:59:42+13:00",
+      "fetchedAt": "2026-11-28T14:43:32+13:00",
       "sourceUrl": "https://www.rialto.co.nz/cinema/newmarket/sessions"
     },
     "silky-orakei": {
@@ -2146,13 +1976,13 @@
           "tags": []
         },
         {
-          "title": "The Hunger Games: Sunrise on the Reaping",
+          "title": "Dune: Part Three",
           "sessions": [],
           "note": null,
           "tags": []
         },
         {
-          "title": "Dune: Part Three",
+          "title": "The Hunger Games: Sunrise on the Reaping",
           "sessions": [],
           "note": null,
           "tags": []
@@ -2220,7 +2050,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-27T14:59:43+13:00",
+      "fetchedAt": "2026-11-28T14:43:34+13:00",
       "sourceUrl": "https://www.flicks.co.nz/cinema/silky-otter-cinemas-orakei/"
     },
     "silky-ponsonby": {
@@ -2233,13 +2063,13 @@
           "tags": []
         },
         {
-          "title": "The Hunger Games: Sunrise on the Reaping",
+          "title": "Dune: Part Three",
           "sessions": [],
           "note": null,
           "tags": []
         },
         {
-          "title": "Dune: Part Three",
+          "title": "The Hunger Games: Sunrise on the Reaping",
           "sessions": [],
           "note": null,
           "tags": []
@@ -2299,7 +2129,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-27T14:59:46+13:00",
+      "fetchedAt": "2026-11-28T14:43:36+13:00",
       "sourceUrl": "https://www.flicks.co.nz/cinema/silky-otter-cinemas-ponsonby/"
     },
     "event-queen": {
@@ -2308,42 +2138,6 @@
         {
           "title": "The Hunger Games: Sunrise on the Reaping",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "3:20pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "4:20pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "6:30pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "7:15pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "7:45pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "8:45pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "11:20am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "12:20pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:30pm"
-            },
             {
               "date": "2026-11-28",
               "time": "3:00pm"
@@ -2528,26 +2322,6 @@
           "title": "Focker-In-Law",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "3:30pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "6:20pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "8:50pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "12:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:25pm"
-            },
-            {
               "date": "2026-11-28",
               "time": "3:50pm"
             },
@@ -2663,26 +2437,6 @@
           "title": "Disney's Hexed",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "3:40pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "6:10pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "8:40pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "11:00am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:00pm"
-            },
-            {
               "date": "2026-11-28",
               "time": "3:40pm"
             },
@@ -2766,18 +2520,6 @@
           "title": "Wicker",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "4:15pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "6:35pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:40pm"
-            },
-            {
               "date": "2026-11-28",
               "time": "4:10pm"
             },
@@ -2840,18 +2582,6 @@
         {
           "title": "You Can See Everything",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "3:00pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "6:40pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "12:10pm"
-            },
             {
               "date": "2026-11-28",
               "time": "3:45pm"
@@ -2916,10 +2646,6 @@
           "title": "Yeh Prem Mol Liya",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "8:20pm"
-            },
-            {
               "date": "2026-11-28",
               "time": "8:15pm"
             },
@@ -2940,12 +2666,35 @@
           "tags": []
         },
         {
-          "title": "Ramayana - Rise of a Legend (Hindi)",
+          "title": "Gun Maaster G9",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "7:30pm"
+              "date": "2026-11-28",
+              "time": "8:35pm"
             },
+            {
+              "date": "2026-11-29",
+              "time": "8:00pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "8:45pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "8:40pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "8:40pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Ramayana - Rise of a Legend (Hindi)",
+          "sessions": [
             {
               "date": "2026-11-28",
               "time": "7:30pm"
@@ -2973,14 +2722,6 @@
         {
           "title": "Buddy",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "5:15pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "9:00pm"
-            },
             {
               "date": "2026-11-28",
               "time": "2:30pm"
@@ -3024,18 +2765,6 @@
         {
           "title": "Godzilla: Minus Zero",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "8:30pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "11:30am"
-            },
             {
               "date": "2026-11-28",
               "time": "2:35pm"
@@ -3116,18 +2845,6 @@
           "title": "Wildwood",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "3:00pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "12:10pm"
-            },
-            {
               "date": "2026-11-28",
               "time": "3:00pm"
             },
@@ -3183,14 +2900,6 @@
           "title": "The Further Mis-Adventures Of Cliff Booth",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "2:45pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "5:45pm"
-            },
-            {
               "date": "2026-11-28",
               "time": "2:30pm"
             },
@@ -3235,20 +2944,35 @@
           "tags": []
         },
         {
-          "title": "Primetime",
+          "title": "Wild Horse Nine",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "3:20pm"
+              "date": "2026-11-28",
+              "time": "4:50pm"
             },
             {
-              "date": "2026-11-27",
-              "time": "5:50pm"
+              "date": "2026-11-29",
+              "time": "2:15pm"
             },
             {
-              "date": "2026-11-27",
-              "time": "8:50pm"
+              "date": "2026-11-30",
+              "time": "2:30pm"
             },
+            {
+              "date": "2026-12-01",
+              "time": "2:30pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "2:30pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Primetime",
+          "sessions": [
             {
               "date": "2026-11-28",
               "time": "3:20pm"
@@ -3294,16 +3018,21 @@
           "tags": []
         },
         {
-          "title": "Ebenezer",
+          "title": "Doctor Who: The Satan Pit",
           "sessions": [
             {
               "date": "2026-11-28",
-              "time": "11:00am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "12:45pm"
-            },
+              "time": "6:00pm"
+            }
+          ],
+          "note": null,
+          "tags": [
+            "event"
+          ]
+        },
+        {
+          "title": "Ebenezer",
+          "sessions": [
             {
               "date": "2026-11-29",
               "time": "11:00am"
@@ -3327,73 +3056,6 @@
           ],
           "note": null,
           "tags": []
-        },
-        {
-          "title": "Gun Maaster G9",
-          "sessions": [
-            {
-              "date": "2026-11-28",
-              "time": "8:35pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "8:00pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "8:45pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "8:40pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "8:40pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Wild Horse Nine",
-          "sessions": [
-            {
-              "date": "2026-11-28",
-              "time": "4:50pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "2:15pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "2:30pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "2:30pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "2:30pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Doctor Who: The Satan Pit",
-          "sessions": [
-            {
-              "date": "2026-11-28",
-              "time": "6:00pm"
-            }
-          ],
-          "note": null,
-          "tags": [
-            "event"
-          ]
         },
         {
           "title": "Andrew Lloyd Webber's Starlight Express",
@@ -3429,7 +3091,7 @@
             },
             {
               "date": "2026-12-05",
-              "time": "2:35pm"
+              "time": "3:00pm"
             },
             {
               "date": "2026-12-06",
@@ -4545,7 +4207,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-27T15:00:25+13:00",
+      "fetchedAt": "2026-11-28T14:44:16+13:00",
       "sourceUrl": "https://www.eventcinemas.co.nz/cinema/Queen-Street/sessions"
     },
     "event-newmarket": {
@@ -4554,46 +4216,6 @@
         {
           "title": "The Hunger Games: Sunrise on the Reaping",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "3:30pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "4:00pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "7:15pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "7:30pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "9:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "10:10am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "12:30pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:40pm"
-            },
             {
               "date": "2026-11-28",
               "time": "3:45pm"
@@ -4750,22 +4372,6 @@
           "title": "Focker-In-Law",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "3:30pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "6:20pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "8:45pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:30pm"
-            },
-            {
               "date": "2026-11-28",
               "time": "3:00pm"
             },
@@ -4827,19 +4433,19 @@
             },
             {
               "date": "2026-12-02",
-              "time": "10:40am"
+              "time": "10:30am"
             },
             {
               "date": "2026-12-02",
-              "time": "1:10pm"
+              "time": "1:00pm"
             },
             {
               "date": "2026-12-02",
-              "time": "3:40pm"
+              "time": "3:30pm"
             },
             {
               "date": "2026-12-02",
-              "time": "6:15pm"
+              "time": "6:00pm"
             },
             {
               "date": "2026-12-02",
@@ -4852,26 +4458,6 @@
         {
           "title": "Disney's Hexed",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "3:30pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "9:50am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "10:50am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "12:50pm"
-            },
             {
               "date": "2026-11-28",
               "time": "3:30pm"
@@ -4934,15 +4520,11 @@
             },
             {
               "date": "2026-12-02",
-              "time": "12:50pm"
+              "time": "12:45pm"
             },
             {
               "date": "2026-12-02",
-              "time": "3:25pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "6:00pm"
+              "time": "3:20pm"
             }
           ],
           "note": null,
@@ -4951,14 +4533,6 @@
         {
           "title": "Wicker",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "3:45pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "6:15pm"
-            },
             {
               "date": "2026-11-28",
               "time": "4:00pm"
@@ -4999,10 +4573,6 @@
           "title": "You Can See Everything",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "8:30pm"
-            },
-            {
               "date": "2026-11-28",
               "time": "3:00pm"
             },
@@ -5040,7 +4610,7 @@
             },
             {
               "date": "2026-12-02",
-              "time": "8:45pm"
+              "time": "8:30pm"
             }
           ],
           "note": null,
@@ -5049,10 +4619,6 @@
         {
           "title": "Godzilla: Minus Zero",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "9:00pm"
-            },
             {
               "date": "2026-11-28",
               "time": "9:00pm"
@@ -5080,10 +4646,6 @@
         {
           "title": "Festive Fun With Peppa Pig",
           "sessions": [
-            {
-              "date": "2026-11-28",
-              "time": "10:00am"
-            },
             {
               "date": "2026-11-29",
               "time": "10:00am"
@@ -5114,10 +4676,6 @@
         {
           "title": "Ebenezer",
           "sessions": [
-            {
-              "date": "2026-11-28",
-              "time": "10:00am"
-            },
             {
               "date": "2026-11-29",
               "time": "10:00am"
@@ -5572,6 +5130,10 @@
               "time": "6:10pm"
             },
             {
+              "date": "2026-12-20",
+              "time": "9:30pm"
+            },
+            {
               "date": "2026-12-21",
               "time": "10:15am"
             },
@@ -5636,7 +5198,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-27T15:00:49+13:00",
+      "fetchedAt": "2026-11-28T14:44:39+13:00",
       "sourceUrl": "https://www.eventcinemas.co.nz/cinema/Newmarket-Westfield/sessions"
     },
     "event-stlukes": {
@@ -5645,34 +5207,6 @@
         {
           "title": "The Hunger Games: Sunrise on the Reaping",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "3:45pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "7:20pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "8:20pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "10:20am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "12:40pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:40pm"
-            },
             {
               "date": "2026-11-28",
               "time": "4:00pm"
@@ -5801,26 +5335,6 @@
           "title": "Focker-In-Law",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "3:40pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "6:10pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "8:40pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "10:00am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:10pm"
-            },
-            {
               "date": "2026-11-28",
               "time": "3:40pm"
             },
@@ -5926,30 +5440,6 @@
           "title": "Disney's Hexed",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "3:30pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "10:20am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "11:20am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "12:50pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:50pm"
-            },
-            {
               "date": "2026-11-28",
               "time": "3:30pm"
             },
@@ -6037,12 +5527,12 @@
           "title": "Wicker",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "6:15pm"
-            },
-            {
               "date": "2026-11-28",
               "time": "3:50pm"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "6:30pm"
             },
             {
               "date": "2026-11-30",
@@ -6079,14 +5569,6 @@
         {
           "title": "You Can See Everything",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "5:30pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "2:00pm"
-            },
             {
               "date": "2026-11-28",
               "time": "5:30pm"
@@ -6128,43 +5610,8 @@
           "tags": []
         },
         {
-          "title": "Ebenezer",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "4:50pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "10:40am"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "10:20am"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "4:20pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "4:50pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "4:20pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Yeh Prem Mol Liya",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "8:25pm"
-            },
             {
               "date": "2026-11-28",
               "time": "4:00pm"
@@ -6213,10 +5660,6 @@
           "title": "Gun Maaster G9",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "8:40pm"
-            },
-            {
               "date": "2026-11-28",
               "time": "8:40pm"
             },
@@ -6243,14 +5686,6 @@
         {
           "title": "Ramayana - Rise of a Legend (Hindi)",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "4:30pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "7:30pm"
-            },
             {
               "date": "2026-11-28",
               "time": "4:30pm"
@@ -6307,10 +5742,6 @@
           "title": "Buddy",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "9:00pm"
-            },
-            {
               "date": "2026-11-28",
               "time": "6:30pm"
             },
@@ -6335,51 +5766,8 @@
           "tags": []
         },
         {
-          "title": "Wildwood",
-          "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "3:20pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "10:10am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "10:10am"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "3:20pm"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "3:20pm"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "3:20pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Primetime",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "8:35pm"
-            },
             {
               "date": "2026-11-28",
               "time": "9:00pm"
@@ -6401,86 +5789,6 @@
           "tags": []
         },
         {
-          "title": "Festive Fun With Peppa Pig",
-          "sessions": [
-            {
-              "date": "2026-11-28",
-              "time": "10:00am"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-12-06",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-12-08",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-12-20",
-              "time": "10:30am"
-            },
-            {
-              "date": "2026-12-22",
-              "time": "10:30am"
-            }
-          ],
-          "note": null,
-          "tags": [
-            "event",
-            "kids"
-          ]
-        },
-        {
-          "title": "Drummer Boy",
-          "sessions": [
-            {
-              "date": "2026-11-28",
-              "time": "1:15pm"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "1:00pm"
-            },
-            {
-              "date": "2026-11-30",
-              "time": "10:40am"
-            },
-            {
-              "date": "2026-12-01",
-              "time": "10:20am"
-            },
-            {
-              "date": "2026-12-02",
-              "time": "1:40pm"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
-          "title": "Shaun the Sheep: The Beast of Mossy Bottom",
-          "sessions": [
-            {
-              "date": "2026-11-28",
-              "time": "11:00am"
-            },
-            {
-              "date": "2026-11-29",
-              "time": "11:00am"
-            },
-            {
-              "date": "2026-12-13",
-              "time": "11:00am"
-            }
-          ],
-          "note": null,
-          "tags": []
-        },
-        {
           "title": "Doctor Who: The Satan Pit",
           "sessions": [
             {
@@ -6494,11 +5802,23 @@
           ]
         },
         {
-          "title": "Forgotten Island",
+          "title": "Ebenezer",
           "sessions": [
             {
-              "date": "2026-11-28",
-              "time": "11:35am"
+              "date": "2026-11-29",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "4:20pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "4:50pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "4:20pm"
             }
           ],
           "note": null,
@@ -6530,6 +5850,71 @@
           ]
         },
         {
+          "title": "Drummer Boy",
+          "sessions": [
+            {
+              "date": "2026-11-29",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "10:40am"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "10:20am"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "1:40pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Wildwood",
+          "sessions": [
+            {
+              "date": "2026-11-29",
+              "time": "10:10am"
+            },
+            {
+              "date": "2026-11-29",
+              "time": "1:00pm"
+            },
+            {
+              "date": "2026-11-30",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-12-01",
+              "time": "3:20pm"
+            },
+            {
+              "date": "2026-12-02",
+              "time": "3:20pm"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
+          "title": "Shaun the Sheep: The Beast of Mossy Bottom",
+          "sessions": [
+            {
+              "date": "2026-11-29",
+              "time": "11:00am"
+            },
+            {
+              "date": "2026-12-13",
+              "time": "11:00am"
+            }
+          ],
+          "note": null,
+          "tags": []
+        },
+        {
           "title": "Wild Horse Nine",
           "sessions": [
             {
@@ -6543,6 +5928,36 @@
           ],
           "note": null,
           "tags": []
+        },
+        {
+          "title": "Festive Fun With Peppa Pig",
+          "sessions": [
+            {
+              "date": "2026-12-01",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-12-06",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-12-08",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-12-20",
+              "time": "10:30am"
+            },
+            {
+              "date": "2026-12-22",
+              "time": "10:30am"
+            }
+          ],
+          "note": null,
+          "tags": [
+            "event",
+            "kids"
+          ]
         },
         {
           "title": "Spider-Man - Brand New -  Brand New Day",
@@ -7227,7 +6642,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-27T15:01:18+13:00",
+      "fetchedAt": "2026-11-28T14:45:08+13:00",
       "sourceUrl": "https://www.eventcinemas.co.nz/cinema/st-lukes/sessions"
     },
     "reading-newlynn": {
@@ -7236,10 +6651,6 @@
         {
           "title": "How to Rob a Bank",
           "sessions": [
-            {
-              "date": "2026-11-28",
-              "time": "10:15am"
-            },
             {
               "date": "2026-11-29",
               "time": "10:15am"
@@ -7263,22 +6674,6 @@
         {
           "title": "Disney’s Hexed",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "3:15pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "5:45pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "10:15am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "12:45pm"
-            },
             {
               "date": "2026-11-28",
               "time": "3:15pm"
@@ -7358,38 +6753,6 @@
         {
           "title": "The Hunger Games: Sunrise on the Reaping",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "3:30pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "5:45pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "7:00pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "8:15pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "9:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "11:15am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "12:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "2:30pm"
-            },
             {
               "date": "2026-11-28",
               "time": "3:30pm"
@@ -7545,38 +6908,6 @@
         {
           "title": "Focker-in-Law",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "3:30pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "4:15pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "6:45pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "9:15pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "10:00am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "11:15am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:45pm"
-            },
             {
               "date": "2026-11-28",
               "time": "3:30pm"
@@ -8350,10 +7681,6 @@
           "title": "Wildwood",
           "sessions": [
             {
-              "date": "2026-11-28",
-              "time": "10:00am"
-            },
-            {
               "date": "2026-11-29",
               "time": "10:00am"
             },
@@ -8376,14 +7703,6 @@
         {
           "title": "Ebenezer",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "9:30pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:00pm"
-            },
             {
               "date": "2026-11-28",
               "time": "3:45pm"
@@ -8448,10 +7767,6 @@
           "title": "Godzilla Minus Zero (Japanese)",
           "sessions": [
             {
-              "date": "2026-11-28",
-              "time": "12:30pm"
-            },
-            {
               "date": "2026-11-29",
               "time": "12:30pm"
             },
@@ -8474,10 +7789,6 @@
         {
           "title": "Ramayana: Rise of a Legend (Hindi)",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "8:30pm"
-            },
             {
               "date": "2026-11-28",
               "time": "8:30pm"
@@ -8505,18 +7816,6 @@
         {
           "title": "Wicker",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "3:30pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "6:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:30pm"
-            },
             {
               "date": "2026-11-29",
               "time": "3:30pm"
@@ -8557,10 +7856,6 @@
           "title": "You Can See Everything",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "8:30pm"
-            },
-            {
               "date": "2026-11-29",
               "time": "8:30pm"
             },
@@ -8583,14 +7878,6 @@
         {
           "title": "Yeh Prem Mol Liya (Hindi)",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "8:15pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "10:45am"
-            },
             {
               "date": "2026-11-28",
               "time": "8:15pm"
@@ -8634,14 +7921,6 @@
         {
           "title": "Buddy",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "3:15pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "5:45pm"
-            },
             {
               "date": "2026-11-28",
               "time": "3:00pm"
@@ -8713,7 +7992,7 @@
               "time": "4:30pm"
             }
           ],
-          "note": "opens Sat 28 Nov",
+          "note": null,
           "tags": []
         },
         {
@@ -8724,11 +8003,11 @@
               "time": "7:45pm"
             }
           ],
-          "note": "opens Sat 28 Nov",
+          "note": null,
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-27T15:01:21+13:00",
+      "fetchedAt": "2026-11-28T14:45:10+13:00",
       "sourceUrl": "https://www.readingcinemas.co.nz/cinemas"
     },
     "bridgeway": {
@@ -8765,14 +8044,6 @@
         {
           "title": "Bad Apples",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "8:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:30pm"
-            },
             {
               "date": "2026-11-28",
               "time": "5:25pm"
@@ -8823,18 +8094,6 @@
         {
           "title": "Chopin, A Sonata in Paris",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "5:05pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "7:40pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "11:20am"
-            },
             {
               "date": "2026-11-28",
               "time": "5:05pm"
@@ -8960,10 +8219,6 @@
           "title": "La Bola Negra",
           "sessions": [
             {
-              "date": "2026-11-28",
-              "time": "2:00pm"
-            },
-            {
               "date": "2026-11-29",
               "time": "11:00am"
             },
@@ -9064,14 +8319,6 @@
           "title": "The Fox",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "3:55pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "11:30am"
-            },
-            {
               "date": "2026-11-29",
               "time": "4:00pm"
             },
@@ -9102,22 +8349,6 @@
         {
           "title": "The Hunger Games: Sunrise on the Reaping",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "4:00pm"
-            },
-            {
-              "date": "2026-11-27",
-              "time": "7:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "11:00am"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "1:50pm"
-            },
             {
               "date": "2026-11-28",
               "time": "7:30pm"
@@ -9178,14 +8409,6 @@
           "title": "The Incomer",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "5:00pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "11:45am"
-            },
-            {
               "date": "2026-11-28",
               "time": "5:15pm"
             },
@@ -9229,10 +8452,6 @@
           "title": "Wicker",
           "sessions": [
             {
-              "date": "2026-11-27",
-              "time": "5:50pm"
-            },
-            {
               "date": "2026-11-28",
               "time": "4:50pm"
             },
@@ -9259,14 +8478,6 @@
         {
           "title": "You Can See Everything",
           "sessions": [
-            {
-              "date": "2026-11-27",
-              "time": "7:05pm"
-            },
-            {
-              "date": "2026-11-28",
-              "time": "2:00pm"
-            },
             {
               "date": "2026-11-28",
               "time": "7:20pm"
@@ -9319,7 +8530,7 @@
           "tags": []
         }
       ],
-      "fetchedAt": "2026-11-27T15:01:23+13:00",
+      "fetchedAt": "2026-11-28T14:45:11+13:00",
       "sourceUrl": "https://ticketing.oz.veezi.com/sessions/?siteToken=cf4esppshx7mcjpd1c5j74xc70"
     }
   }
